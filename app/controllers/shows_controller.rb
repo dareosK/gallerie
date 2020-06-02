@@ -10,6 +10,7 @@ class ShowsController < ApplicationController
   end
 
   def create
+    # authorize @show
     @show = Show.new(show_params)
     @user = current_user # to allow current user to create
     @show.save
