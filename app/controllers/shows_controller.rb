@@ -1,6 +1,6 @@
 class ShowsController < ApplicationController
   def index
-    @shows = Show.all
+    @shows = policy_scope(Show).order(created_at: :desc)
   end
 
   def show
