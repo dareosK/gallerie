@@ -1,2 +1,4 @@
-<h1>Shows#index</h1>
-<p>Find me in app/views/shows/index.html.erb</p>
+<h1>All shows</h1>
+<% @shows.each do |show| %>
+<p><% show.title %></p>
+<%  %>
