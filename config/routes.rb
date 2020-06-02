@@ -12,11 +12,6 @@ Rails.application.routes.draw do
     resources :artworks, only: [:new, :create, :destroy]
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-<<<<<<< HEAD
-  
-=======
   resources :artworks, only: :show
   resources :writings
-
->>>>>>> 2d5d9d418147712089c600a07ac375fba9c50e1b
 end
