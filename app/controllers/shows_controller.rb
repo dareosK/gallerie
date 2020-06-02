@@ -9,6 +9,7 @@ class ShowsController < ApplicationController
   end
 
   def create
+    # authentification @show
   end
 
   def edit
