@@ -1,4 +1,5 @@
 <h1>All shows</h1>
-<% @shows.each do |show| %>
-<p><% show.title %></p>
+<% @shows.each do |s| %>
+<p><%= s.title %></p>
+<%= image_tag(s.photo) %>
 <% end %>
