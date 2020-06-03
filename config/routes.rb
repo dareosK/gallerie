@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  get "dashboard", to: "dashboard#show"
   resources :shows do
     resources :artworks, only: [:new, :create, :destroy]
   end

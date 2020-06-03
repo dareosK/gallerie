@@ -1,3 +1,0 @@
-class DashboardsController < ApplicationController
-
-end
