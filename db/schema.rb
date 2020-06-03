@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_02_134356) do
+ActiveRecord::Schema.define(version: 2020_06_03_112747) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,8 +44,17 @@ ActiveRecord::Schema.define(version: 2020_06_02_134356) do
     t.bigint "show_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "panel_id", null: false
+    t.index ["panel_id"], name: "index_artworks_on_panel_id"
     t.index ["show_id"], name: "index_artworks_on_show_id"
     t.index ["user_id"], name: "index_artworks_on_user_id"
+  end
+
+  create_table "panels", force: :cascade do |t|
+    t.bigint "show_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["show_id"], name: "index_panels_on_show_id"
   end
 
   create_table "shows", force: :cascade do |t|
@@ -81,8 +90,10 @@ ActiveRecord::Schema.define(version: 2020_06_02_134356) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "artworks", "panels"
   add_foreign_key "artworks", "shows"
   add_foreign_key "artworks", "users"
+  add_foreign_key "panels", "shows"
   add_foreign_key "shows", "users"
   add_foreign_key "writings", "users"
 end

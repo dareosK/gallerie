@@ -16,8 +16,7 @@ class ShowsController < ApplicationController
   def create
     authorize @show
     @show = Show.new(show_params)
-    @show.user = current_user # assign user as current_user
-    @show.save
+    @show.user = current_user # to allow current user to create
     if @show.save!
       redirect_to show_path(@show)
     else
