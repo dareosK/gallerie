@@ -4,6 +4,8 @@ class ShowsController < ApplicationController
   end
 
   def show
+    @show = Show.find(params[:id])
+    authorize @show
   end
 
   def new
@@ -13,8 +15,7 @@ class ShowsController < ApplicationController
   def create
     # authorize @show
     @show = Show.new(show_params)
-    @user = current_user # to allow current user to create
-    @show.save
+    @show.user = current_user # to allow current user to create
     if @show.save!
       redirect_to show_path(@show)
     else
