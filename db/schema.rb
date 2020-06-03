@@ -10,10 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_02_085031) do
+ActiveRecord::Schema.define(version: 2020_06_03_112747) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.bigint "byte_size", null: false
+    t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
 
   create_table "artworks", force: :cascade do |t|
     t.string "title"
@@ -23,8 +44,17 @@ ActiveRecord::Schema.define(version: 2020_06_02_085031) do
     t.bigint "show_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "panel_id", null: false
+    t.index ["panel_id"], name: "index_artworks_on_panel_id"
     t.index ["show_id"], name: "index_artworks_on_show_id"
     t.index ["user_id"], name: "index_artworks_on_user_id"
+  end
+
+  create_table "panels", force: :cascade do |t|
+    t.bigint "show_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["show_id"], name: "index_panels_on_show_id"
   end
 
   create_table "shows", force: :cascade do |t|
@@ -59,8 +89,11 @@ ActiveRecord::Schema.define(version: 2020_06_02_085031) do
     t.index ["user_id"], name: "index_writings_on_user_id"
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "artworks", "panels"
   add_foreign_key "artworks", "shows"
   add_foreign_key "artworks", "users"
+  add_foreign_key "panels", "shows"
   add_foreign_key "shows", "users"
   add_foreign_key "writings", "users"
 end
