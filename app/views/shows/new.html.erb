@@ -5,4 +5,5 @@
   <%= f.input :title %>
   <%= f.input :statement %>
   <%= f.submit %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
 <% end %>

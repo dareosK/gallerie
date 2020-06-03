@@ -10,10 +10,11 @@ class ShowsController < ApplicationController
 
   def new
     @show = Show.new # make it available for the view
+
   end
 
   def create
-    # authorize @show
+    authorize @show
     @show = Show.new(show_params)
     @show.user = current_user # to allow current user to create
     if @show.save!
@@ -36,6 +37,6 @@ class ShowsController < ApplicationController
   private
 
   def show_params
-    params.require(:show).permit(:title, :statement)
+    params.require(:show).permit(:title, :statement, photos: [])
   end
 end
