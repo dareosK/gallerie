@@ -67,10 +67,3 @@ Show.create!([
     user_id: User.first.id
 }])
 
-Artwork.create!({
-    title: "Still life",
-    artist: "Van Gogh",
-    description: "Oil on canvas",
-    user_id: User.first.id,
-    show_id: Show.first.id
-})
