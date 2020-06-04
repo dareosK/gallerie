@@ -1,26 +1,62 @@
 <div class="container d-flex">
 	<div class="col-4">
 		<div class="m-3">
-			<h3>profile</h3>
-			<img src="https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=200&q=100" alt="photo" style="border-radius: 50%">
-			<%=current_user.email %>
-			
+			<div class="profile">
+				<%=current_user.name %>
+				<img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="photo" style="border-radius: 50%; width:200px; margin-top: 5px;">
+				<%=current_user.email %>
+				<div class="mb-5"><%=current_user.bio %></div>
+			</div>
 		</div>
 	</div>
 
 	<div class="col-8">
 		<div class="m-3">
-			<h3>show and writing</h3>
-			<% @shows.each do |show| %>
+
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+			  <li class="nav-item">
+			    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" style="color:black">Shows</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" style="color:black">Writings</a>
+			  </li>
+			</ul>
+
+			<div class="tab-content" id="myTabContent">
+  			<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+  			<% @shows.each do |show| %>
 				<div class="card-product">
-				  <%= image_tag(show.photo, size: "160x100")%>
+				  <%= image_tag(show.photo, size: "260x180")%>
 				  <div class="card-product-infos">
 				    <h5><%= show.title %></h5>
 				    <p><%= show.statement %></p>
 				  </div>
-				  <div class="btn btn-secondary">find out more</div>
 				</div>
 			<% end %>
+			<% @shows.each do |show| %>
+				<div class="card-product">
+				  <%= image_tag(show.photo, size: "260x180")%>
+				  <div class="card-product-infos">
+				    <h5><%= show.title %></h5>
+				    <p><%= show.statement %></p>
+				  </div>
+				</div>
+			<% end %>
+		  </div>
+		  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+		  	<% @writing.each do |writing| %>
+		  		<div class="card-writing">
+			  		<div style="text-align: center;">
+			  			<h5><%= writing.title %></h5>
+				  		<%=  writing.publishing_date %>
+					  	<br>
+					  	from <strong><%=  writing.publisher %></strong>
+					  	<%#=  writing.article %>
+			  		</div>
+		  		</div>
+		  	<% end  %>
+		  </div>
+		</div>
 		</div>
 	</div>
 </div>
