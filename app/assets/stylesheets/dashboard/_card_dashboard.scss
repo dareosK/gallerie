@@ -2,7 +2,7 @@
   margin-top: 18px; 
   background-color: white; 
   text-align: center; 
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
   padding: 16px;
 }
 
@@ -10,7 +10,7 @@
   overflow: hidden;
   height: 200px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
   margin: 10px;
@@ -43,7 +43,7 @@
 .card-writing {
   height: 100px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
   display: flex;
   align-items: center;
   justify-content: center;
