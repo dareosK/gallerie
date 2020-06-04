@@ -1,4 +1,5 @@
 class ShowsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :show, :index ]
   def index
     @shows = policy_scope(Show).order(created_at: :desc)
   end
@@ -10,7 +11,6 @@ class ShowsController < ApplicationController
 
   def new
     @show = Show.new # make it available for the view
-
   end
 
   def create

@@ -4,6 +4,8 @@ class PanelsController < ApplicationController
   end
 
   def show
+    @panel = Panel.find(params[:id])
+    authorize @panel
   end
 
   def create
