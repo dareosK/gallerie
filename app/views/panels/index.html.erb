@@ -1,0 +1,7 @@
+<ul>
+<% @panels.each do |panel| %>
+  <% panel.artworks.each do |artwork| %>
+    <li><%= artwork %></li>
+  <% end %>
+<% end %>
+</ul>
