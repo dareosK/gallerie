@@ -1,5 +1,5 @@
 <h1>All shows</h1>
-<div class="container carousel-container" style="background-image: url('https://images-na.ssl-images-amazon.com/images/I/716CwJWw03L._AC_SL1500_.jpg');">
+<div class="container carousel-container">
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -24,7 +24,7 @@
 </div>
 
 
-<div class='container'>
+<div class='container-fluid'>
   <div class='masonry-grid'>
     <% @shows.each do |s| %>
       <div class='masonry-grid-item card-masonry'><%= image_tag(s.photo) %></div>
