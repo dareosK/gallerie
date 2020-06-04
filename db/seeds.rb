@@ -12,6 +12,7 @@ Artwork.destroy_all
 Show.destroy_all
 Writing.destroy_all
 User.destroy_all
+Panel.destroy_all
 
 User.create!(
     email: "emoellervon@icloud.com",
@@ -68,7 +69,14 @@ show_one = Show.new(
 show_one.photo.attach(io: file, filename: 'art.jpg', content_type: 'image/jpg')
 show_one.save!
 
-mpdg = URI.open("https://s.studiobinder.com/wp-content/uploads/2019/12/Manic-Pixie-Dream-Girl-Featured.jpg") 
+6.times do
+    Panel.create!([
+    show_id: Show.first.id
+  ])
+end
+puts "Panels for first show created"
+
+mpdg = URI.open("https://s.studiobinder.com/wp-content/uploads/2019/12/Manic-Pixie-Dream-Girl-Featured.jpg")
 show_two = Show.new(
   title: "Real Art By Real Guys",
   statement: "My ex-girlfriend was very inspiring- a muse, you might say. I'm not going to mention her name at all!",
@@ -95,3 +103,9 @@ show_four = Show.new(
 show_four.photo.attach(io: duck, filename: 'duck.jpg', content_type: 'image/jpg')
 show_four.save!
 
+6.times do
+    Panel.create!([
+    show_id: Show.last.id
+  ])
+end
+puts "Panels for second show created"
