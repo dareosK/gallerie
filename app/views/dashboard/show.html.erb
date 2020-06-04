@@ -1,0 +1,26 @@
+<div class="container d-flex">
+	<div class="col-4">
+		<div class="m-3">
+			<h3>profile</h3>
+			<img src="https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=200&q=100" alt="photo" style="border-radius: 50%">
+			<%=current_user.email %>
+			
+		</div>
+	</div>
+
+	<div class="col-8">
+		<div class="m-3">
+			<h3>show and writing</h3>
+			<% @shows.each do |show| %>
+				<div class="card-product">
+				  <%= image_tag(show.photo, size: "160x100")%>
+				  <div class="card-product-infos">
+				    <h5><%= show.title %></h5>
+				    <p><%= show.statement %></p>
+				  </div>
+				  <div class="btn btn-secondary">find out more</div>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>

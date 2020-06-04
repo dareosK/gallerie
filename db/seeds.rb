@@ -62,8 +62,8 @@ puts "seeding of stories done"
 
 file = URI.open("https://mymodernmet.com/wp/wp-content/uploads/2019/03/elements-of-art-6.jpg")
 show_one = Show.new(
-    title: "Amazzing",
-    statement: "This is a very interesting statement",
+    title: "A Maze Ing",
+    statement: "Sometimes I am locked in your own walls. Mentally. Physically. What does this do to us? ",
     user_id: User.first.id
 )
 show_one.photo.attach(io: file, filename: 'art.jpg', content_type: 'image/jpg')
@@ -77,6 +77,9 @@ end
 puts "Panels for first show created"
 
 mpdg = URI.open("https://s.studiobinder.com/wp-content/uploads/2019/12/Manic-Pixie-Dream-Girl-Featured.jpg")
+
+# mpdg = URI.open("https://www.pigasus-shop.de/images/product_images/popup_images/7452_0.jpg")
+
 show_two = Show.new(
   title: "Real Art By Real Guys",
   statement: "My ex-girlfriend was very inspiring- a muse, you might say. I'm not going to mention her name at all!",
