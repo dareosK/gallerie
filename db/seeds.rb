@@ -106,7 +106,7 @@ show_four = Show.new(
 show_four.photo.attach(io: duck, filename: 'duck.jpg', content_type: 'image/jpg')
 show_four.save!
 
-img_one = URI.open("https://upload.wikimedia.org/wikipedia/commons/1/14/Rubber_Duck_%288374802487%29.jpg")
+img_one = URI.open("https://npg.si.edu/exhibit/feature/images/schoeller_full.jpg")
 show_five = Show.new(
   title: "Debugged",
   statement: "This photo-story documents the intimate, destructive relationship between a man and his rubber duck.",
@@ -115,7 +115,7 @@ show_five = Show.new(
 show_five.photo.attach(io: img_one, filename: 'img_one.jpg', content_type: 'image/jpg')
 show_five.save!
 
-img_two = URI.open("https://upload.wikimedia.org/wikipedia/commons/1/14/Rubber_Duck_%288374802487%29.jpg")
+img_two = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Mona_Lisa-restored.jpg/1200px-Mona_Lisa-restored.jpg")
 show_six = Show.new(
   title: "Debugged",
   statement: "This photo-story documents the intimate, destructive relationship between a man and his rubber duck.",
