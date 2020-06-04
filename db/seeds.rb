@@ -9,10 +9,11 @@ require "open-uri"
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Artwork.destroy_all
+Panel.destroy_all
 Show.destroy_all
 Writing.destroy_all
 User.destroy_all
-Panel.destroy_all
+
 
 User.create!(
     email: "emoellervon@icloud.com",
