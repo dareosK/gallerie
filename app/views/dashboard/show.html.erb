@@ -1,4 +1,4 @@
-<div class="container d-flex">
+<div class="container d-flex mt-5">
 	<div class="col-4">
 		<div class="m-3">
 			<div class="profile">
@@ -24,34 +24,26 @@
 
 			<div class="tab-content" id="myTabContent">
   			<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-  			<% @shows.each do |show| %>
+  			<% @shows.each do |s| %>
 				<div class="card-product">
-				  <%= image_tag(show.photo, size: "260x180")%>
+				  <%= image_tag(s.photo, size: "260x180")%>
 				  <div class="card-product-infos">
-				    <h5><%= show.title %></h5>
-				    <p><%= show.statement %></p>
+				    <h5><%= s.title %></h5>
+				    <%= link_to "show", show_path(s)%>
+				    <p><%#= show.statement %></p>
 				  </div>
 				</div>
 			<% end %>
-			<% @shows.each do |show| %>
-				<div class="card-product">
-				  <%= image_tag(show.photo, size: "260x180")%>
-				  <div class="card-product-infos">
-				    <h5><%= show.title %></h5>
-				    <p><%= show.statement %></p>
-				  </div>
-				</div>
-			<% end %>
-		  </div>
+		   </div>
 		  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-		  	<% @writing.each do |writing| %>
+		  	<% @writing.each do |write| %>
 		  		<div class="card-writing">
 			  		<div style="text-align: center;">
-			  			<h5><%= writing.title %></h5>
-				  		<%=  writing.publishing_date %>
+			  			<h5><%= write.title %></h5>
+				  		<%=  write.publishing_date %>
 					  	<br>
-					  	from <strong><%=  writing.publisher %></strong>
-					  	<%#=  writing.article %>
+					  	from <strong><%=  write.publisher %></strong>
+					  	<%#=  write.article %>
 			  		</div>
 		  		</div>
 		  	<% end  %>
