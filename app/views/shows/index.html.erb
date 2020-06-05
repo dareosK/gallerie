@@ -1,40 +1,43 @@
 <div class="home-banner">
 </div>
+
 <div class='container'>
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style='padding-left: 10px; padding-right: 10px; margin-top: 50px; margin-bottom: 50px;'>
     <div class="carousel-inner">
-    <div class="carousel-item active carousel-index">
-      <img class="d-block w-100" src="https://images-na.ssl-images-amazon.com/images/I/716CwJWw03L._AC_SL1500_.jpg" alt="First slide">
+      <div class="carousel-item carousel-index active">
+        <%= image_tag(@shows.last.photo, class: 'd-block w-100') %>
+      </div>
+      <% @shows.each do |s| %>
+        <div class="carousel-item carousel-index">
+        <%= image_tag(s.photo, class: 'd-block w-100') %>
+        </div>
+        <% end %>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-    <div class="carousel-item carousel-index">
-      <img class="d-block w-100" src="https://q-cf.bstatic.com/images/hotel/max1024x768/220/220680927.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item carousel-index">
-      <img class="d-block w-100" src="https://www.cavalluna.com/wp-content/uploads/2018/07/Quarter-Horse.jpg" alt="Third slide">
-    </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
   </div>
 </div>
 
-
+<!--
 <div class='container'>
   <div class='masonry-grid'>
     <% @shows.each do |s| %>
       <div class='masonry-grid-item'>
+      <%= link_to show_path(s.id) do %>
         <div class='card-masonry'>
           <%= image_tag(s.photo) %>
         </div>
+        <% end %>
       </div>
     <% end %>
   </div>
 </div>
 
-
+-->
