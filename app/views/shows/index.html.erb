@@ -31,7 +31,7 @@
     <% @shows.each do |s| %>
       <div class='masonry-grid-item'>
         <div class='card-masonry'>
-          <%= image_tag(s.photo) %>
+          <%= cl_image_tag(s.photo.key) %>
         </div>
       </div>
     <% end %>
