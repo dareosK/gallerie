@@ -28,6 +28,8 @@ puts "First User Created"
 oscar = User.create!(
   email: "ovm@gmail.com",
   password: "Secret"
+  bio: "Hi I am from Milano. I have stuidued at 'Kunstakademie Düsseldorf' under Joseph Beuys. He taught us the power of art. This virtual gallery helps me spread my work and fight for a better world."
+
   )
 puts "Second User Created"
 
@@ -126,23 +128,15 @@ show_four.save!
 puts "Maria Secio Show created"
 
 # Show 5
-show_five_img = URI.open("https://coeuretart.com/wp-content/uploads/2018/12/julian_PAINTINGS_r-huile-sur-toile-50x40-cm-2018-%C2%A9-GALERIE-CHLOE-SALGADO-et-Julian-Simon..jpg")
+show_five_img = URI.open("https://www.swr.de/swr2/kunst-und-ausstellung/1579886786342,edward-hopper-fondation-beyeler-110~_v-16x9@2dXL_-77ed5d09bafd4e3cf6a5a0264e5e16ea35f14925.jpg")
 show_five = Show.new(
-    title: "Julian Simon - Overexposure",
-    statement: "In the era of hyper-connectivity, the over exposure and over consumption of images, where millions of photographs are taken per day, most of which are deleted or perhaps never even seen; Julian Simon, expresses his interest in these neglected and forgotten images by transposing them onto canvases in the manner of the great masters.
-
-Taken spontaneously with a disposable camera, the photographs chosen by Julian Simon are often poorly cropped, blurry and overexposed, capturing chromatic aberrations and the occasional distinctive shadow of a finger blocking the camera’s lens.
-
-Once his subject is selected, the artist works in a technique similar to that of fa presto, a practice originated in seventeenth century Italy, painting rapidly to arrive at a spontaneous and expressive result. He prepares his canvas with an imprimatura, or an initial stain of color, that gives his work a certain radiance. Simon then transcribes his photographs without preparatory drawings in multiple thin layers of oil paint.
-
-In the interest of realism and inspired by the praised, limited color palette of Anders Leonard Zorn (1860–1920), the artist employs only seven colors in his works : black, white, ultramarine blue, ochre, burnt Sienna, burnt umber and crimson. These colors allow him to depict the skin tones and lighting that are particularly dear to him.
-
-Julian Simon offers a realistic and offbeat perspective on the Generation Y, immortalizing forgotten carefree and intimate moments on his canvases.",
+    title: "Hopper",
+    statement: "",
     user_id: oscar.id
 )
-show_five.photo.attach(io: show_five_img, filename: 'julian_PAINTINGS_r-huile-sur-toile-50x40-cm-2018-%C2%A9-GALERIE-CHLOE-SALGADO-et-Julian-Simon..jpg', content_type: 'image/jpg')
+show_five.photo.attach(io: show_five_img, filename: '1579886786342,edward-hopper-fondation-beyeler-110~_v-16x9@2dXL_-77ed5d09bafd4e3cf6a5a0264e5e16ea35f14925.jpg', content_type: 'image/jpg')
 show_five.save!
-puts "Julian Simon Show created"
+puts "Hopper Show created"
 
 # Show 6
 show_six_img = URI.open("https://artit.ams3.digitaloceanspaces.com/staging/workspace_images/425_d5a9bb31-b1bc-426e-a405-ca46958c2958_79171376_2496305133947869_947037398255009792_n.jpg")
