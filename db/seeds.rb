@@ -92,7 +92,7 @@ puts "Alec Soth Show created"
 # Show 2
 show_two_img = URI.open("https://news.artnet.com/app/news-upload/2017/06/2004-138-Gedser_A4_440x300mm_LAC-697x1024.jpg")
 show_two = Show.new(
-    title: "Wolfgang Tilmans : Retrospective",
+    title: "Wolfgang Tilmans - Retrospective",
     statement: "This year's big summer exhibition is devoted to the artist Wolfgang Tillmans. It is the first comprehensive engagement with the medium of photography at the Fondation Beyeler, which some time ago added a wonderful group of works by Tillmans to its collection. Around 200 photographic works dating from 1989 to 2017 will be on show from May 28 to October 1, together with a new audiovisual installation.
 Tillmans first made a name for himself in the early 1990s through photographs that have attained iconic status for their evocation of the mood of an entire generation, with its carefree urge for freedom and its desire to seize life’s moments. Soon, however, he widened his focus, experimenting with the means of photography to develop a new visual language. He created his images with and without a camera and also using a photocopier. In addition to traditional genres such as portrait, still life and landscape, the exhibition presents abstract works that play with the limits of the visible. It will show how Tillman’s work is concerned with the creation of images rather than with photography in the conventional sense. The exhibition is being designed in close cooperation with the artist.",
     user_id: oscar.id
@@ -117,7 +117,7 @@ puts "Igor Moritz Show created"
 # Show 4
 show_four_img = URI.open("https://farm1.staticflickr.com/808/26357169967_7a9c66fa6c_b.jpg")
 show_four = Show.new(
-    title: "Maria Secio : Ikigami",
+    title: "Maria Secio - Ikigami",
     statement: "Maria Sécio (b.1994) from Lisbon, Portugal has just finished her undergraduate studies in Cinematography and Photography at Arts University Bournemouth. So far, she took part in two group exhibitions, both where in Bournemouth. Her photographs have been developing from being diarist to a more painterly and romantic exploration of her subject and surroundings.",
     user_id: oscar.id
 )
@@ -147,7 +147,7 @@ puts "Julian Simon Show created"
 # Show 6
 show_six_img = URI.open("https://artit.ams3.digitaloceanspaces.com/staging/workspace_images/425_d5a9bb31-b1bc-426e-a405-ca46958c2958_79171376_2496305133947869_947037398255009792_n.jpg")
 show_six = Show.new(
-    title: "Allistair Walter - Maria",
+    title: "Allistair Walter - Spider",
     statement: "",
     user_id: oscar.id
 )
@@ -180,7 +180,7 @@ puts "Basquiat Show created"
 # Show 9
 show_nine_img = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Ernst_Ludwig_Kirchner_-_KG_Br%C3%BCcke_%28Ausstellungsplakat_der_Galerie_Arnold_in_Dresden%29.jpeg/698px-Ernst_Ludwig_Kirchner_-_KG_Br%C3%BCcke_%28Ausstellungsplakat_der_Galerie_Arnold_in_Dresden%29.jpeg")
 show_nine = Show.new(
-    title: "Basquiat",
+    title: "Die Brücke",
     statement: "",
     user_id: oscar.id
 )
