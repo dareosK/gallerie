@@ -2,15 +2,15 @@
 </div>
 
 <div class='container'>
-  <div id="carouselFeatured" class="carousel slide" data-ride="carousel">
+  <div id="carouselFeatured" class="carousel slide" data-ride="carousel" style='padding-left: 10px; padding-right: 10px; margin-top: 50px; margin-bottom: 50px;'>
     <div class="carousel-inner">
-    <div class="carousel-item active">
+    <div class="carousel-item active carousel-index">
       <img class="d-block w-100" src="https://images-na.ssl-images-amazon.com/images/I/716CwJWw03L._AC_SL1500_.jpg" alt="First slide">
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item carousel-index">
       <img class="d-block w-100" src="https://q-cf.bstatic.com/images/hotel/max1024x768/220/220680927.jpg" alt="Second slide">
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item carousel-index">
       <img class="d-block w-100" src="https://www.cavalluna.com/wp-content/uploads/2018/07/Quarter-Horse.jpg" alt="Third slide">
     </div>
     </div>
@@ -26,13 +26,16 @@
 </div>
 
 
-
 <div class='container'>
   <div class='masonry-grid'>
     <% @shows.each do |s| %>
-      <div class='masonry-grid-item card-masonry'><%= image_tag(s.photo) %></div>
+      <div class='masonry-grid-item'>
+        <div class='card-masonry'>
+          <%= image_tag(s.photo) %>
+        </div>
+      </div>
     <% end %>
-  </dive>
+  </div>
 </div>
 
 
