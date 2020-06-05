@@ -172,7 +172,7 @@ show_seven.save!
 puts "Basquiat Show created"
 
 # Show 9
-show_nine_img = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Ernst_Ludwig_Kirchner_-_KG_Br%C3%BCcke_%28Ausstellungsplakat_der_Galerie_Arnold_in_Dresden%29.jpeg/698px-Ernst_Ludwig_Kirchner_-_KG_Br%C3%BCcke_%28Ausstellungsplakat_der_Galerie_Arnold_in_Dresden%29.jpeg")
+show_nine_img = URI.open("https://res.cloudinary.com/dlf53umtd/image/upload/v1591353171/ek6rtubuesh77l57ejpy00jltujr.jpg")
 show_nine = Show.new(
     title: "Die Brücke",
     statement: "",

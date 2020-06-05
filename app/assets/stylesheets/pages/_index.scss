@@ -41,3 +41,14 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+.carousel-index {
+  height: 300px;
+  img {
+    height: 300px;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+  }
+}
