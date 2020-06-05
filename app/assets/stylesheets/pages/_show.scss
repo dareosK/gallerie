@@ -1,0 +1,12 @@
+.image-show {
+  height: 100vh;
+
+  img {
+    height: 100vh;
+    position: absolute;
+    object-fit: contain;
+    top: 0;
+    left: 0;
+  }
+}
+
