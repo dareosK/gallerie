@@ -23,12 +23,15 @@ mike = User.create!(
     email: "emoellervon@icloud.com",
     password: "Secret"
   )
-puts "First"
+puts "First User Created"
 
 oscar = User.create!(
   email: "ovm@gmail.com",
   password: "Secret"
   )
+puts "Second User Created"
+
+puts "======Users created"
 
 # ============= #
 # WRITING SEEDS #
@@ -40,16 +43,15 @@ Writing.create!([
     publishing_date: DateTime.new(2020,9,14),
     publisher: "New York Times",
     article: "This is a very short article that is just placed here as a placeholder",
-    user_id: User.first.id
+    user_id: oscar.id
   },
   {
     title: "Imagine a magic Tree",
     publishing_date: DateTime.parse("25-09-2020"),
     publisher: "Arts Space",
     article: "And then suddenly someone walked thru the forest and stood in front of this giant tree... A Kauri",
-    user_id: User.first.id
+    user_id: oscar.id
   }])
-puts "Second"
 
 Writing.create!([
   {
@@ -66,11 +68,12 @@ Writing.create!([
     article: "The Wood That Fights Fire... As gold-crazed settlers flocked to the Bay Area in the 19th century, they needed lumber to build their homes and mines. And what better way to get a lot of wood at once than toppling an enormous redwood? Little did they know the wood had a greater legacy in store. In April 1906, San Francisco awoke to a major earthquake. As if the rocking buildings weren’t bad enough, residents were soon battling massive fires that threatened to consume the city. But the city didn’t go up in smoke for one reason: redwoods. Though the fire spread for three days, a curious thing happened when it hit a building made from the mighty tree. While not totally fireproof, the redwood’s low resin content and porous grain allow it to take on moisture, which makes it far more flame-resistant than woods like pine. As one reporter noted, “[I]n all principal directions, the fire was finally stopped in the very midst of frame redwood buildings.” ",
     user_id: oscar.id
   }])
-puts "seeding of stories done"
+puts "======Writings for First User created"
 
 # # ========== #
 # # SHOW SEEDS #
-# # note: each Show needs Panels. Find the iteration for the Panel seeds
+# # note: each Show needs Panels, where Artworks  are displayed.
+# # Find the iteration for the Panel seeds
 # # on the ARTWORK SEEDS section.
 # # ========== #
 
@@ -111,6 +114,81 @@ show_three.photo.attach(io: show_three_img, filename: 'large.jpg', content_type:
 show_three.save!
 puts "Igor Moritz Show created"
 
+# Show 4
+show_four_img = URI.open("https://farm1.staticflickr.com/808/26357169967_7a9c66fa6c_b.jpg")
+show_four = Show.new(
+    title: "Maria Secio : Ikigami",
+    statement: "Maria Sécio (b.1994) from Lisbon, Portugal has just finished her undergraduate studies in Cinematography and Photography at Arts University Bournemouth. So far, she took part in two group exhibitions, both where in Bournemouth. Her photographs have been developing from being diarist to a more painterly and romantic exploration of her subject and surroundings.",
+    user_id: oscar.id
+)
+show_four.photo.attach(io: show_four_img, filename: '26357169967_7a9c66fa6c_b.jpg', content_type: 'image/jpg')
+show_four.save!
+puts "Maria Secio Show created"
+
+# Show 5
+show_five_img = URI.open("https://coeuretart.com/wp-content/uploads/2018/12/julian_PAINTINGS_r-huile-sur-toile-50x40-cm-2018-%C2%A9-GALERIE-CHLOE-SALGADO-et-Julian-Simon..jpg")
+show_five = Show.new(
+    title: "Julian Simon - Overexposure",
+    statement: "In the era of hyper-connectivity, the over exposure and over consumption of images, where millions of photographs are taken per day, most of which are deleted or perhaps never even seen; Julian Simon, expresses his interest in these neglected and forgotten images by transposing them onto canvases in the manner of the great masters.
+
+Taken spontaneously with a disposable camera, the photographs chosen by Julian Simon are often poorly cropped, blurry and overexposed, capturing chromatic aberrations and the occasional distinctive shadow of a finger blocking the camera’s lens.
+
+Once his subject is selected, the artist works in a technique similar to that of fa presto, a practice originated in seventeenth century Italy, painting rapidly to arrive at a spontaneous and expressive result. He prepares his canvas with an imprimatura, or an initial stain of color, that gives his work a certain radiance. Simon then transcribes his photographs without preparatory drawings in multiple thin layers of oil paint.
+
+In the interest of realism and inspired by the praised, limited color palette of Anders Leonard Zorn (1860–1920), the artist employs only seven colors in his works : black, white, ultramarine blue, ochre, burnt Sienna, burnt umber and crimson. These colors allow him to depict the skin tones and lighting that are particularly dear to him.
+
+Julian Simon offers a realistic and offbeat perspective on the Generation Y, immortalizing forgotten carefree and intimate moments on his canvases.",
+    user_id: oscar.id
+)
+show_five.photo.attach(io: show_five_img, filename: 'julian_PAINTINGS_r-huile-sur-toile-50x40-cm-2018-%C2%A9-GALERIE-CHLOE-SALGADO-et-Julian-Simon..jpg', content_type: 'image/jpg')
+show_five.save!
+puts "Julian Simon Show created"
+
+# Show 6
+show_six_img = URI.open("https://artit.ams3.digitaloceanspaces.com/staging/workspace_images/425_d5a9bb31-b1bc-426e-a405-ca46958c2958_79171376_2496305133947869_947037398255009792_n.jpg")
+show_six = Show.new(
+    title: "Allistair Walter - Maria",
+    statement: "",
+    user_id: oscar.id
+)
+show_six.photo.attach(io: show_six_img, filename: '425_d5a9bb31-b1bc-426e-a405-ca46958c2958_79171376_2496305133947869_947037398255009792_n.jpg', content_type: 'image/jpg')
+show_six.save!
+puts "Allistair Walter Show created"
+
+# Show 7
+show_seven_img = URI.open("https://www.stereosis.com/wp-content/uploads/2017/04/Z8-Dareos_Khalili_05.jpg")
+show_seven = Show.new(
+    title: "Home",
+    statement: "Curated by Jacob Aue Sobol, Home contains the work of 10 of the best contemporary Greek Photographers",
+    user_id: oscar.id
+)
+show_seven.photo.attach(io: show_seven_img, filename: 'Z8-Dareos_Khalili_05.jpg', content_type: 'image/jpg')
+show_seven.save!
+puts "Home Show created"
+
+# Show 8
+show_seven_img = URI.open("https://media.mutualart.com/Images//2019_02/25/05/054937678/d7af851f-586c-4882-8bad-7f9ae10e7a3e.Jpeg")
+show_seven = Show.new(
+    title: "Basquiat",
+    statement: "",
+    user_id: oscar.id
+)
+show_seven.photo.attach(io: show_seven_img, filename: 'd7af851f-586c-4882-8bad-7f9ae10e7a3e.Jpeg', content_type: 'image/jpg')
+show_seven.save!
+puts "Basquiat Show created"
+
+# Show 9
+show_nine_img = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Ernst_Ludwig_Kirchner_-_KG_Br%C3%BCcke_%28Ausstellungsplakat_der_Galerie_Arnold_in_Dresden%29.jpeg/698px-Ernst_Ludwig_Kirchner_-_KG_Br%C3%BCcke_%28Ausstellungsplakat_der_Galerie_Arnold_in_Dresden%29.jpeg")
+show_nine = Show.new(
+    title: "Basquiat",
+    statement: "",
+    user_id: oscar.id
+)
+show_nine.photo.attach(io: show_nine_img, filename: '698px-Ernst_Ludwig_Kirchner_-_KG_Br%C3%BCcke_%28Ausstellungsplakat_der_Galerie_Arnold_in_Dresden%29.jpeg', content_type: 'image/jpg')
+show_nine.save!
+puts "Die Brücke Show created"
+
+puts "======Shows created"
 
 
 # # ============= #
@@ -123,7 +201,7 @@ puts "Igor Moritz Show created"
    show_id: Show.first.id
  ])
 end
-puts "Panels for first show created"
+puts "======Panels for first show created"
 
 show_one_artwork_one_img = URI.open("https://photos.lensculture.com/original/963c7429-9d8d-4d4a-b8e9-f5f6f5fcfa61.jpg")
 show_one_artwork_one = Artwork.new(
@@ -218,7 +296,7 @@ show_one_artwork_eight.save!
 # artwork_one.save!
 puts "Alec Soth show artworks done"
 
-
+puts "======Artworks created"
 
 #### PLACEHOLDER FOR SHOW_TWO ARTWORK INSTANCES ####
 
