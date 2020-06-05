@@ -6,7 +6,7 @@ const initMasonry = () => {
   var msnry = new Masonry(elem, {
     // options
     itemSelector: '.masonry-grid-item',
-    gutter: 10
+    /* gutter: 10 */
   });
     imagesLoaded(elem).on('progress', function () {
     // layout Masonry after each image loads
