@@ -4,19 +4,21 @@
 <div class='container'>
   <div id="carouselFeatured" class="carousel slide" data-ride="carousel" style='padding-left: 10px; padding-right: 10px; margin-top: 50px; margin-bottom: 50px;'>
     <div class="carousel-inner">
-      <div class="carousel-item carousel-index active">
+       <div class="carousel-item carousel-index active">
+       <h2 class='featured-exhibitions-title'>Featured Exhibitions</h2>
         <%= image_tag(@shows.last.photo, class: 'd-block w-100') %>
       </div>
       <% @shows.each do |s| %>
         <div class="carousel-item carousel-index">
-        <%= image_tag(s.photo, class: 'd-block w-100') %>
+        <h2 class='featured-exhibitions-title'>Featured Exhibitions</h2>
+            <%= image_tag(s.photo, class: 'd-block w-100') %>
+          </div>
+          <% end %>
         </div>
-        <% end %>
-      </div>
-    <a class="carousel-control-prev" href="#carouselFeatured" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
+      <a class="carousel-control-prev" href="#carouselFeatured" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
     <a class="carousel-control-next" href="#carouselFeatured" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
