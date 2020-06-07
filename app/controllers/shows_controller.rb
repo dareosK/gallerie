@@ -11,6 +11,7 @@ class ShowsController < ApplicationController
 
   def new
     @show = Show.new # make it available for the view
+    authorize @show
   end
 
   def create
