@@ -15,8 +15,8 @@
   </div>
 </div>
 
-	<div class="col-8">
-		<div class="m-3">
+	<!--<div class="col-8"> 
+		<div class="m-3">-->
 
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
 			  <li class="nav-item">
@@ -27,30 +27,38 @@
 			  </li>
 			</ul>
 
-			<div class="tab-content" id="myTabContent">
-  			<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-          <div class='container'>
-            <% @artworks.each do |a| %>
-            <%= cl_image_tag(a.photo.key, transformation: { width: 200, height: 200, crop: 'fill'})%>
-            <% end %>
-          </div>
+			<!-- <div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+					info
 				</div>
-		   </div>
+
+				<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+					stuff
+				</div>
+			</div>-->
+
+		<div class="tab-content" id="myTabContent">
+  		<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class='container'>
+          <% @artworks.each do |a| %>
+          <%= cl_image_tag(a.photo.key, transformation: { width: 200, height: 200, crop: 'fill'})%>
+          <% end %>
+        </div>
+			</div>
 		  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-		  	
-		  		<div class="card-writing">
-			  		<div style="text-align: center;">
+		  	<div class="card-writing">
+			  	<div style="text-align: center;">
 			  			
-					  	<br>
-					  <h1>hello</h1>
-					  	<%#=  write.article %>
-			  		</div>
-		  		</div>
-		  
+					  <br>
+					 <h1>hello</h1>
+					  <%#=  write.article %>
+			  	</div>
+		  	</div>
 		  </div>
 		</div>
-		</div>
+		<!-- </div>
 	</div>
 </div>
-<div class='container'></div>
+<div class='container'></div>-->
+
 
