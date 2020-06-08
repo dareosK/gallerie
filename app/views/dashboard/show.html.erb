@@ -24,6 +24,11 @@
 
 			<div class="tab-content" id="myTabContent">
   			<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+  				<%#= link_to '[+]', new_show_path,  {remote: true, 'data-toggle' =>  'modal', 'data-target' => '#modal-window', class: 'btn btn-primary btn-lg'}  %>
+  				<%  if user_signed_in?%>
+				    <button type="button" class="btn btn-primary btn-lg btn-default" data-toggle="modal" data-target="#newShow">[+]</button>
+				<% end  %>
+  				
   			<% @shows.each do |s| %>
 				<div class="card-product">
 				  <%= image_tag(s.photo, size: "260x180")%>
@@ -52,3 +57,30 @@
 		</div>
 	</div>
 </div>
+
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="newShow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">x</button>
+		<h4 class="modal-title" id="myModalLabel"></h4>
+		</div>
+		<div class="modal-body">
+			<h1>Create a new Show</h1>
+
+			<%= simple_form_for(@show) do |f| %>
+			  <%= f.input :title %>
+			  <%= f.input :photo, as: :file %>
+			<div class="modal-footer">
+			  <%= f.submit class: 'btn btn-primary' %>
+			</div>
+		<% end %>
+    </div>
+  </div>
+</div>
+
+
