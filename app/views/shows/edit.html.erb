@@ -1,13 +1,20 @@
 <h1>Shows#edit</h1>
 <p>Find me in app/views/shows/edit.html.erb</p>
 
-<div class='container'>
-  <div id="poster-display">
-  <%= cl_image_tag(@show.photo.key) %> 
+<div class='container d-flex justify-content-between'>
+  <div id="poster-display" class=''>
+  <%= cl_image_tag(@show.photo.key, transformation: { width: 200, height: 200, crop: 'fill'}) %>
   </div>
-  <div class='row' id='show-title-statement'>
-    <h1>Title</h1>
-    <h3>Here is some placeholder text for the artist statement. Bla bla bla bla bla bla bla. I love Gigi D'Agostino and hope he will become my husband</h3>    
+  <div class='bg-info flex-fill' id='show-title-statement'>
+    <div class='d-flex flex-column align-items-center justify-content-end'>
+      <div>
+        <h1 class='m-2'><%= @show.title %></h1>
+      </div>
+      <div>
+        <p class='m-3'><%= @show.statement %></p>
+      </div>  
+    </div>
+    
   </div>
 </div>
 
