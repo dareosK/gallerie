@@ -1,6 +1,3 @@
-<h1>Shows#edit</h1>
-<p>Find me in app/views/shows/edit.html.erb</p>
-
 <div class='container d-flex justify-content-between'>
   <div id="poster-display" class=''>
   <%= cl_image_tag(@show.photo.key, transformation: { width: 200, height: 200, crop: 'fill'}) %>
@@ -32,14 +29,12 @@
 
 			<div class="tab-content" id="myTabContent">
   			<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-  			
-				<div class="card-product">
-				  
-				  <div class="card-product-infos">
-				  
-				  </div>
+          <div class='container'>
+            <% @artworks.each do |a| %>
+            <%= cl_image_tag(a.photo.key, transformation: { width: 200, height: 200, crop: 'fill'})%>
+            <% end %>
+          </div>
 				</div>
-			
 		   </div>
 		  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 		  	
