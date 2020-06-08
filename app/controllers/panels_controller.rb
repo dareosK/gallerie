@@ -6,6 +6,7 @@ class PanelsController < ApplicationController
   def show
     @panel = Panel.find(params[:id])
     authorize @panel
+    @artworks = @panel.artworks
   end
 
   def create
@@ -21,6 +22,7 @@ class PanelsController < ApplicationController
 
   def edit
     @panel = Panel.find(params[:id])
+    authorize @panel
   end
 
   def update

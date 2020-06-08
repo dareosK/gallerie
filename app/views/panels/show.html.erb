@@ -1,7 +1,6 @@
-<% panels.each do |panel| %>
-  <% panel.each do |artwork| %>
-    <h2>Satement : <%= artwork.statement %></h2>
-  <% end %>
+
+<div class='container'>
+<% @artworks.each do |a| %>
+<%= cl_image_tag(a.photo.key, transformation: { width: 200, height: 200, crop: 'fill'})%>
 <% end %>
-
-
+</div>
