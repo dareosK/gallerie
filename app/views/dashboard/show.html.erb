@@ -2,10 +2,15 @@
 	<div class="col-4">
 		<div class="m-3">
 			<div class="profile">
-				<%=current_user.name %>
-				<img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="photo" style="border-radius: 50%; width:200px; margin-top: 5px;">
-				<%=current_user.email %>
-				<div class="mb-5"><%=current_user.bio %></div>
+				<div class="flex-item"><h5><%=@user.name %></h5></div> 
+				<div class="flex-item"><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="photo" style="border-radius: 50%; width:200px; margin-top: 5px;"></div>
+				<div class="flex-item" style="font-weight: lighter; color: grey; font-size:14px;"><%=@user.bio%></div>
+				<div class="flex-item" style="color:grey">
+					<i class="fab fa-instagram"></i>
+					<i class="fab fa-twitter"></i>
+					<i class="fab fa-facebook-square"></i>
+				</div>
+				<div class="flex-item" style="color:lightgrey"><%=@user.email %></div>
 			</div>
 		</div>
 	</div>
@@ -25,19 +30,22 @@
 			<div class="tab-content" id="myTabContent">
   			<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
   				<%#= link_to '[+]', new_show_path,  {remote: true, 'data-toggle' =>  'modal', 'data-target' => '#modal-window', class: 'btn btn-primary btn-lg'}  %>
-  				<%  if user_signed_in?%>
-				    <button type="button" class="btn btn-primary btn-lg btn-default" data-toggle="modal" data-target="#newShow">[+]</button>
+  				<%  if user_signed_in? %>
+  				<div class="d-flex justify-content-end m-3"><button type="button" class="btn btn-primary btn-lg btn_add_show" data-toggle="modal" data-target="#newShow">[+]</button></div>
 				<% end  %>
   				
   			<% @shows.each do |s| %>
-				<div class="card-product">
-				  <%= image_tag(s.photo, size: "260x180")%>
-				  <div class="card-product-infos">
-				    <h5><%= s.title %></h5>
-				    <%= link_to "show", show_path(s)%>
-				    <p><%#= show.statement %></p>
-				  </div>
-				</div>
+  				<%= link_to show_path(s) do %>
+					<div class="card-product">
+					  <%= image_tag(s.photo, size: "260x180")%>
+					  <div class="card-product-infos">
+					    <h5><%= s.title %></h5>
+					    <p><%#= show.statement %></p>
+					    <%# if (user_signed_in? && (current_user.id == @job.user_id))
+    = link_to "Edit", edit_job_path(@job), class: "btn btn-sm btn-default"%>
+					  </div>
+					</div>
+				<% end %>
 			<% end %>
 		   </div>
 		  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -58,9 +66,6 @@
 	</div>
 </div>
 
-
-<!-- Button trigger modal -->
-
 <!-- Modal -->
 <div class="modal fade" id="newShow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -75,12 +80,14 @@
 			<%= simple_form_for(@show) do |f| %>
 			  <%= f.input :title %>
 			  <%= f.input :photo, as: :file %>
-			<div class="modal-footer">
-			  <%= f.submit class: 'btn btn-primary' %>
-			</div>
-		<% end %>
+				<div class="modal-footer">
+				  <%= f.submit class: 'btn btn-primary' %>
+				</div>
+			<% end %>
     </div>
-  </div>
+  	</div>
+	</div>
 </div>
+
 
 

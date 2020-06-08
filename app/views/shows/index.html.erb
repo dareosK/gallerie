@@ -26,6 +26,12 @@
   </div>
 </div>
 
+<div>
+  <% @users = User.all %>
+    <% @users.each do |u|%>
+    <%= link_to u.email, user_dashboard_path(u)%>
+  <% end %>
+</div>
 
 <div class='container'>
   <div class='masonry-grid potato'>

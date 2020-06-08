@@ -21,13 +21,14 @@ User.destroy_all
 
 mike = User.create!(
     email: "emoellervon@icloud.com",
-    password: "Secret"
+    password: "Secret",
   )
 puts "First User Created"
 
 oscar = User.create!(
-  email: "ovm@gmail.com",
+  email: "rinaldi@gmail.com",
   password: "Secret",
+  name: "Marina Rinaldi",
   bio: "Hi I am from Milano. I have studied at 'Kunstakademie Düsseldorf' under Joseph Beuys. He taught us the power of art. This virtual gallery helps me spread my work and fight for a better world.",
   )
 puts "Second User Created"
