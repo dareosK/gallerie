@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'shows#index'
 
-  get "dashboard", to: "dashboard#show"
+  resources :users, only: [] do 
+    get "dashboard", to: "dashboard#show" 
+  end 
+  
+  root to: 'shows#index'
 
   resources :shows, except: [:new] do
     resources :panels, only: [:create, :index, :show, :update, :destroy]
