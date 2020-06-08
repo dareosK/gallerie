@@ -1,2 +1,14 @@
 <h1>Shows#edit</h1>
 <p>Find me in app/views/shows/edit.html.erb</p>
+
+<div class='container'>
+  <div id="poster-display">
+  <%= cl_image_tag(@show.photo.key) %> 
+  </div>
+  <div class='row' id='show-title-statement'>
+    <h1>Title</h1>
+    <h3>Here is some placeholder text for the artist statement. Bla bla bla bla bla bla bla. I love Gigi D'Agostino and hope he will become my husband</h3>    
+  </div>
+</div>
+
+<div class='container'></div>
