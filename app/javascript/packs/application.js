@@ -28,14 +28,21 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { initMasonry } from '../components/masonry'
+import { initMasonry } from '../components/masonry';
 
 import { initUpdateNavbarOnScroll } from '../components/navbar';
+
+// Sandbox
+import { initDraggable } from '../components/draggable';
+import { initResizeable } from '../components/resizeable';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initUpdateNavbarOnScroll();
   initMasonry();
+  initDraggable();
+  initResizeable();
 });
+
 
