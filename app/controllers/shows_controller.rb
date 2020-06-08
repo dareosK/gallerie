@@ -23,6 +23,7 @@ class ShowsController < ApplicationController
 
   def edit
     @show = Show.find(params[:id])
+    @artworks = @show.artworks
     authorize @show
   end
 
