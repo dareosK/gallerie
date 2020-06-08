@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   get "dashboard", to: "dashboard#show"
 
   resources :shows, except: [:new] do
-    resources :panels, only: [:create, :index, :show, :update, :destroy]
+    resources :panels, only: [:create, :index, :show, :update, :destroy, :edit]
   end
 
-  resources :panels, only: [:create, :index, :show, :update, :destroy] do
+  resources :panels, only: [:create, :index, :show, :update, :destroy, :edit] do
     resources :artworks, only: [:create, :update, :destroy]
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
