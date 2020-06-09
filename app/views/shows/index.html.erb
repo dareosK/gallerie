@@ -1,20 +1,22 @@
 <div class="home-banner">
 </div>
 
+<div style = "text-align: center; width: 100vw; margin-bottom: 3.5rem; margin-top: 3.5rem">
+<h1>Featured Artshows</h1>
+</div>
+
 <div class='container'>
   <div id="carouselFeatured" class="carousel slide" data-ride="carousel" style='padding-left: 10px; padding-right: 10px; margin-top: 50px; margin-bottom: 50px;'>
     <div class="carousel-inner">
       <div class="carousel-item carousel-index active">
-        <h2 class='featured-exhibitions-title'>Featured Exhibitions</h2>
         <%= image_tag(@shows.last.photo, class: 'd-block w-100') %>
       </div>
       <% @shows.each do |s| %>
-      <div class="carousel-item carousel-index">
-        <h2 class='featured-exhibitions-title'>Featured Exhibitions</h2>
+        <div class="carousel-item carousel-index">
         <%= image_tag(s.photo, class: 'd-block w-100') %>
+        </div>
+        <% end %>
       </div>
-      <% end %>
-    </div>
     <a class="carousel-control-prev" href="#carouselFeatured" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
@@ -26,11 +28,15 @@
   </div>
 </div>
 
-<div>
+<!--<div>
   <% @users = User.all %>
     <% @users.each do |u|%>
     <%= link_to u.email, user_dashboard_path(u)%>
   <% end %>
+</div>-->
+
+<div style = "text-align: center; width: 100vw; margin-bottom: 3.5rem; margin-top: 3.5rem">
+<h1>Recent Artshows</h1>
 </div>
 
 <div class='container'>
