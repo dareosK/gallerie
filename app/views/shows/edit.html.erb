@@ -1,5 +1,5 @@
 <div class='container d-flex justify-content-between'>
-  <div id="poster-display" class=''>
+  <div id="poster-display">
   <%= cl_image_tag(@show.photo.key, transformation: { width: 200, height: 200, crop: 'fill'}) %>
   </div>
   <div class='bg-info flex-fill' id='show-title-statement'>
@@ -7,16 +7,15 @@
       <div>
         <h1 class='m-2'><%= @show.title %></h1>
       </div>
+			<div><%= @show.logline %></div>
       <div>
         <p class='m-3'><%= @show.statement %></p>
+				<button type="button" class="btn btn-primary btn-lg btn_add_show" data-toggle="modal" data-target="#showNew">[+]</button>
       </div>  
-    </div>
-    
+    </div> 
   </div>
 </div>
 
-	<!--<div class="col-8"> 
-		<div class="m-3">-->
 
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
 			  <li class="nav-item">
@@ -27,15 +26,7 @@
 			  </li>
 			</ul>
 
-			<!-- <div class="tab-content" id="myTabContent">
-				<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-					info
-				</div>
 
-				<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-					stuff
-				</div>
-			</div>-->
 
 		<div class="tab-content" id="myTabContent">
   		<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -50,15 +41,34 @@
 			  	<div style="text-align: center;">
 			  			
 					  <br>
-					 <h1>hello</h1>
-					  <%#=  write.article %>
+					 <h1>hello</h1>  
 			  	</div>
 		  	</div>
 		  </div>
 		</div>
-		<!-- </div>
+
+<!--modal -->
+		<div class="modal fade" id="showNew" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">x</button>
+		<h4 class="modal-title" id="myModalLabel"></h4>
+		</div>
+		<div class="modal-body">
+			<h1>Create a new Show</h1>
+
+			<%= simple_form_for @show do |f| %>
+			  <%= f.input :title %>
+			  <%= f.input :photo, as: :file, required: false %>
+				<%= f.input :logline, required: false %>
+				<div class="modal-footer">
+				  <%= f.submit class: 'btn btn-primary' %>
+				</div>
+			<% end %>
+    </div>
+  	</div>
 	</div>
 </div>
-<div class='container'></div>-->
-
+	
 
