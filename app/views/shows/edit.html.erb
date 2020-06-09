@@ -38,7 +38,9 @@
 			</div>
 		  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 			<div class="container">
-			<div class="add-new"></div>
+			  <%= link_to show_panels_path(@show), method: :post do %>
+				  <div class="add-new"></div>
+					<% end %>
 				<% @panels.each do |p| %>
 				<%= cl_image_tag(p.wall.key, transformation: { width: 200, height: 200, crop: 'fill'}) %>
 				<% end %>

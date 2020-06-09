@@ -1,3 +1,5 @@
+require "open-uri"
+
 class PanelsController < ApplicationController
   def index
     @panels = policy_scope(Panel).order(created_at: :desc)
@@ -9,11 +11,21 @@ class PanelsController < ApplicationController
     @artworks = @panel.artworks
   end
 
-  def create
+  def new
+    @show = Show.find(params[:show_id])
     @panel = Panel.new
-    @panel.user = current_user # to allow current user to create
+    authorize @panel
+  end
+  
+
+  def create
+    @show = Show.find(params[:show_id])
+    wall_panel_img = URI.open("https://res.cloudinary.com/do3fkzte4/image/upload/v1591694256/wall_1_xvvizq.jpg")
+    @panel = Panel.new
+    @panel.wall.attach(io: wall_panel_img, filename: 'wall_1_xvvizq.jpg', content_type: 'image/jpg')
+    @panel.show = @show
     if @panel.save!
-      redirect_to panel_path(@panel)
+      redirect_to edit_show_path(@show, anchor: "profile")
     else
       render "new"
     end
