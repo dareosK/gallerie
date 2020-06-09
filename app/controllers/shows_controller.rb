@@ -24,6 +24,7 @@ class ShowsController < ApplicationController
     @show = Show.find(params[:id])
     @artworks = @show.artworks
     @panels = @show.panels
+    @panel = Panel.new
     authorize @show
   end
 
