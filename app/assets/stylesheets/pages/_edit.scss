@@ -1,0 +1,10 @@
+.panny {
+	border: 2px solid rgba(114, 186, 94, 0.1);
+	height: 100vh;
+	width: calc(90% / 3 * 2);
+	position: -webkit-sticky;
+  position: fixed;
+  top: 3rem;
+  justify-content: right;
+}
+

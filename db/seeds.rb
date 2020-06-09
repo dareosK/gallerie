@@ -172,7 +172,7 @@ show_seven.save!
 puts "Basquiat Show created"
 
 # Show 9
-show_nine_img = URI.open("https://res.cloudinary.com/dlf53umtd/image/upload/v1591353171/ek6rtubuesh77l57ejpy00jltujr.jpg")
+show_nine_img = URI.open("https://res.cloudinary.com/dlf53umtd/image/upload/v1591366390/gzp248yk1knrckk9wy3qt2yxe5d1.jpg")
 show_nine = Show.new(
     title: "Die Brücke",
     statement: "",
