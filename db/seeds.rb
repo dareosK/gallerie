@@ -161,18 +161,22 @@ show_seven.save!
 puts "Home Show created"
 
 # Show 8
-show_seven_img = URI.open("https://media.mutualart.com/Images//2019_02/25/05/054937678/d7af851f-586c-4882-8bad-7f9ae10e7a3e.Jpeg")
-show_seven = Show.new(
+show_eight_img = URI.open("https://media.mutualart.com/Images//2019_02/25/05/054937678/d7af851f-586c-4882-8bad-7f9ae10e7a3e.Jpeg")
+show_eight = Show.new(
     title: "Basquiat",
     statement: "",
     user_id: oscar.id
 )
-show_seven.photo.attach(io: show_seven_img, filename: 'd7af851f-586c-4882-8bad-7f9ae10e7a3e.Jpeg', content_type: 'image/jpg')
-show_seven.save!
+show_eight.photo.attach(io: show_eight_img, filename: 'd7af851f-586c-4882-8bad-7f9ae10e7a3e.Jpeg', content_type: 'image/jpg')
+show_eight.save!
 puts "Basquiat Show created"
 
 # Show 9
+<<<<<<< HEAD
 show_nine_img = URI.open("https://res.cloudinary.com/dlf53umtd/image/upload/v1591366390/gzp248yk1knrckk9wy3qt2yxe5d1.jpg")
+=======
+show_nine_img = URI.open("https://images.unsplash.com/photo-1520758594221-872948699332?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+>>>>>>> 2b29707ffbcb4c924c479baea62f7b251e2cb498
 show_nine = Show.new(
     title: "Die Brücke",
     statement: "",
@@ -184,17 +188,30 @@ puts "Die Brücke Show created"
 
 puts "======Shows created"
 
+## panel image link
+wall_panel_img = URI.open("https://res.cloudinary.com/do3fkzte4/image/upload/v1591694256/wall_1_xvvizq.jpg")
+##
 
 # # ============= #
 # # ARTWORK SEEDS #
 # # ============= #
 
 # Artworks Show 1
-4.times do
+
    Panel.create!([
    show_id: Show.first.id
  ])
-end
+
+panel_one = Panel.first 
+panel_one.wall.attach(io: wall_panel_img, filename: 'wall_1_xvvizq.jpg', content_type: 'image/jpg')
+panel_one.save!
+
+# panels = Panel.all
+
+# panels.each do |p| 
+#     p.wall.attach(io: wall_panel_img, filename: 'wall_1_xvvizq.jpg', content_type: 'image/jpg')
+#     p.save!
+# end
 puts "======Panels for first show created"
 
 show_one_artwork_one_img = URI.open("https://photos.lensculture.com/original/963c7429-9d8d-4d4a-b8e9-f5f6f5fcfa61.jpg")

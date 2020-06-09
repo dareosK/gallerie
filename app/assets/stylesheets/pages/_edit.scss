@@ -1,10 +1,17 @@
 .panny {
-	border: 2px solid rgba(114, 186, 94, 0.1);
+	width: calc(85% / 3 * 2);
 	height: 100vh;
-	width: calc(90% / 3 * 2);
 	position: -webkit-sticky;
   position: fixed;
   top: 3rem;
   justify-content: right;
+  padding: 10px;
 }
+
+.grid {
+	display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+
 
