@@ -9,6 +9,8 @@ class PanelsController < ApplicationController
     @panel = Panel.find(params[:id])
     authorize @panel
     @artworks = @panel.artworks
+    wall_panel_img = URI.open("https://res.cloudinary.com/do3fkzte4/image/upload/v1591694256/wall_1_xvvizq.jpg")
+    @panel.wall.attach(io: wall_panel_img, filename: 'wall_1_xvvizq.jpg', content_type: 'image/jpg')
   end
 
   def new
@@ -16,7 +18,6 @@ class PanelsController < ApplicationController
     @panel = Panel.new
     authorize @panel
   end
-  
 
   def create
     @show = Show.find(params[:show_id])

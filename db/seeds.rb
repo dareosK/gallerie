@@ -68,7 +68,7 @@ Writing.create!([
     publishing_date: DateTime.parse("25-09-2020"),
     publisher: "Arts Space",
     article: "The Wood That Fights Fire... As gold-crazed settlers flocked to the Bay Area in the 19th century, they needed lumber to build their homes and mines. And what better way to get a lot of wood at once than toppling an enormous redwood? Little did they know the wood had a greater legacy in store. In April 1906, San Francisco awoke to a major earthquake. As if the rocking buildings weren’t bad enough, residents were soon battling massive fires that threatened to consume the city. But the city didn’t go up in smoke for one reason: redwoods. Though the fire spread for three days, a curious thing happened when it hit a building made from the mighty tree. While not totally fireproof, the redwood’s low resin content and porous grain allow it to take on moisture, which makes it far more flame-resistant than woods like pine. As one reporter noted, “[I]n all principal directions, the fire was finally stopped in the very midst of frame redwood buildings.” ",
-    user_id: oscar.id
+    user_id: mike.id
   }])
 puts "======Writings for First User created"
 
@@ -143,7 +143,7 @@ show_six_img = URI.open("https://artit.ams3.digitaloceanspaces.com/staging/works
 show_six = Show.new(
     title: "Allistair Walter - Spider",
     statement: "",
-    user_id: oscar.id
+    user_id: mike.id
 )
 show_six.photo.attach(io: show_six_img, filename: '425_d5a9bb31-b1bc-426e-a405-ca46958c2958_79171376_2496305133947869_947037398255009792_n.jpg', content_type: 'image/jpg')
 show_six.save!
@@ -154,7 +154,7 @@ show_seven_img = URI.open("https://www.stereosis.com/wp-content/uploads/2017/04/
 show_seven = Show.new(
     title: "Home",
     statement: "Curated by Jacob Aue Sobol, Home contains the work of 10 of the best contemporary Greek Photographers",
-    user_id: oscar.id
+    user_id: mike.id
 )
 show_seven.photo.attach(io: show_seven_img, filename: 'Z8-Dareos_Khalili_05.jpg', content_type: 'image/jpg')
 show_seven.save!
@@ -165,7 +165,7 @@ show_eight_img = URI.open("https://media.mutualart.com/Images//2019_02/25/05/054
 show_eight = Show.new(
     title: "Basquiat",
     statement: "",
-    user_id: oscar.id
+    user_id: mike.id
 )
 show_eight.photo.attach(io: show_eight_img, filename: 'd7af851f-586c-4882-8bad-7f9ae10e7a3e.Jpeg', content_type: 'image/jpg')
 show_eight.save!
@@ -176,7 +176,7 @@ show_nine_img = URI.open("https://res.cloudinary.com/dlf53umtd/image/upload/v159
 show_nine = Show.new(
     title: "Die Brücke",
     statement: "",
-    user_id: oscar.id
+    user_id: mike.id
 )
 show_nine.photo.attach(io: show_nine_img, filename: '698px-Ernst_Ludwig_Kirchner_-_KG_Br%C3%BCcke_%28Ausstellungsplakat_der_Galerie_Arnold_in_Dresden%29.jpeg', content_type: 'image/jpg')
 show_nine.save!
