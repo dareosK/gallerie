@@ -1,18 +1,14 @@
-<div class="container d-flex mt-5">
-	<div class="col-8">
-		<div class="m-2">
-			<div class="panny">
-				Here comes Panel with Drag n Drop function
-			</div>
+<div class="container-fluid d-flex mt-5">
+	<div class="col-8 m-2">
+		<div class="panny ml-2">
+			<% cl_image_tag(@panel.wall.key, transformation: { width: 400, height: 400, crop: 'fill'} )%>
 		</div>
 	</div>
-	<div class="col-2-2">
-		<div class="m-2">
-			<% @artworks.each do |a| %>
-				<div class="flex-item">
-					<%= cl_image_tag(a.photo.key, transformation: { width: 100, height: 100, crop: 'fill'})%>
-				</div>
-			<% end %>
-		</div>
+	<div class="col-4 m-2 grid">
+		<% @artworks.each do |a| %>
+				<%= cl_image_tag(a.photo.key, transformation: { width: 100, height: 100, crop: 'fit'})%>
+		<% end %>
 	</div>
 </div>
+
+<!-- ticket 
