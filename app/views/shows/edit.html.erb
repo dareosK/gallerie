@@ -37,15 +37,14 @@
         </div>
 			</div>
 		  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-		  	<div class="card-writing">
-			  	<div style="text-align: center;">
-			  			<% @panels.each do |p| %>
-							<%= cl_image_tag(p.wall.key, transformation: { width: 200, height: 200, crop: 'fill'}) %>
-							<% end %>
-			  	</div>
-		  	</div>
-		  </div>
-		</div>
+			<div class="container">
+			<div class="add-new"></div>
+				<% @panels.each do |p| %>
+				<%= cl_image_tag(p.wall.key, transformation: { width: 200, height: 200, crop: 'fill'}) %>
+				<% end %>
+			</div>
+	  </div>
+	</div>
 
 <!--modal -->
 		<div class="modal fade" id="showNew" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
