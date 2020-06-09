@@ -22,10 +22,16 @@ $headers-font: "Proxima Nova Extra Condensed Bold ", "Helvetica", "sans-serif";
 // $my-font: "Font Name";
 
 // define the fonts as variables
-h1{
+
+h1, h2, h3 {
   font-family: proxima-nova-extra-condensed, sans-serif;
-  font-size: 40px;
   font-weight: 800 !important;
   font-style: normal;
   color: black !important;
+}
+
+body {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400 !important;
+  font-style: normal;
 }
