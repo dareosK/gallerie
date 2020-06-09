@@ -31,6 +31,7 @@
 		<div class="tab-content" id="myTabContent">
   		<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
         <div class='container'>
+				  <button type="button" data-toggle="modal" data-target="#artworkNew"><div class='add-new-artwork'></div></button>
           <% @artworks.each do |a| %>
           <%= cl_image_tag(a.photo.key, transformation: { width: 200, height: 200, crop: 'fill'})%>
           <% end %>
@@ -72,4 +73,31 @@
 	</div>
 </div>
 	
+
+	<!-- modal for artowrks-->
+
+		<div class="modal fade" id="artworkNew" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">x</button>
+		<h4 class="modal-title" id="myModalLabel"></h4>
+		</div>
+		<div class="modal-body">
+			<h1 class>Add an artwork</h1>
+
+			<%= simple_form_for [@shows_panel, @artwork] do |f| %>
+			  <%= f.input :title %>
+			  <%= f.input :photo, as: :file %>
+				<%= f.input :artist %>
+				<%= f.input :description %>
+				<div class="modal-footer">
+				  <%= f.submit class: 'btn btn-primary' %>
+				</div>
+			<% end %>
+    </div>
+  	</div>
+	</div>
+</div>
+
 

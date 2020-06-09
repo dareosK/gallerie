@@ -22,6 +22,8 @@ class ShowsController < ApplicationController
 
   def edit
     @show = Show.find(params[:id])
+    @shows_panel = @show.panels.first
+    @artwork = Artwork.new
     @artworks = @show.artworks
     @panels = @show.panels
     @panel = Panel.new
