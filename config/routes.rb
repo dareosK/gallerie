@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   root to: 'shows#index'
 
   resources :shows, except: [:new] do
-    resources :panels, only: [:create, :index, :show, :update, :destroy, :edit]
+    resources :panels, only: [:create, :index, :show, :update, :destroy, :edit, :new]
   end
 
   resources :panels, only: [:create, :index, :show, :update, :destroy, :edit] do
