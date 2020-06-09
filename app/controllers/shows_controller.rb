@@ -27,6 +27,14 @@ class ShowsController < ApplicationController
   end
 
   def update
+    @show = Show.find(params[:id])
+    authorize @show
+    
+    if @show.update(show_params)
+      redirect_to edit_show_path(@show)
+    else
+      render "new"
+    end
   end
 
   def destroy
@@ -35,6 +43,6 @@ class ShowsController < ApplicationController
   private
 
   def show_params
-    params.require(:show).permit(:title, :statement, :photo)
+    params.require(:show).permit(:title, :statement, :photo, :logline)
   end
 end
