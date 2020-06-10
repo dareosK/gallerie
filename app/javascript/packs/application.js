@@ -33,6 +33,7 @@ import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { initDraggable } from '../components/draggable';
 import { initResizeable } from '../components/resizeable';
 
+
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
