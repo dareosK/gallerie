@@ -1,6 +1,6 @@
 .footer {
   margin-top: 18px;
-  background-color: #0C0C0C;
+  background-color: white;
   width: 100%;
   
   bottom: 0;
@@ -10,7 +10,10 @@
   text-align: center;
 }
 
-.icon {
-  text-align: center;;
-  background-color: white;
+.fab {
+  text-align: center;
+  color: black;
+  &:hover {
+  	color: black;
+  }
 }
