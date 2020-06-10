@@ -1,0 +1,8 @@
+<div class="m-5 d-flex">
+	<div class="flex-item"><h5><%= @writing.title %></h5></div>
+	<div class="flex-item"><%=  @writing.publishing_date %>
+	from <strong><%=  @writing.publisher %></strong></div>
+	<br>
+	<div class="flex-item article"><%=  @writing.article %></div>
+	<div class="flex-item"><%= link_to "back", user_dashboard_path(:user_id) %></div>
+</div>

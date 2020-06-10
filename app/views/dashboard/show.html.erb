@@ -36,12 +36,12 @@
 					<% end  %>
 
   			<% @shows.each do |s| %>
-  				<%= link_to show_path(s) do %>
+  				<%= link_to edit_show_path(s) do %>
 					<div class="card-product">
 					  <%= image_tag(s.photo, size: "260x180")%>
 					  <div class="card-product-infos">
 					    <h5><%= s.title %></h5>
-					    <p><%#= show.statement %></p>
+					    <p><%= s.logline %></p>
 					    <%# if (user_signed_in? && (current_user.id == @job.user_id))
     = link_to "Edit", edit_job_path(@job), class: "btn btn-sm btn-default"%>
 					  </div>
@@ -57,8 +57,9 @@
 				  		<%=  write.publishing_date %>
 					  	<br>
 					  	from <strong><%=  write.publisher %></strong>
-					  	<%#=  write.article %>
+					  	<%=  write.article %>
 			  		</div>
+			  		<%= link_to "Read article", writing_path(write) %>
 		  		</div>
 		  		<% end  %>
 		  	</div>
