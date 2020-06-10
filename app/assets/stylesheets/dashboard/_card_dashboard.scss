@@ -102,5 +102,14 @@ h5, p {
 }
 
 .link-font {
-  font-style:$body-font;
+  font-family: $body-font;
+}
+
+.biography {
+  font-family: $body-font;
+  width: 200px;
+  text-align: left; 
+  text-align: justify; 
+  color: grey; font-size:14px; 
+  margin: 8px auto;
 }
