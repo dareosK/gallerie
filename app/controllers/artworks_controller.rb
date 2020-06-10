@@ -1,9 +1,12 @@
 class ArtworksController < ApplicationController
-
-  def new
-    
+  def new    
   end
 
+  def update
+    @artwork = Artwork.find(params[:id])
+    @artwork.update(artoworks_params)
+  end
+  
   def create 
     @panel = Panel.find(params[:panel_id])
     @show = @panel.show
@@ -20,10 +23,9 @@ class ArtworksController < ApplicationController
   def destroy
   end
 
-    private
+  private
 
-  def art_params
-    params.require(:artwork).permit(:title, :description, :photo, :artist)
+  def artworks_params
+    params.require(:artwork).permit(:title, :artist, :description, :x, :y, :width)
   end
-  
 end

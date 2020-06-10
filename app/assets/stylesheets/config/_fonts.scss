@@ -22,10 +22,49 @@ $headers-font: "Proxima Nova Extra Condensed Bold ", "Helvetica", "sans-serif";
 // $my-font: "Font Name";
 
 // define the fonts as variables
-h1{
+
+h1 {
   font-family: proxima-nova-extra-condensed, sans-serif;
-  font-size: 40px;
   font-weight: 800 !important;
+  font-size: 40px !important;
   font-style: normal;
   color: black !important;
+}
+
+h2 {
+  font-family: proxima-nova-extra-condensed, sans-serif;
+  font-weight: 800 !important;
+  font-size: 33px !important;
+  font-style: normal;
+  color: black !important;
+}
+
+h3 {
+  font-family: proxima-nova-extra-condensed, sans-serif;
+  font-weight: 800 !important;
+  font-size: 24px !important;
+  font-style: normal;
+  color: black !important;
+}
+
+h4 {
+  font-family: proxima-nova-extra-condensed, sans-serif;
+  font-weight: 800 !important;
+  font-size: 20px !important;
+  font-style: normal;
+  color: black !important;
+}
+
+h5 {
+  font-family: proxima-nova-extra-condensed, sans-serif;
+  font-weight: 800 !important;
+  font-size: 16px !important;
+  font-style: normal;
+  color: black;
+}
+
+p {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400 !important;
+  font-style: normal;
 }
