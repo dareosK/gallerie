@@ -1,16 +1,16 @@
 <div class='container d-flex justify-content-between'>
   <div id="poster-display">
-  <%= cl_image_tag(@show.photo.key, transformation: { width: 200, height: 200, crop: 'fill'}) %>
+  <%= cl_image_tag(@show.photo.key, transformation: { width: 200, height: 200, crop: 'fit'}) %>
   </div>
   <div class='bg-info flex-fill' id='show-title-statement'>
-    <div class='d-flex flex-column align-items-center justify-content-end'>
+    <div class='d-flex flex-column align-items-center justify-content-center'>
       <div>
         <h1 class='m-2'><%= @show.title %></h1>
       </div>
 			<div><%= @show.logline %></div>
       <div>
-        <p class='m-3'><%= @show.statement %></p>
-				<button type="button" class="btn btn-primary btn-lg btn_add_show" data-toggle="modal" data-target="#showNew">[+]</button>
+        <p class='m-3'><%#= @show.statement %></p>
+				<button type="button" class="btn btn-primary btn-lg btn_add_show" data-toggle="modal" data-target="#showNew">edit</button>
       </div>  
     </div> 
   </div>
@@ -44,6 +44,7 @@
 				  <div class="add-new"></div>
 					<% end %>
 				<% @panels.each do |p| %>
+				<%= link_to "edit", show_panel_path(p)  %>
 				<%= cl_image_tag(p.wall.key, transformation: { width: 200, height: 200, crop: 'fill'}) %>
 				<% end %>
 			</div>
