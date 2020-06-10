@@ -51,7 +51,9 @@ Writing.create!([
     title: "Imagine a magic Tree",
     publishing_date: DateTime.parse("25-09-2020"),
     publisher: "Arts Space",
-    article: "And then suddenly someone walked thru the forest and stood in front of this giant tree... A Kauri",
+    article: "And then suddenly someone walked thru the forest and stood in front of this giant tree... A Kauri. The sun was baking the surrounding trees. A creek gently rippled across the glade. More than 50 scientists, activists, artists and Māori elders were gathered to share knowledge and inspiration on how to save an iconic tree species, kauri, from a lethal pathogen, Phytophthora agathidicida.
+
+Elder Tohe Ashby had just finished a presentation on the kinship between the kauri and whales. Ashby had recently returned from Taranaki province, where a pod of sperm whales had been beached. In his words, they had sacrificed themselves after hearing the agony of their kauri brethren, and he had traveled there to recover their remains. Now, their bones would be ground up and used in a potion to heal the trees. Despite centuries of colonization, finding Māori culture in New Zealand takes no effort. All rugby games start with the traditional war dance haka. Māori language is mixed into everyday speech, and elements of their art are ubiquitous. However, marginalization is still a fact of the day, and cross-cultural collaboration is anything but frictionless. Spending a year reporting on Māori influence on conservation work, I found myself wading into a scene rife with conflict. Eventually, though, the conflict also struck me as a sign of vigor.",
     user_id: oscar.id
   }])
 
