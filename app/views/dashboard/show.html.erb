@@ -4,11 +4,8 @@
 			<div class="profile">
 				<div class="flex-item"><h3><%=@user.name %></h3></div> 
 				<div class="flex-item"><img src="https://source.unsplash.com/0G2ZxV31kk4" alt="photo" style="width:200px; margin-top: 5px; margin-bottom: 8px;"></div>
-				<div class="flex-item"><h4>Profile</h4></div>
-        <div class="flex-item" style="text-align: left; color: grey; font-size:14px; margin-bottom: 8px; margin-top: 8px;"><%=@user.bio%></div>
-        <div class="flex-item"><h4>Email</h4></div>
-        <div class="flex-item" style="color:lightgrey"><%=@user.email %></div>
-				<div class="flex-item"><h4>Social Media</h4></div>
+        <div class="flex-item biography"><%=@user.bio%></div>
+        <div class="flex-item link-font" style="color:grey; margin-top:20px;"><%=@user.email %></div>
         <div class="flex-item" style="color:grey">
 					<i class="fab fa-instagram"></i>
 					<i class="fab fa-twitter"></i>
@@ -27,7 +24,7 @@
 			    <a class="nav-link active link-font" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" style="color:black;">Shows</a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" style="color:black">Writings</a>
+			    <a class="nav-link link-font" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" style="color:black">Writings</a>
 			  </li>
 			</ul>
 
