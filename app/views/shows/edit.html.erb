@@ -35,9 +35,10 @@
           <% @artworks.each do |a| %>
           <%= cl_image_tag(a.photo.key, transformation: { width: 200, height: 200, crop: 'fill'})%>
           <% end %>
-        </div>
-			</div>
-		  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        	</div>
+		</div>
+
+		<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 			<div class="container">
 			  <%= link_to show_panels_path(@show), method: :post do %>
 				  <div class="add-new"></div>
@@ -46,10 +47,10 @@
 				<%= cl_image_tag(p.wall.key, transformation: { width: 200, height: 200, crop: 'fill'}) %>
 				<% end %>
 			</div>
-	  </div>
+	  	</div>
 	</div>
 
-<!--modal -->
+<!--modal for show-cover -->
 		<div class="modal fade" id="showNew" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
