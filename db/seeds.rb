@@ -198,13 +198,13 @@ wall_panel_img = URI.open("https://res.cloudinary.com/do3fkzte4/image/upload/v15
    show_id: Show.first.id
  ])
 
-panel_one = Panel.first 
+panel_one = Panel.first
 panel_one.wall.attach(io: wall_panel_img, filename: 'wall_1_xvvizq.jpg', content_type: 'image/jpg')
 panel_one.save!
 
 # panels = Panel.all
 
-# panels.each do |p| 
+# panels.each do |p|
 #     p.wall.attach(io: wall_panel_img, filename: 'wall_1_xvvizq.jpg', content_type: 'image/jpg')
 #     p.save!
 # end
@@ -216,6 +216,9 @@ show_one_artwork_one = Artwork.new(
     show_id: Show.first.id,
     panel_id: Panel.first.id,
     user_id: User.first.id,
+    width: 200,
+    x: 300,
+    y: 300,
 )
 show_one_artwork_one.photo.attach(io: show_one_artwork_one_img, filename: '963c7429-9d8d-4d4a-b8e9-f5f6f5fcfa61.jpg', content_type: 'image/jpg')
 show_one_artwork_one.save!
@@ -226,6 +229,9 @@ show_one_artwork_two = Artwork.new(
     show_id: Show.first.id,
     panel_id: Panel.first.id,
     user_id: User.first.id,
+    width: 200,
+    x: 300,
+    y: 300,
 )
 show_one_artwork_two.photo.attach(io: show_one_artwork_two_img, filename: 'e278964e-f804-42fb-b560-c81dcb22a36a.jpg', content_type: 'image/jpg')
 show_one_artwork_two.save!
@@ -236,6 +242,9 @@ show_one_artwork_three = Artwork.new(
     show_id: Show.first.id,
     panel_id: Panel.first.id,
     user_id: User.first.id,
+    width: 200,
+    x: 300,
+    y: 300,
 )
 show_one_artwork_three.photo.attach(io: show_one_artwork_three_img, filename: '10054579-e3a4-49b0-8c68-6f7a6b964088.jpg', content_type: 'image/jpg')
 show_one_artwork_three.save!
@@ -246,6 +255,9 @@ show_one_artwork_four = Artwork.new(
     show_id: Show.first.id,
     panel_id: Panel.first.id,
     user_id: User.first.id,
+    width: 200,
+    x: 300,
+    y: 300,
 )
 show_one_artwork_four.photo.attach(io: show_one_artwork_four_img, filename: '180ebb17-5cbb-4e0a-9f83-274d82369a90.jpg', content_type: 'image/jpg')
 show_one_artwork_four.save!
@@ -256,6 +268,9 @@ show_one_artwork_five = Artwork.new(
     show_id: Show.first.id,
     panel_id: Panel.first.id,
     user_id: User.first.id,
+    width: 200,
+    x: 300,
+    y: 300,
 )
 show_one_artwork_five.photo.attach(io: show_one_artwork_five_img, filename: 'e819b04f-66e4-4514-83aa-77d1f2fa4710.jpg', content_type: 'image/jpg')
 show_one_artwork_five.save!
@@ -266,6 +281,9 @@ show_one_artwork_six = Artwork.new(
     show_id: Show.first.id,
     panel_id: Panel.first.id,
     user_id: User.first.id,
+    width: 200,
+    x: 300,
+    y: 300,
 )
 show_one_artwork_six.photo.attach(io: show_one_artwork_six_img, filename: 'bc2db11c-8a44-40f5-aae0-93fe14a95c3b.jpg', content_type: 'image/jpg')
 show_one_artwork_six.save!
@@ -276,6 +294,9 @@ show_one_artwork_seven = Artwork.new(
     show_id: Show.first.id,
     panel_id: Panel.first.id,
     user_id: User.first.id,
+    width: 200,
+    x: 300,
+    y: 300,
 )
 show_one_artwork_seven.photo.attach(io: show_one_artwork_seven_img, filename: '64c023d1-6fc8-4a83-bc59-ed4420c129e8.jpg', content_type: 'image/jpg')
 show_one_artwork_seven.save!
@@ -286,6 +307,9 @@ show_one_artwork_eight = Artwork.new(
     show_id: Show.first.id,
     panel_id: Panel.first.id,
     user_id: User.first.id,
+    width: 200,
+    x: 300,
+    y: 300,
 )
 show_one_artwork_eight.photo.attach(io: show_one_artwork_eight_img, filename: 'fedce6c0-6de8-4c76-a879-2a7217db5c03.jpg', content_type: 'image/jpg')
 show_one_artwork_eight.save!
