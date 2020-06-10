@@ -16,9 +16,12 @@
               <div class="resize-icon" style=" width:20px; height:20px; background-color: gray; position: absolute; bottom: 0; right: 0;"></div>
             </div>
 					  <div style="display: none">
-						  <%= simple_form_for [@panel, panel_artwork], remote: true, html: { class: 'coordinate-form'} do |f| %>
-							  <%= f.input :x, as: :hidden, input_html: { class: 'coordinate-form-x'} %>
-								<%= f.input :y, as: :hidden, input_html: { class: 'coordinate-form-y' } %>
+						<%= form_with(model: [ @panel, panel_artwork]) do |f| %>
+						<%= f.text_field :x, as: :hidden, class: 'coordinate-form-x' %>
+						<%= f.text_field :y, as: :hidden, class: 'coordinate-form-y'  %>
+						  <%#= simple_form_for [@panel, panel_artwork], remote: true, html: { class: 'coordinate-form' } do |f| %>
+							  <%#= f.input :x, as: :hidden, input_html: { class: 'coordinate-form-x'} %>
+								<%#= f.input :y, as: :hidden, input_html: { class: 'coordinate-form-y' } %>
 								<%= f.submit as: :hidden, class: 'coordinate-form-submit' %>
 						  <% end %>
 						</div>
