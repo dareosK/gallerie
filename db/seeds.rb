@@ -1,13 +1,11 @@
 require "date"
 require "open-uri"
 
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+# =========================== #
+# Destroys pre-existing seeds #
+# =========================== #
+
 Artwork.destroy_all
 Panel.destroy_all
 Show.destroy_all
@@ -28,8 +26,8 @@ puts "First User Created"
 oscar = User.create!(
   email: "rinaldi@gmail.com",
   password: "Secret",
-  name: "Marina Rinaldi",
-  bio: "Hi I am from Milano. I have studied at 'Kunstakademie Düsseldorf' under Joseph Beuys. He taught us the power of art. This virtual gallery helps me spread my work and fight for a better world.",
+  name: "Dareos Khalili",
+  bio: "Dareos has studied at 'Kunstakademie Düsseldorf' under Joseph Beuys. His curational work revolves around the absurdity of human constracts.",
   )
 puts "Second User Created"
 
@@ -60,7 +58,7 @@ Writing.create!([
     title: "Creative Mushroom",
     publishing_date: DateTime.new(2020,9,14),
     publisher: "Aesthetica",
-    article: "Do you know Alice and the wonderland? Alice sits on a riverbank on a warm summer day, drowsily reading over her sister’s shoulder, when she catches sight of a White Rabbit in a waistcoat running by her. The White Rabbit pulls out a pocket watch, exclaims that he is late, and pops down a rabbit hole.", 
+    article: "Do you know Alice and the wonderland? Alice sits on a riverbank on a warm summer day, drowsily reading over her sister’s shoulder, when she catches sight of a White Rabbit in a waistcoat running by her. The White Rabbit pulls out a pocket watch, exclaims that he is late, and pops down a rabbit hole.",
     user_id: oscar.id
   },
   {

@@ -33,7 +33,7 @@ class ShowsController < ApplicationController
   def update
     @show = Show.find(params[:id])
     authorize @show
-    
+
     if @show.update(show_params)
       redirect_to edit_show_path(@show)
     else

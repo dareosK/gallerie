@@ -11,8 +11,8 @@
       <div>
         <p class='m-3'><%#= @show.statement %></p>
 				<button type="button" class="btn btn-primary btn-lg btn_add_show" data-toggle="modal" data-target="#showNew">edit</button>
-      </div>  
-    </div> 
+      </div>
+    </div>
   </div>
 </div>
 
@@ -44,8 +44,9 @@
 				  <div class="add-new"></div>
 					<% end %>
 				<% @panels.each do |p| %>
-				<%= link_to "edit", show_panel_path(p)  %>
-				<%= cl_image_tag(p.wall.key, transformation: { width: 200, height: 200, crop: 'fill'}) %>
+				<%= link_to edit_panel_path(p) do   %>
+  				<%= cl_image_tag(p.wall.key, transformation: { width: 200, height: 200, crop: 'fill'}) %>
+          <% end %>
 				<% end %>
 			</div>
 	  	</div>
@@ -74,7 +75,7 @@
   	</div>
 	</div>
 </div>
-	
+
 
 	<!-- modal for artowrks-->
 
