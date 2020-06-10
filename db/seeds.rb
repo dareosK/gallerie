@@ -1,13 +1,10 @@
 require "date"
 require "open-uri"
 
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# IMPORTANT!!! NEVER USE SAME OPEN.URI IMAGE IN MORE THAN ONE SEEDS. EVEN #
+# IF YOU ASSING IT TO A VARIABLE. IT PROMPTS AN IOERROR: CLOSED STREAM, #
+# AND GOOD LUCK FINDING AN ANSWER ON STACKOVERFLOW....Talking from experience! #
+
 Artwork.destroy_all
 Panel.destroy_all
 Show.destroy_all
@@ -60,7 +57,7 @@ Writing.create!([
     title: "Creative Mushroom",
     publishing_date: DateTime.new(2020,9,14),
     publisher: "Aesthetica",
-    article: "Do you know Alice and the wonderland? Alice sits on a riverbank on a warm summer day, drowsily reading over her sister’s shoulder, when she catches sight of a White Rabbit in a waistcoat running by her. The White Rabbit pulls out a pocket watch, exclaims that he is late, and pops down a rabbit hole.", 
+    article: "Do you know Alice and the wonderland? Alice sits on a riverbank on a warm summer day, drowsily reading over her sister’s shoulder, when she catches sight of a White Rabbit in a waistcoat running by her. The White Rabbit pulls out a pocket watch, exclaims that he is late, and pops down a rabbit hole.",
     user_id: oscar.id
   },
   {
@@ -189,23 +186,30 @@ puts "Die Brücke Show created"
 
 puts "======Shows created"
 
-## panel image link
-wall_panel_img = URI.open("https://res.cloudinary.com/do3fkzte4/image/upload/v1591694256/wall_1_xvvizq.jpg")
-##
 
 # # ============= #
 # # ARTWORK SEEDS #
 # # ============= #
 
-# Artworks Show 1
+# Panels Show 1
+wall_panel_img = URI.open("https://res.cloudinary.com/do3fkzte4/image/upload/v1591694256/wall_1_xvvizq.jpg")
 
-   Panel.create!([
+   panel_one = Panel.create!(
    show_id: Show.first.id
- ])
+ )
 
-panel_one = Panel.first
 panel_one.wall.attach(io: wall_panel_img, filename: 'wall_1_xvvizq.jpg', content_type: 'image/jpg')
 panel_one.save!
+
+
+wall_panel_two_img = URI.open("https://res.cloudinary.com/do3fkzte4/image/upload/v1591694256/wall_1_xvvizq.jpg")
+
+  panel_two = Panel.create!(
+  show_id: Show.first.id
+ )
+
+panel_two.wall.attach(io: wall_panel_two_img, filename: 'wall_two', content_type: 'image/jpg')
+panel_two.save!
 
 # panels = Panel.all
 
@@ -215,11 +219,12 @@ panel_one.save!
 # end
 puts "======Panels for first show created"
 
+# Artworks Show 1
 show_one_artwork_one_img = URI.open("https://photos.lensculture.com/original/963c7429-9d8d-4d4a-b8e9-f5f6f5fcfa61.jpg")
 show_one_artwork_one = Artwork.new(
     artist: "Alec Soth",
     show_id: Show.first.id,
-    panel_id: Panel.first.id,
+    panel_id: panel_one.id,
     user_id: User.first.id,
     width: 200,
     x: 300,
@@ -232,7 +237,7 @@ show_one_artwork_two_img = URI.open("https://photos.lensculture.com/original/e27
 show_one_artwork_two = Artwork.new(
     artist: "Alec Soth",
     show_id: Show.first.id,
-    panel_id: Panel.first.id,
+    panel_id: panel_one.id,
     user_id: User.first.id,
     width: 200,
     x: 300,
@@ -245,7 +250,7 @@ show_one_artwork_three_img = URI.open("https://photos.lensculture.com/original/1
 show_one_artwork_three = Artwork.new(
     artist: "Alec Soth",
     show_id: Show.first.id,
-    panel_id: Panel.first.id,
+    panel_id: panel_one.id,
     user_id: User.first.id,
     width: 200,
     x: 300,
@@ -258,7 +263,7 @@ show_one_artwork_four_img = URI.open("https://photos.lensculture.com/original/18
 show_one_artwork_four = Artwork.new(
     artist: "Alec Soth",
     show_id: Show.first.id,
-    panel_id: Panel.first.id,
+    panel_id: panel_one.id,
     user_id: User.first.id,
     width: 200,
     x: 300,
@@ -271,7 +276,7 @@ show_one_artwork_five_img = URI.open("https://photos.lensculture.com/original/e8
 show_one_artwork_five = Artwork.new(
     artist: "Alec Soth",
     show_id: Show.first.id,
-    panel_id: Panel.first.id,
+    panel_id: panel_one.id,
     user_id: User.first.id,
     width: 200,
     x: 300,
@@ -284,7 +289,7 @@ show_one_artwork_six_img = URI.open("https://photos.lensculture.com/original/bc2
 show_one_artwork_six = Artwork.new(
     artist: "Alec Soth",
     show_id: Show.first.id,
-    panel_id: Panel.first.id,
+    panel_id: panel_two.id,
     user_id: User.first.id,
     width: 200,
     x: 300,
@@ -297,7 +302,7 @@ show_one_artwork_seven_img = URI.open("https://photos.lensculture.com/original/6
 show_one_artwork_seven = Artwork.new(
     artist: "Alec Soth",
     show_id: Show.first.id,
-    panel_id: Panel.first.id,
+    panel_id: panel_two.id,
     user_id: User.first.id,
     width: 200,
     x: 300,
@@ -310,7 +315,7 @@ show_one_artwork_eight_img = URI.open("https://photos.lensculture.com/original/f
 show_one_artwork_eight = Artwork.new(
     artist: "Alec Soth",
     show_id: Show.first.id,
-    panel_id: Panel.first.id,
+    panel_id: panel_two.id,
     user_id: User.first.id,
     width: 200,
     x: 300,
