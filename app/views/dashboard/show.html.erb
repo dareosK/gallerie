@@ -3,7 +3,7 @@
 	<div class="col-4">
 		<div class="m-3">
 			<div class="profile">
-				<div class="flex-item"><h3><%=@user.name %></h3></div> 
+				<div class="flex-item"><h3><%=@user.name %></h3></div>
 				<div class="flex-item"><img src="https://source.unsplash.com/0G2ZxV31kk4" alt="photo" style="width:200px; margin-top: 5px; margin-bottom: 8px;"></div>
         <div class="flex-item biography"><%=@user.bio%></div>
         <div class="flex-item link-font" style="color:grey; margin-top:20px;"><%=@user.email %></div>
@@ -36,7 +36,7 @@
   			<% @shows.each do |s| %>
   				<%= link_to edit_show_path(s) do %>
 					<div class="card-product">
-					  <%= image_tag(s.photo, size: "260x180")%>
+					  <%= cl_image_tag(s.photo.key, size: "260x180")%>
 					  <div class="card-product-infos">
 					    <h5><%= s.title %></h5>
 					    <p><%= s.logline %></p>
@@ -60,7 +60,7 @@
                   from <strong><%=  write.publisher %></strong>
                 </div>
 					  	<p><%=  write.article %></p>
-			  		<%#= link_to "->", writing_path(write) %>	
+			  		<%#= link_to "->", writing_path(write) %>
 			  		</div>
 		  		</div>
 		  		<% end  %>
