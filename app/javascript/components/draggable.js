@@ -40,6 +40,9 @@ const savePosition = ( x, y, draggableArtwork) => {
 }
 
 const initDraggable = () => {
+  if (allArtworks) {
+
+  
    allArtworks.forEach((artwork) => {
     artwork.addEventListener("mousedown", startDrag)
     // if (draggableArtwork) {
@@ -54,6 +57,7 @@ const initDraggable = () => {
     // };
 
   })
+  }
 }
 
 export { initDraggable }

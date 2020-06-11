@@ -3,6 +3,8 @@ import Flickity from 'flickity';
 
 const initFlickity = () => {
   var elem = document.querySelector('.main-carousel');
+  if (elem) {
+
   var flkty = new Flickity( elem, {
     // options
     cellAlign: 'left',
@@ -11,11 +13,11 @@ const initFlickity = () => {
     autoPlay: true,
     draggable: true,
   });
+  }
+
   // element argument can be a selector string
   //   for an individual element
-  var flkty = new Flickity( '.main-carousel', {
-    // options
-  });
+  
 }
 
 export { initFlickity }
