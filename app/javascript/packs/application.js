@@ -28,7 +28,7 @@ import "bootstrap";
 import { initMasonry } from '../components/masonry';
 
 import { initUpdateNavbarOnScroll } from '../components/navbar';
-
+import { clickable } from '../components/clickable';
 // Sandbox
 import { initDraggable } from '../components/draggable';
 import { initResizeable } from '../components/resizeable';
@@ -40,6 +40,7 @@ document.addEventListener('turbolinks:load', () => {
   initMasonry();
   initDraggable();
   initResizeable();
+  clickable();
 });
 
 

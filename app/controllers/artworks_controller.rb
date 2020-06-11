@@ -10,7 +10,7 @@ class ArtworksController < ApplicationController
   def create 
     @panel = Panel.find(params[:panel_id])
     @show = @panel.show
-    @artwork = Artwork.new(art_params)
+    @artwork = Artwork.new(artworks_params)
     @artwork.panel = @panel
     @artwork.user = current_user
     @artwork.show = @show
@@ -26,6 +26,6 @@ class ArtworksController < ApplicationController
   private
 
   def artworks_params
-    params.require(:artwork).permit(:title, :artist, :description, :x, :y, :width)
+    params.require(:artwork).permit(:title, :photo, :artist, :description, :x, :y, :width)
   end
 end
