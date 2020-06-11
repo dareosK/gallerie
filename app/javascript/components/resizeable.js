@@ -1,34 +1,44 @@
 // =====resizeable.js===== //
+// import { savePosition } from "../draggable";
 const resizeIcons = document.querySelectorAll(".resize-icon"); // selects the right element(make ->elementss)
 
 let initWidth;
 let initX;
-let resizeableArtwork;
+let resizableArtwork;
 
-const start = (event) => {
+const startResize = (event) => {
   event.preventDefault();
   console.log(event.currentTarget);
-  resizeableArtwork = event.currentTarget.parentElement.parentElement.querySelector("img");
-  initWidth = resizeableArtwork.width;
+  resizableArtwork = event.currentTarget.parentElement.parentElement.querySelector("img");
+  initWidth = resizableArtwork.width;
   initX = event.clientX;
   window.addEventListener("mousemove", resize);
 }
 
-const resize =(event) => {
+const resize = (event) => {
   event.preventDefault();
-  resizeableArtwork.style.width = `${initWidth + event.clientX - initX}px`;
-  console.log(resizeableArtwork.style.width)
+  resizableArtwork.style.width = `${initWidth + event.clientX - initX}px`;
 }
 
-const stop = (event) => {
+const stopResize = (event) => {
+  event.preventDefault();
   window.removeEventListener("mousemove", resize);
-  // savePosition(event.clientX, event.clientY, draggableArtwork) // add function
+  saveWidth();
+}
+
+const saveWidth = () => {
+  console.log(resizableArtwork);
+  const resizableForm = resizableArtwork.parentElement.querySelector(".resizable-form");
+  console.log(resizableForm);
+  resizableForm.querySelector(".resizable-form-width").value = resizableArtwork.width;
+  resizableForm.querySelector(".resizable-form-submit").click();
+  // savePosition();
 }
 
 const initResizeable = () => {
   resizeIcons.forEach((icon) => {
-    icon.addEventListener("mousedown", start)
-    icon.addEventListener("mouseup", stop)
+    icon.addEventListener("mousedown", startResize)
+    icon.addEventListener("mouseup", stopResize)
    })
 }
 

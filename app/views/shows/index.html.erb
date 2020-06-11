@@ -1,47 +1,31 @@
 <div class="home-banner">
 </div>
 
-<div style = "text-align: center; width: 100vw; margin-bottom: 3.5rem; margin-top: 3.5rem;">
+<div style="text-align: center; width: 100vw; margin-bottom: 3.5rem; margin-top: 5rem;">
 <h1>Featured Artshows</h1>
 </div>
 
-<div class='container'>
-  <div id="carouselFeatured" class="carousel slide" data-ride="carousel" style='padding-left: 10px; padding-right: 10px; margin-top: 50px; margin-bottom: 50px;'>
-    <div class="carousel-inner">
-      <div class="carousel-item carousel-index active">
-        <%= image_tag(@shows.last.photo, class: 'd-block w-100') %>
-      </div>
-      <% @shows.each do |s| %>
-        <div class="carousel-item carousel-index">
-        <%= image_tag(s.photo, class: 'd-block w-100') %>
+<div class="main-carousel data-flickity">
+  <div class="flex-container">
+    <% @shows.each do |s| %>
+      <div class="carousel-cell mr-1">
+        <%= link_to show_path(s.id) do %>
+        <div id="poster">
+          <%= cl_image_tag(s.photo.key, width: 300) %>
         </div>
         <% end %>
       </div>
-    <a class="carousel-control-prev" href="#carouselFeatured" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselFeatured" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    <% end %>
   </div>
 </div>
 
-<!--<div>
-  <% @users = User.all %>
-    <% @users.each do |u|%>
-    <%= link_to u.email, user_dashboard_path(u)%>
-  <% end %>
-</div>-->
-
-<div style = "text-align: center; width: 100vw; margin-bottom: 3.5rem; margin-top: 3.5rem;">
+<div style="text-align: center; width: 100vw; margin-bottom: 3.5rem; margin-top: 7rem;">
 <h1>Recent Artshows</h1>
 </div>
 
-<div class='container'>
+<div class='container-fluid'>
   <div class='masonry-grid potato'>
-    <% @shows.each do |s| %>
+    <% @shows.reverse_each do |s| %>
       <div class='masonry-grid-item'>
       <%= link_to show_path(s.id) do %>
         <div class='card-masonry'>
