@@ -44,7 +44,7 @@
 					  <button type="button" style="float:left" class='add-new'><div><i class="fas fa-plus" style="position:relative"></i></div></button>
 						<% end %>
 					<% @panels.each do |p| %>
-							<%= link_to show_panel_path(p)  do %>
+							<%= link_to panel_path(p)  do %>
 								<%= cl_image_tag(p.wall.key, transformation: { width: 200, height: 200, crop: 'fill'}) %>
 							<% end %>
 					<% end %>
