@@ -7,8 +7,9 @@
 	        <h3><%= @show.title %><button type="button" style=" font-size: 15px; background-color: white;"	class="btn btn-primary btn-lg btn_add_show" data-toggle="modal" data-target="#showNew"><i class="fas fa-pen-nib"></i></button></h3>
 
 	        <%#= @show.logline %>
-	        <div class="overflow-auto" style="max-height: 140px;"><%= @show.statement %></div>
+	        <div class="overflow-auto mr-3" style="max-height: 140px; text-align: justify"><%= @show.statement %></div>
 	        <!--  style="max-height: 140px; max-width: 600px; display: block; overflow: hidden; white-space: normal; text-overflow: ellipsis;" -->
+	        <div class="d-flex justify-content-end m-3"><%= link_to "show", show_path(@show), class: "btn btn-primary btn-lg btn_add_show" %></div>
 	    </div> 
 	  </div>
 	</div>
@@ -27,31 +28,35 @@
 
 		<div class="tab-content" id="myTabContent">
   		<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-        <div class='container-fluid d-flex flex-wrap justify-content-between'>
-				  <button type="button" style="float:left" data-toggle="modal" data-target="#artworkNew" class='add-new'><div><i class="fas fa-plus" style="position:relative"></i></div></button>
+        <div class='container-fluid d-flex flex-wrap justify-content-left'>
+				  <button type="button" style="float:left" data-toggle="modal" data-target="#artworkNew" class='add-new box-spacing'><div><i class="fas fa-plus" style="position:relative"></i></div></button>
           <% @artworks.each do |a| %>
-	          <div class="justify-content-between">
-	          	<%= cl_image_tag(a.photo.key, transformation: { width: 200, height: 200, crop: 'fill'})%>
+	          <div class=" box-spacing ">
+	          	<%= cl_image_tag(a.photo.key, transformation: { height: 200, crop: 'fit'})%>
 	          </div>
           <% end %>
         </div>
 			</div>
 
 			<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-				<div class="container d-flex flex-wrap artworks-index">
+				<div class="container-fluid d-flex flex-wrap artworks-index">
 				  <%= link_to show_panels_path(@show), method: :post do %>
 					  <!--<div class="add-new m-2 fas fa-plus" style=" color:black;"></div>-->
-					  <button type="button" style="float:left" class='add-new'><div><i class="fas fa-plus" style="position:relative"></i></div></button>
+					  <button type="button" style="float:left" class='add-new box-spacing'><div><i class="fas fa-plus" style="position:relative"></i></div></button>
 						<% end %>
 					<% @panels.each do |p| %>
-							<%= link_to show_panel_path(p)  do %>
-								<%= cl_image_tag(p.wall.key, transformation: { width: 200, height: 200, crop: 'fill'}) %>
-							<% end %>
+						<%= link_to show_panel_path(p)  do %>
+							<div class="box-spacing ml-4">
+								<%= cl_image_tag(p.wall.key, transformation: { height: 200, crop: 'fill'}) %>
+							</div>
+						<% end %>
 					<% end %>
 				</div>
 		  </div>
 		</div>
 	</div>
+	<div class="btn btn-secondary justify-content-left">Show</div>
+
 
 
 <!--modal for show-cover -->

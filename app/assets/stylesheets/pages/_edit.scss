@@ -11,8 +11,15 @@
 .add-new {
   width: 200px;
   height: 200px;
-  border: 1px solid black;
+  border: 1px solid lightgrey;
   background-color: white;
+}
+.fa-plus {
+  color: grey;
+}
+
+.show-button {
+  color: white
 }
 
 .add-new-artwork {
@@ -54,7 +61,11 @@
 .artworks-index {
   width: 100%;
   padding-right: 15px;
-padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.box-spacing {
+  margin: 20px;
 }
