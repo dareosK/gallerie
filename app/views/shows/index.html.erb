@@ -36,9 +36,13 @@
     <% @shows.reverse_each do |s| %>
       <div class='masonry-grid-item'>
       <%= link_to show_path(s.id) do %>
-        <div class='card-masonry bingo-hover'>
-          <%= cl_image_tag(s.photo.key) %>
-          <%# <%= s.logline(class: 'display: none') %> 
+        <div class='card-masonry'>
+          <div class="show-hover layer">
+            <%= cl_image_tag(s.photo.key) %>
+            <div class="d-flex align-items-end show-info pl-2">
+              <p><%= s.title  %></p>
+            </div>
+          </div>
         </div>
         <% end %>
       </div>
