@@ -22,6 +22,7 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import "flickity/dist/flickity.css";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -32,7 +33,7 @@ import { clickable } from '../components/clickable';
 // Sandbox
 import { initDraggable } from '../components/draggable';
 import { initResizeable } from '../components/resizeable';
-import { initFlickity } from '../components/flickity'
+import { initFlickity } from '../components/flickity';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -43,8 +44,6 @@ document.addEventListener('turbolinks:load', () => {
   initResizeable();
   clickable();
   initFlickity();
-  draggable();
-  sortable();
 });
 
 
