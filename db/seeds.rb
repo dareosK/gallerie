@@ -42,14 +42,14 @@ puts "======Users created"
 Writing.create!([
   {
     title: "How self portraits change self perception",
-    publishing_date: DateTime.new(2020,9,14),
+    publishing_date: DateTime.new(2020,6,12),
     publisher: "New York Times",
     article: "She finds a bottle marked “DRINK ME” and downs the contents. She shrinks down to the right size to enter the door but cannot enter since she has left the key on the tabletop above her head. Alice discovers a cake marked “EAT ME” which causes her to grow to an inordinately large height. ",
     user_id: oscar.id
   },
   {
     title: "Imagine a magic Tree",
-    publishing_date: DateTime.parse("25-09-2020"),
+    publishing_date: DateTime.parse("25-05-2020"),
     publisher: "Mono.Kultur",
     article: "And then suddenly someone walked thru the forest and stood in front of this giant tree... A Kauri. The sun was baking the surrounding trees. More than 50 elders were gathered to share knowledge and inspiration on how to save an iconic tree species, kauri, from a lethal pathogen, Phytophthora agathidicida.",
     user_id: oscar.id
@@ -58,18 +58,42 @@ Writing.create!([
 Writing.create!([
   {
     title: "Creative Mushroom",
-    publishing_date: DateTime.new(2020,9,14),
+    publishing_date: DateTime.new(2020,5,25),
     publisher: "Aesthetica",
     article: "Do you know Alice and the wonderland? Alice sits on a riverbank on a warm summer day, drowsily reading over her sister’s shoulder, when she catches sight of a White Rabbit in a waistcoat running by her. The White Rabbit pulls out a pocket watch, exclaims that he is late, and pops down a rabbit hole.", 
     user_id: oscar.id
   },
   {
     title: "Mono Pole",
-    publishing_date: DateTime.parse("25-09-2020"),
+    publishing_date: DateTime.parse("25-03-2020"),
     publisher: "Arts Space",
     article: "The Wood That Fights Fire... As gold-crazed settlers flocked to the Bay Area in the 19th century, they needed lumber to build their homes and mines. And what better way to get a lot of wood at once than toppling an enormous redwood? Little did they know the wood had a greater legacy in store. ",
-    user_id: mike.id
+    user_id: oscar.id
   }])
+Writing.create!([
+  {
+    title: "Portraits in Isolation",
+    publishing_date: DateTime.new(2020,3,14),
+    publisher: "New York Times",
+    article: "She finds a bottle marked “DRINK ME” and downs the contents. She shrinks down to the right size to enter the door but cannot enter since she has left the key on the tabletop above her head. Alice discovers a cake marked “EAT ME” which causes her to grow to an inordinately large height. ",
+    user_id: oscar.id
+  },
+  {
+    title: "Review of Gaiety is the Most Outstanding Feature of the Soviet Union, London",
+    publishing_date: DateTime.parse("13-03-2020"),
+    publisher: "Mono.Kultur",
+    article: "A broad anthology of Russia’s contemporary cultural offerings. Lightness, whatever the title may suggest, is an element scarcely present within Saatchi’s latest exhibition until, that is, you reach the gallery’s top floor where spotlights bounce off slick oil paintings which hang proudly, just waiting to be appreciated.",
+    user_id: oscar.id
+  }]) 
+
+Writing.create!(
+    title: "Sotheby’s Just Lost Its Lawsuit Against Greece Over an 8th-Century Horse Statue",
+    publishing_date: DateTime.parse("25-02-2020"),
+    publisher: "Arts and Culture",
+    article: "The decision may have lasting implications for the trade. A lawyer for Greece says the ruling bodes well for the antiquities market. The ministry of culture in Greece has won a court ruling over Sotheby’s that may leave lasting effects on the antiquities market.",
+    user_id: oscar.id
+  )
+
 puts "======Writings for First User created"
 
 # # ========== #
