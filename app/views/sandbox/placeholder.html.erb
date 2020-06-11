@@ -1,0 +1,59 @@
+
+<!-- OLD PANELS EDIT
+<div class="container-fluid mt-5">
+  <div class="col-12 p-3" style="position:relative; width: 100%;">
+    <div class="d-flex justify-content-start">
+      <% @artworks.each do |artwork| %>
+          <%= cl_image_tag(artwork.photo.key, class: "m-3", transformation: { height: 200, crop: 'fit'})%>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="" style="width: 100%; height: 100vh; background-image: url(<%= cl_image_path(@panel.wall.key)%>);">
+    <div class="col-8 d-flex">
+        <% @panel_artworks.each do |panel_artwork| %>
+          <div class="p-3 artwork" style="width: fit-content; position: absolute; top: <%= panel_artwork.y %>px; left: <%= panel_artwork.x %>px; ">
+            <%= cl_image_tag(panel_artwork.photo.key, width: "#{panel_artwork.width}px" )%>
+            <div style="height: 100%; width: 100%; position: relative;" id="resize-icon">
+              <div class="resize-icon" style=" width:20px; height:20px; background-color: gray; position: absolute; bottom: 0; right: 0;"></div>
+            </div>
+            <div style="display: none">
+              <%= simple_form_for [@panel, panel_artwork], remote: true, html: { class: 'coordinate-form'} do |f| %>
+                <%= f.input :x, as: :hidden, input_html: { class: 'coordinate-form-x'} %>
+                <%= f.input :y, as: :hidden, input_html: { class: 'coordinate-form-y' } %>
+                <%= f.submit as: :hidden, class: 'coordinate-form-submit' %>
+              <% end %>
+            </div>
+            <div style="display: none">
+              <%= simple_form_for [@panel, panel_artwork], remote: true, html: { class: 'resizable-form'} do |f| %>
+              <%= f.input :width, as: :hidden, input_html: { class: 'resizable-form-width'} %>
+              <%= f.submit as: :hidden, class: 'resizable-form-submit' %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+// CAROUSEL //
+<div class="main-carousel data-flickity">
+  <div class="flex-container">
+    <div class="carousel-cell"><img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg" alt=""></div>
+    <div class="carousel-cell"><img src="https://cdn.pixabay.com/photo/2018/11/17/22/15/tree-3822149_960_720.jpg" alt=""></div>
+    <div class="carousel-cell"><img src="https://media.treehugger.com/assets/images/2019/07/angeltree.jpg.1200x0_q70_crop-smart.jpg" alt=""></div>
+    <div class="carousel-cell"><img src="https://www.gardendesign.com/pictures/images/900x705Max/site_3/magnola-tree-blooming-tree-shutterstock-com_12301.jpg" alt=""></div>
+    <div class="carousel-cell"><img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg" alt=""></div>
+    <div class="carousel-cell"><img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg" alt=""></div>
+    <div class="carousel-cell"><img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg" alt=""></div>
+    <div class="carousel-cell"><img src="https://cdn.pixabay.com/photo/2018/11/17/22/15/tree-3822149_960_720.jpg" alt=""></div>
+    <div class="carousel-cell"><img src="https://media.treehugger.com/assets/images/2019/07/angeltree.jpg.1200x0_q70_crop-smart.jpg" alt=""></div>
+    <div class="carousel-cell"><img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg" alt=""></div>
+    <div class="carousel-cell"><img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg" alt=""></div>
+  </div>
+</div>
+
+
+
+-->

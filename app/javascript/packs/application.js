@@ -43,6 +43,8 @@ document.addEventListener('turbolinks:load', () => {
   initResizeable();
   clickable();
   initFlickity();
+  draggable();
+  sortable();
 });
 
 

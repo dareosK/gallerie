@@ -10,6 +10,8 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+
+    <link href="draganddrop.css" rel="stylesheet">
   </head>
 
   <body>
@@ -18,5 +20,7 @@
     <%= yield %>
     <%= render 'shared/footer' %>
     <script src="/path/to/flickity.pkgd.min.js"></script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="draganddrop.js"></script>
   </body>
 </html>
