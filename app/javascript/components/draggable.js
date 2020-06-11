@@ -5,6 +5,7 @@ let initY;
 let initX;
 let draggableArtwork;
 
+
 const startDrag = (event) => {
   draggableArtwork = event.currentTarget.parentElement;
   initX = event.clientX - draggableArtwork.offsetLeft;
@@ -16,6 +17,7 @@ const drag = (event) => {
 event.preventDefault;
 draggableArtwork.style.top = `${event.clientY - initY}px`;
 draggableArtwork.style.left = `${event.clientX - initX}px`;
+
 }
 
 const stopDrag = (event) => {
@@ -25,11 +27,13 @@ const stopDrag = (event) => {
 }
 
 const savePosition = ( x, y, draggableArtwork) => {
-  console.log(draggableArtwork);
+  console.log(x);
+  console.log(y);
   const coordinateForm = draggableArtwork.querySelector(".coordinate-form");
+  coordinateForm.querySelector(".coordinate-form-x").value = draggableArtwork.style.left.replace("px", "");
   console.log(coordinateForm.querySelector(".coordinate-form-x"));
-  coordinateForm.querySelector(".coordinate-form-x").value = x;
-  coordinateForm.querySelector(".coordinate-form-y").value = y;
+  coordinateForm.querySelector(".coordinate-form-y").value = draggableArtwork.style.top.replace("px", "");
+  
   // coordinateForm.submit();
   coordinateForm.querySelector(".coordinate-form-submit").click();
 }
