@@ -3,15 +3,30 @@ const clickable = () => {
 	const tab2 = document.querySelector("#profile-tab");
   if (tab1 || tab2) {
     tab1.addEventListener("click",(event) => {
-    tab2.style.backgroundColor = 'white';
-    event.currentTarget.style.backgroundColor = 'lightgray';
-  });
+      tab2.style.backgroundColor = 'white';
+      event.currentTarget.style.backgroundColor = 'lightgray';
+    });
+    
+// 	if (tab1 || tab2) {
+// 		tab1.addEventListener("click",(event) => {
+// 			tab2.style.backgroundColor = 'white';
+// 			event.currentTarget.style.backgroundColor = 'lightgray';
+// 		});
 
-  tab2.addEventListener("click",(event) => {
-    tab1.style.backgroundColor = 'white';
-    event.currentTarget.style.backgroundColor = 'lightgray';
-  });
+// 		tab2.addEventListener("click",(event) => {
+// 			tab1.style.backgroundColor = 'white';
+// 			event.currentTarget.style.backgroundColor = 'lightgray';
+// 		});
+// 	}
+// }
+// export { clickable };
+
+    tab2.addEventListener("click",(event) => {
+      tab1.style.backgroundColor = 'white';
+      event.currentTarget.style.backgroundColor = 'lightgray';
+   });
   }
 }
 
 export { clickable };
+
