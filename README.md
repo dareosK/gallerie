@@ -1,1 +1,2 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+VUE Gallery. A Virtual Gallery and Social Media for Curators !
+MVP
