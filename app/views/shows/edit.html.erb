@@ -45,11 +45,18 @@
 					  <button type="button" style="float:left" class='add-new box-spacing'><div><i class="fas fa-plus" style="position:relative"></i></div></button>
 						<% end %>
 					<% @panels.each do |p| %>
-						<%= link_to show_panel_path(p)  do %>
+
+						<!-- <%= link_to show_panel_path(p)  do %>
 							<div class="box-spacing ml-4">
 								<%= cl_image_tag(p.wall.key, transformation: { height: 200, crop: 'fill'}) %>
 							</div>
-						<% end %>
+						<% end %>-->
+
+							<%= link_to panel_path(p)  do %>
+                <div class="box-spacing ml-4">
+								  <%= cl_image_tag(p.wall.key, transformation: { width: 200, height: 200, crop: 'fill'}) %>
+                </div>
+							<% end %>
 					<% end %>
 				</div>
 		  </div>

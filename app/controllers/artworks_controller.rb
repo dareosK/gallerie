@@ -5,11 +5,26 @@ class ArtworksController < ApplicationController
   def update
     @artwork = Artwork.find(params[:id])
     @panel = @artwork.panel
+    @panel_id = @artwork.panel_id
       if @artwork.update(artworks_params)
-        render panel_path(@panel)
+        @panel = @artwork.panel
+        @panel_id = @artwork.panel_id
+        if @panel_id.to_s == params[:artwork][:panel_id]
+
+        redirect_to panel_path(@panel)
       else
+
         render panel_path(@panel)
       end
+    end
+
+      #   @panel = @artwork.panel
+      #   ## instead of this horrible if statement find out how to check if params coming from form include panel_id
+      #   ## if artwork.panel.value changes then redirect_to else render
+      #   redirect_to panel_path(@panel)
+      # else
+      #   render panel_path(@panel)
+      # end
     authorize @artwork
   end
   
@@ -32,6 +47,6 @@ class ArtworksController < ApplicationController
   private
 
   def artworks_params
-    params.require(:artwork).permit(:title, :photo, :artist, :description, :x, :y, :width)
+    params.require(:artwork).permit(:title, :photo, :artist, :description, :x, :y, :width, :panel_id)
   end
 end
