@@ -116,7 +116,7 @@ show_one.photo.attach(io: show_one_img, filename: '963c7429-9d8d-4d4a-b8e9-f5f6f
 show_one.save!
 puts "Alec Soth Show created"
 
-# Show 2
+# Show 2 https://79hbm1979mg58bnh1fp50y1bry-wpengine.netdna-ssl.com/wp-content/uploads/2017/05/Ravens2.jpg
 show_two_img = URI.open("https://news.artnet.com/app/news-upload/2017/06/2004-138-Gedser_A4_440x300mm_LAC-697x1024.jpg")
 show_two = Show.new(
     title: "Wolfgang Tilmans - Retrospective",
@@ -189,21 +189,10 @@ show_seven.photo.attach(io: show_seven_img, filename: 'Z8-Dareos_Khalili_05.jpg'
 show_seven.save!
 puts "Home Show created"
 
-# Show 8
-show_eight_img = URI.open("https://media.mutualart.com/Images//2019_02/25/05/054937678/d7af851f-586c-4882-8bad-7f9ae10e7a3e.Jpeg")
-show_eight = Show.new(
-    title: "Basquiat",
-    statement: "",
-    user_id: mike.id
-)
-show_eight.photo.attach(io: show_eight_img, filename: 'd7af851f-586c-4882-8bad-7f9ae10e7a3e.Jpeg', content_type: 'image/jpg')
-show_eight.save!
-puts "Basquiat Show created"
-
 # Show 9
-show_nine_img = URI.open("https://res.cloudinary.com/dlf53umtd/image/upload/v1591366390/gzp248yk1knrckk9wy3qt2yxe5d1.jpg")
+show_nine_img = URI.open("https://66.media.tumblr.com/aef231256a10a700488efd7a3a3467ea/tumblr_ozeo7yIB4i1ugxfjno1_1280.jpg")
 show_nine = Show.new(
-    title: "Die Brücke",
+    title: "Natasha Mabille",
     statement: "",
     user_id: mike.id
 )
@@ -211,7 +200,131 @@ show_nine.photo.attach(io: show_nine_img, filename: '698px-Ernst_Ludwig_Kirchner
 show_nine.save!
 puts "Die Brücke Show created"
 
-puts "======Shows created"
+puts "======Shows old created"
+# Show 10 
+show_ten_img = URI.open("https://d2jv9003bew7ag.cloudfront.net/uploads/Elmgreen-and-Dragset-Broken-Square-2018-detail.jpg")
+show_ten = Show.new(
+    title: "Dragset and Elmgreen",
+    statement: "",
+    user_id: mike.id
+)
+show_ten.photo.attach(io: show_ten_img, filename: 'Elmgreen-and-Dragset-Broken-Square-2018-detail.jpg', content_type: 'image/jpg')
+show_ten.save!
+
+# Show 11
+show_eleven_img = URI.open("https://d2jv9003bew7ag.cloudfront.net/uploads/Jan-Fabre-Thinking-Model-I-2012-image-via-museumtoscale.com_.jpg")
+show_eleven = Show.new(
+    title: "Dragset and Elmgreen",
+    statement: "",
+    user_id: mike.id
+)
+show_eleven.photo.attach(io: show_eleven_img, filename: 'Jan-Fabre-Thinking-Model-I-2012-image-via-museumtoscale.com_.jpg', content_type: 'image/jpg')
+show_eleven.save!
+
+# Show 8
+show_eight_img = URI.open("https://www.adam-themagazine.com/wp-content/uploads/2019/03/basquiat3.jpg")
+show_eight = Show.new(
+    title: "Basquiat",
+    statement: "",
+    user_id: mike.id
+)
+show_eight.photo.attach(io: show_eight_img, filename: 'uploads/2019/03/basquiat3.jpg', content_type: 'image/jpg')
+show_eight.save!
+puts "Basquiat Show created"
+
+#Show 12
+show_twelve_img = URI.open("https://images-na.ssl-images-amazon.com/images/I/71m+hpscF9L.jpg")
+show_twelve = Show.new(
+    title: "Francesca Woodman - Retrospective",
+    statement: "",
+    user_id: mike.id
+)
+show_twelve.photo.attach(io: show_twelve_img, filename: 'images/I/71m+hpscF9L.jpg', content_type: 'image/jpg')
+show_twelve.save!
+
+# Show 13 https://www.alexcoghe.com/wp-content/uploads/2014/12/big.jpg
+show_thirteen_img = URI.open("https://www.alexcoghe.com/wp-content/uploads/2014/12/big.jpg")
+show_thirteen = Show.new(
+    title: "Jacob Aue Sobol - I, Tokyo.",
+    statement: "",
+    user_id: mike.id
+)
+show_thirteen.photo.attach(io: show_thirteen_img, filename: 'wp-content/uploads/2014/12/big.jpg', content_type: 'image/jpg')
+show_thirteen.save!
+puts "----shows new 1 created"
+
+# Show 14 https://aestheticamagazine.com/wp-content/uploads/2020/05/E7095534-A7B8-4BA4-AD66-D94094D91F95.jpeg
+show_fourteen_img = URI.open("https://aestheticamagazine.com/wp-content/uploads/2020/05/E7095534-A7B8-4BA4-AD66-D94094D91F95.jpeg")
+show_fourteen = Show.new(
+    title: "Body as Performance",
+    statement: "",
+    user_id: mike.id
+)
+show_fourteen.photo.attach(io: show_fourteen_img, filename: '2020/05/E7095534-A7B8-4BA4-AD66-D94094D91F95.jpeg', content_type: 'image/jpg')
+show_fourteen.save!
+
+puts "----shows new 1 created"
+
+# Show 15 https://graphics8.nytimes.com/images/2011/03/10/t-magazine/10mm-heyman/10mm-heyman-custom7.jpg
+show_fifteen_img = URI.open("https://graphics8.nytimes.com/images/2011/03/10/t-magazine/10mm-heyman/10mm-heyman-custom7.jpg")
+show_fifteen = Show.new(
+    title: "Mark Morrisroe",
+    statement: "",
+    user_id: mike.id
+)
+show_fifteen.photo.attach(io: show_fifteen_img, filename: '10mm-heyman/10mm-heyman-custom7.jpg', content_type: 'image/jpg')
+show_fifteen.save!
+
+# Shows 16 
+show_sixteen_img = URI.open("https://dazedimg-dazedgroup.netdna-ssl.com/786/azure/dazed-prod/1220/7/1227454.jpg")
+show_sixteen = Show.new(
+    title: "Peter Hujar - Candy Darling's Legacy",
+    statement: "Although Hujar’s celebrity was far outweighed by that of his contemporaries, such as Diane Arbus and Robert Mapplethorpe, he has after-death managed to be considered as one of the greatest photographers of the 20th century.",
+    user_id: mike.id
+)
+show_sixteen.photo.attach(io: show_sixteen_img, filename: '10mm-heyman/10mm-heyman-custom7.jpg', content_type: 'image/jpg')
+show_sixteen.save!
+
+#Shows 17 
+show_seventeen_img = URI.open("https://2yt5hf5ru3lc0191q3nb5yfv-wpengine.netdna-ssl.com/wp-content/uploads/She-Lise-Sarfati-004.jpg")
+show_seventeen = Show.new(
+    title: "Lise Sarfati",
+    statement: "French photographer and artist, Lise Sarfati, is noted for her photographs of elusive characters, often young, who resist any attempt to being pinned down. Her work particularly explores the instability of feminine identity.",
+    user_id: mike.id
+)
+show_seventeen.photo.attach(io: show_seventeen_img, filename: 'wp-content/uploads/She-Lise-Sarfati-004.jpg', content_type: 'image/jpg')
+show_seventeen.save!
+
+#Shows 18 
+show_eighteen_img = URI.open("https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fwww.all-about-photo.com%2Fimages%2Fphotographer%2FH%2FPHOT-pieter-hugo-2.jpg")
+show_eighteen = Show.new(
+    title: "Pieter Hugo - scepticism",
+    statement: "Hugo’s work is governed by an autodidactic approach to photography and a deep scepticism of the role of the photographic medium. He is one of a generation of post-Apartheid photographers that seeks to confront photography’s history of representing marginalised and disempowered people. ",
+    user_id: mike.id
+)
+show_eighteen.photo.attach(io: show_eighteen_img, filename: 'photographer%2FH%2FPHOT-pieter-hugo-2.jpg', content_type: 'image/jpg')
+show_eighteen.save!
+
+#Shows 19 
+show_nineteen_img = URI.open("https://79hbm1979mg58bnh1fp50y1bry-wpengine.netdna-ssl.com/wp-content/uploads/2017/05/Ravens2.jpg")
+show_nineteen = Show.new(
+    title: "Eiki Mori - Tokyo Boy Alone",
+    statement: "Japanese artist Eiki Mori is an openly gay man living in Tokyo. He has already produced two highly successful books that look at various aspects of gay life in contemporary modern day Japan, both projects using himself as his subject.",
+    user_id: mike.id
+)
+show_nineteen.photo.attach(io: show_nineteen_img, filename: 'wp-content/uploads/2017/05/Ravens2.jpg', content_type: 'image/jpg')
+show_nineteen.save!
+
+#Shows 19 https://66.media.tumblr.com/aef231256a10a700488efd7a3a3467ea/tumblr_ozeo7yIB4i1ugxfjno1_1280.jpg
+show_twenty_img = URI.open("https://www.positive-magazine.com/edge/wp-content/uploads/2009/10/eikimori5-550x433.jpg")
+show_twenty = Show.new(
+    title: "Masahisa Fukase - Ravens",
+    statement: "Fukase’s haunting series of work was made between 1975 and 1986 in the aftermath of a divorce and was apparently triggered by a mournful train journey to his hometown. The coastal landscapes of Hokkaido serve as the backdrop for his profoundly dark and impressionistic photographs of ominous flocks of crows. The work has been interpreted as an ominous allegory for postwar Japan. ",
+    user_id: mike.id
+)
+show_twenty.photo.attach(io: show_twenty_img, filename: 'uploads/2009/10/eikimori5-550x433.jpg', content_type: 'image/jpg')
+show_twenty.save!
+puts "----shows new 2 created"
 
 ## panel image link
 wall_panel_img = URI.open("https://res.cloudinary.com/do3fkzte4/image/upload/v1591694256/wall_1_xvvizq.jpg")
