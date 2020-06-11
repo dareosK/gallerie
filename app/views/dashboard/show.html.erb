@@ -1,3 +1,4 @@
+
 <div class="container d-flex mt-5">
 	<div class="col-4">
 		<div class="m-3">
@@ -24,7 +25,7 @@
 			    <a class="nav-link active link-font" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" style="color:black;">Shows</a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link link-font" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" style="color:black">Writings</a>
+			    <a class="nav-link link-font" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" style="color:black">Publications</a>
 			  </li>
 			</ul>
 
@@ -66,30 +67,13 @@
 		</div>
 		</div>
 	</div>
+
+<!--
+<div class="main-carousel">
+  <div class="carousel-cell"><img src="https://source.unsplash.com/0G2ZxV31kk4" alt=""></div>
+  <div class="carousel-cell"><img src="https://source.unsplash.com/0G2ZxV31kk4" alt=""></div>
+  <div class="carousel-cell"><img src="https://source.unsplash.com/0G2ZxV31kk4" alt=""></div>
+-->
+  ...
+
 </div>
-
-<!-- Modal -->
-<div class="modal fade" id="newShow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-		<button type="button" class="close" data-dismiss="modal">x</button>
-		<h4 class="modal-title" id="myModalLabel"></h4>
-		</div>
-		<div class="modal-body">
-			<h1>Create a new Show</h1>
-
-			<%= simple_form_for(@show) do |f| %>
-			  <%= f.input :title %>
-			  <%= f.input :photo, as: :file %>
-				<div class="modal-footer">
-				  <%= f.submit class: 'btn btn-primary' %>
-				</div>
-			<% end %>
-    	</div>
-  	</div>
-	</div>
-</div>
-
-
-

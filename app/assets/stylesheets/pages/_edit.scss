@@ -1,7 +1,18 @@
+.gallerie-edit {
+  padding-top: 80px;
+  .gallerie-description {
+    padding-left: 20px;
+  }
+}
+.gallerie-tabs {
+  padding-top: 40px;
+}
+
 .add-new {
   width: 200px;
   height: 200px;
   border: 1px solid black;
+  background-color: white;
 }
 
 .add-new-artwork {
@@ -25,4 +36,25 @@
   gap: 36px;
 }
 
+.home  {
+  background-color: white;
+}
+.profile{
+  background-color: white;
+}
 
+
+.fa-pen-nib {
+  color: grey;
+  &:hover {
+  color: black;
+  }
+}
+
+.artworks-index {
+  width: 100%;
+  padding-right: 15px;
+padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
