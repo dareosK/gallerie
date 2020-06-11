@@ -1,26 +1,19 @@
- <div class='container-fluid'>
-  <div id="showCarousel" class="carousel slide" data-interval="false" data-ride="carousel">
+<div id="showCarousel" class="carousel slide" data-interval="false" data-ride="carousel">
+
   <div class="carousel-inner">
-    <div class="carousel-item active image-show">
-      <div class="d-block w-100"> <%= cl_image_tag "artwork_1_d1fwgv" %></div>
-    </div>
-    <div class="carousel-item image-show">
-      <div class="d-block w-100"> <%= cl_image_tag "artwork_2_jd9rqo" %></div>
-    </div>
-    <div class="carousel-item image-show">
-      <div class="d-block w-100"> <%= cl_image_tag "artwork_3_ngcxcb" %></div>
-    </div>
-    <div class="carousel-item image-show">
-      <div class="d-block w-100"> <%= cl_image_tag "artwork_4_g1gukq" %></div>
-    </div>
-    <div class="carousel-item image-show">
-      <div class="d-block w-100"> <%= cl_image_tag "artwork_5_yina6z" %></div>
-    </div>
-    <div class="carousel-item image-show">
-      <div class="d-block w-100"> <%= cl_image_tag "artwork_6_rgdjxu" %></div>
-    </div>
-    <div class="carousel-item image-show">
-      <div class="d-block w-100"> <%= cl_image_tag "artwork_7_viigso" %></div>
+    <% @show.panels.each do |panel| %>
+      <div class="carousel-item active image-show">
+        <div class="d-block w-100" >
+          <div>
+            <%= cl_image_tag(panel.wall.key, width: "100%", height: "100vh", class: "wall-img") %>
+            <% panel.artworks.each do |artwork| %>
+            <div style='position: absolute; left: <%= artwork.x %>px; top: <%= artwork.y %>px; box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.2)'>
+              <%= cl_image_tag(artwork.photo.key) %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
   <a class="carousel-control-prev" href="#showCarousel" role="button" data-slide="prev">
@@ -32,4 +25,3 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-

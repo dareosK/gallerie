@@ -2,11 +2,16 @@
   height: 100vh;
 
   img {
-    height: 100vh;
-    position: absolute;
-    object-fit: contain;
-    top: 0;
-    left: 0;
+    height: 50vh;
+    // position: absolute;
+    // object-fit: cover;
+    // top: 0;
+    // left: 0;
   }
 }
 
+.wall-img {
+  height: 100vh !important;
+  object-fit: cover;
+  position: relative;
+}
