@@ -17,8 +17,13 @@
 
 .flickity-page-dots .dot {
   height: 4px;
-  width: 300px;
+  width: 100px;
   margin: 0;
   border-radius: 0;
   color: #3D0000 !important;
+}
+
+.flickity-slider {
+  display: flex;
+  align-items: flex-end;
 }
