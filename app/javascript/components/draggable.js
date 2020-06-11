@@ -28,9 +28,9 @@ const savePosition = ( x, y, draggableArtwork) => {
   console.log(x);
   console.log(y);
   const coordinateForm = draggableArtwork.querySelector(".coordinate-form");
-  coordinateForm.querySelector(".coordinate-form-x").value = x + 27;
+  coordinateForm.querySelector(".coordinate-form-x").value = x + window.scrollX;
   console.log(coordinateForm.querySelector(".coordinate-form-x"));
-  coordinateForm.querySelector(".coordinate-form-y").value = y;
+  coordinateForm.querySelector(".coordinate-form-y").value = y - 314 + window.scrollY;
   
   // coordinateForm.submit();
   coordinateForm.querySelector(".coordinate-form-submit").click();

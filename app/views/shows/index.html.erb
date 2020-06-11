@@ -46,6 +46,7 @@
       <%= link_to show_path(s.id) do %>
         <div class='card-masonry'>
           <%= cl_image_tag(s.photo.key) %>
+          <%= s.logline(class: 'display: none') %>
         </div>
         <% end %>
       </div>
