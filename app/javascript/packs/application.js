@@ -32,7 +32,7 @@ import { initUpdateNavbarOnScroll } from '../components/navbar';
 // Sandbox
 import { initDraggable } from '../components/draggable';
 import { initResizeable } from '../components/resizeable';
-
+import { initFlickity } from '../components/flickity'
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -41,6 +41,7 @@ document.addEventListener('turbolinks:load', () => {
   initMasonry();
   initDraggable();
   initResizeable();
+  initFlickity();
 });
 
 

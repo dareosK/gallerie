@@ -1,0 +1,24 @@
+.main-carousel {
+
+}
+
+.carousel-cell > #poster {
+  margin-right: 1px;
+}
+
+.flex-container {
+  display: flex;
+  align-items: flex-end; // it's `flex-start` by default
+}
+
+.flickity-page-dots {
+  bottom: -22px;
+}
+
+.flickity-page-dots .dot {
+  height: 4px;
+  width: 300px;
+  margin: 0;
+  border-radius: 0;
+  color: #3D0000 !important;
+}
