@@ -1,7 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Gallerie</title>
+    <!--<title>Gallerie</title>
+    <meta name="title" content="Gallerie">
+    <meta name ="description" content = "Be independent, curate your own shows and decide who to exhibit. Give wings to your creativity!">
+    <meta property=”og:title” content=”Gallerie VUE” />
+    <meta property=”og:description” content=”Be independent, curate your own shows and decide who to exhibit. Give wings to your creativity!” />
+    <meta property=”og:type” content=”website” />
+    <meta property=”og:url” content=”http://www.gallerie-vue.com” />
+    <meta property=”og:image” content=”http://www.yourdomain.com/image-name.jpg” />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">-->
+      <title><%= Gallerie %></title>
+    <meta name="description" content="<%= meta_description %>">
+    <%= favicon_link_tag 'favicon-art.svg' %>
+
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="<%= meta_title %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:image" content="<%= meta_image %>" />
+    <meta property="og:description" content="<%= meta_description %>" />
+    <meta property="og:site_name" content="<%= meta_title %>" />
+
+
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -17,6 +39,6 @@
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= render 'shared/footer' %>
-    <script src="/path/to/flickity.pkgd.min.js"></script>
+    <!--<script src="/path/to/flickity.pkgd.min.js"></script>-->
   </body>
 </html>
