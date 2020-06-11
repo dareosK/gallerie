@@ -25,11 +25,13 @@ const stopDrag = (event) => {
 }
 
 const savePosition = ( x, y, draggableArtwork) => {
-  console.log(draggableArtwork);
+  console.log(x);
+  console.log(y);
   const coordinateForm = draggableArtwork.querySelector(".coordinate-form");
+  coordinateForm.querySelector(".coordinate-form-x").value = x + 27;
   console.log(coordinateForm.querySelector(".coordinate-form-x"));
-  coordinateForm.querySelector(".coordinate-form-x").value = x;
   coordinateForm.querySelector(".coordinate-form-y").value = y;
+  
   // coordinateForm.submit();
   coordinateForm.querySelector(".coordinate-form-submit").click();
 }
