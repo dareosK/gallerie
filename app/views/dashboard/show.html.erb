@@ -54,10 +54,11 @@
 		  	<% @writing.each do |write| %>
 		  		<div class="card-writing">
 			  		<div style="text-align: left;">
-			  			<h5 class="article-title"><%= write.title %></h5>
-				  		<%=  write.publishing_date %>
-					  	from <strong><%=  write.publisher %></strong>
-					  	<br>
+			  			<h5><%= write.title %></h5>
+                <div class="publishing-data">
+                  <%=  write.publishing_date %>
+                  from <strong><%=  write.publisher %></strong>
+                </div>
 					  	<p><%=  write.article %></p>
 			  		<%#= link_to "->", writing_path(write) %>	
 			  		</div>

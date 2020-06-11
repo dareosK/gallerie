@@ -6,7 +6,6 @@
 </div>
 
 <div class="main-carousel data-flickity">
-  <div class="flex-container">
     <% @shows.each do |s| %>
       <div class="carousel-cell mr-1">
         <%= link_to show_path(s.id) do %>
@@ -16,7 +15,6 @@
         <% end %>
       </div>
     <% end %>
-  </div>
 </div>
 
 <div style="text-align: center; width: 100vw; margin-bottom: 3.5rem; margin-top: 7rem;">
@@ -30,6 +28,7 @@
       <%= link_to show_path(s.id) do %>
         <div class='card-masonry'>
           <%= cl_image_tag(s.photo.key) %>
+          <%# <%= s.logline(class: 'display: none') %> %>
         </div>
         <% end %>
       </div>

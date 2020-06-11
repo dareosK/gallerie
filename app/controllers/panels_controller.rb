@@ -1,6 +1,7 @@
 require "open-uri"
 
 class PanelsController < ApplicationController
+  layout "panel"
   def index
     @panels = policy_scope(Panel).order(created_at: :desc)
   end

@@ -1,10 +1,9 @@
 // =====draggable.js===== //
-const allArtworks = document.querySelectorAll(".artwork img");
+const allArtworks = document.querySelectorAll(".index-artwork img");
 
 let initY;
 let initX;
 let draggableArtwork;
-
 
 const startDrag = (event) => {
   draggableArtwork = event.currentTarget.parentElement;
@@ -17,7 +16,6 @@ const drag = (event) => {
 event.preventDefault;
 draggableArtwork.style.top = `${event.clientY - initY}px`;
 draggableArtwork.style.left = `${event.clientX - initX}px`;
-
 }
 
 const stopDrag = (event) => {
@@ -27,13 +25,11 @@ const stopDrag = (event) => {
 }
 
 const savePosition = ( x, y, draggableArtwork) => {
-  console.log(x);
-  console.log(y);
+  console.log(draggableArtwork);
   const coordinateForm = draggableArtwork.querySelector(".coordinate-form");
-  coordinateForm.querySelector(".coordinate-form-x").value = draggableArtwork.style.left.replace("px", "");
   console.log(coordinateForm.querySelector(".coordinate-form-x"));
-  coordinateForm.querySelector(".coordinate-form-y").value = draggableArtwork.style.top.replace("px", "");
-  
+  coordinateForm.querySelector(".coordinate-form-x").value = x;
+  coordinateForm.querySelector(".coordinate-form-y").value = y;
   // coordinateForm.submit();
   coordinateForm.querySelector(".coordinate-form-submit").click();
 }
@@ -42,13 +38,13 @@ const initDraggable = () => {
    allArtworks.forEach((artwork) => {
     artwork.addEventListener("mousedown", startDrag)
     // if (draggableArtwork) {
-      artwork.addEventListener("click", stopDrag) 
+      artwork.addEventListener("click", stopDrag)
     // };
-    
+
   })
 }
 
-export { initDraggable }
+// export { indexDraggable }
 // export { savePosition }
 
 

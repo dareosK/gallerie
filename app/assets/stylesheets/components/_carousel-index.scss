@@ -1,14 +1,13 @@
 .main-carousel {
-
+  height: 450px;
+  .flickity-viewport {
+    height: 100% !important;
+  }
 }
 
 .carousel-cell > #poster {
   margin-right: 1px;
-}
-
-.flex-container {
-  display: flex;
-  align-items: flex-end; // it's `flex-start` by default
+  width: 300px;
 }
 
 .flickity-page-dots {
@@ -17,8 +16,13 @@
 
 .flickity-page-dots .dot {
   height: 4px;
-  width: 300px;
+  width: 100px;
   margin: 0;
   border-radius: 0;
   color: #3D0000 !important;
+}
+
+.flickity-slider {
+  display: flex;
+  align-items: flex-end;
 }
