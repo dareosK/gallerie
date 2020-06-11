@@ -1,8 +1,15 @@
 <div class="container-fluid mt-5" style="padding: 0 !important; margin: 0 !important;">
   <div class="col-12 p-3" style="position:relative; width: 100%;">
     <div class="d-flex justify-content-start">
-      <% @artworks.each do |artwork| %>
-          <%= cl_image_tag(artwork.photo.key, class: "m-3", transformation: { height: 200, crop: 'fit'})%>
+		  <% @artworks.each do |artwork| %>
+			<div class="index-artworks">
+			<%= cl_image_tag(artwork.photo.key, class: "m-3", transformation: { height: 200, crop: 'fit'})%>
+			<%= form_with(model: [@panel, artwork]) do |f| %>
+			<%= f.number_field :panel_id, value: @panel.id %>
+			<%= f.submit as: :button %>
+			<% end %>
+			</div>
+          
       <% end %>
     </div>
   </div>

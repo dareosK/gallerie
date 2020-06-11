@@ -1,5 +1,6 @@
 // =====draggable.js===== //
 const allArtworks = document.querySelectorAll(".artwork img");
+const indexArtworks = document.querySelectorAll(".index-artworks img");
 
 let initY;
 let initX;
@@ -45,6 +46,13 @@ const initDraggable = () => {
       artwork.addEventListener("click", stopDrag) 
     // };
     
+  })
+  indexArtworks.forEach((artwork) => {
+    artwork.addEventListener("mousedown", startDrag)
+    // if (draggableArtwork) {
+    artwork.addEventListener("click", stopDrag)
+    // };
+
   })
 }
 
