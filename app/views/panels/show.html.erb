@@ -5,8 +5,8 @@
 			<div class="index-artworks">
 			<%= cl_image_tag(artwork.photo.key, class: "m-3", transformation: { height: 200, crop: 'fit'})%>
 			<%= form_with(model: [@panel, artwork]) do |f| %>
-			<%= f.number_field :panel_id, value: @panel.id %>
-			<%= f.submit as: :button %>
+			<%= f.number_field :panel_id, value: @panel.id, style: 'display: none;' %>
+			<%= f.submit as: :button, class: 'btn btn-primary' %>
 			<% end %>
 			</div>
           
