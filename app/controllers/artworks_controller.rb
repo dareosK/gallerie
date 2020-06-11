@@ -4,7 +4,13 @@ class ArtworksController < ApplicationController
 
   def update
     @artwork = Artwork.find(params[:id])
-    @artwork.update(artoworks_params)
+    @panel = @artwork.panel
+      if @artwork.update(artworks_params)
+        render panel_path(@panel)
+      else
+        render panel_path(@panel)
+      end
+    authorize @artwork
   end
   
   def create 
