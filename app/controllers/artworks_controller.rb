@@ -5,11 +5,11 @@ class ArtworksController < ApplicationController
   def update
     @artwork = Artwork.find(params[:id])
     @panel = @artwork.panel
-    if @artwork.update(artworks_params)
-      redirect_to panel_path(@panel)
-    else
-      render panel_path(@panel)
-    end
+      if @artwork.update(artworks_params)
+        render panel_path(@panel)
+      else
+        render panel_path(@panel)
+      end
     authorize @artwork
   end
   
