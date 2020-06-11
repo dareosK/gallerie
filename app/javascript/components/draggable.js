@@ -27,7 +27,7 @@ const stopDrag = (event) => {
 const savePosition = ( x, y, draggableArtwork) => {
   console.log(draggableArtwork);
   const coordinateForm = draggableArtwork.querySelector(".coordinate-form");
-  // console.log(coordinateForm.querySelector(".coordinate-form-x");
+  console.log(coordinateForm.querySelector(".coordinate-form-x"));
   coordinateForm.querySelector(".coordinate-form-x").value = x;
   coordinateForm.querySelector(".coordinate-form-y").value = y;
   // coordinateForm.submit();
@@ -37,9 +37,9 @@ const savePosition = ( x, y, draggableArtwork) => {
 const initDraggable = () => {
    allArtworks.forEach((artwork) => {
     artwork.addEventListener("mousedown", startDrag)
-    if (draggableArtwork) {
-      artwork.addEventListener("mouseup", stopDrag) 
-    };
+    // if (draggableArtwork) {
+      artwork.addEventListener("click", stopDrag) 
+    // };
     
   })
 }
