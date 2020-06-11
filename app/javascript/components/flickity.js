@@ -9,6 +9,7 @@ const initFlickity = () => {
     contain: true,
     freeScroll: true,
     autoPlay: true,
+    draggable: true,
   });
   // element argument can be a selector string
   //   for an individual element
