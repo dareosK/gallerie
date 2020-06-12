@@ -1,3 +1,4 @@
+import "flickity/dist/flickity.css";
 import $ from 'jquery';
 import Flickity from 'flickity';
 
