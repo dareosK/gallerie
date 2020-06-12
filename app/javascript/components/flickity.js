@@ -1,8 +1,12 @@
 import "flickity/dist/flickity.min.css";
-import $ from 'jquery';
+// import $ from 'jquery';
 import Flickity from 'flickity';
 
 const initFlickity = () => {
+  var jQueryBridget = require('jquery-bridget');
+  // make Flickity a jQuery plugin
+  Flickity.setJQuery( $ );
+  jQueryBridget( 'flickity', Flickity, $ );
   var elem = document.querySelector('.main-carousel');
   var flkty = new Flickity( elem, {
     // options
