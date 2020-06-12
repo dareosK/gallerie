@@ -26,10 +26,10 @@ mike = User.create!(
 puts "First User Created"
 
 oscar = User.create!(
-  email: "rinaldi@gmail.com",
+  email: "dareos@gmail.com",
   password: "Secret",
-  name: "Marina Rinaldi",
-  bio: "Hi I am from Milano. I have studied at 'Kunstakademie Düsseldorf' under Joseph Beuys. He taught us the power of art. This virtual gallery helps me spread my work and fight for a better world.",
+  name: "Dareos Khalili",
+  bio: "Dareos holds a MA in Cultural Management from Kunsthochschule Berlin-Weißensee. His curatorial work provides a platform, in which one is called to examine the absurdity of human constructs.",
   )
 puts "Second User Created"
 
@@ -41,14 +41,14 @@ puts "======Users created"
 
 Writing.create!([
   {
-    title: "How self portraits change self perception",
+    title: "How self portraits change self perception.",
     publishing_date: DateTime.new(2020,6,12),
     publisher: "New York Times",
     article: "She finds a bottle marked “DRINK ME” and downs the contents. She shrinks down to the right size to enter the door but cannot enter since she has left the key on the tabletop above her head. Alice discovers a cake marked “EAT ME” which causes her to grow to an inordinately large height. ",
     user_id: oscar.id
   },
   {
-    title: "Imagine a magic Tree",
+    title: "Imagine a magic Tree.",
     publishing_date: DateTime.parse("25-05-2020"),
     publisher: "Mono.Kultur",
     article: "And then suddenly someone walked thru the forest and stood in front of this giant tree... A Kauri. The sun was baking the surrounding trees. More than 50 elders were gathered to share knowledge and inspiration on how to save an iconic tree species, kauri, from a lethal pathogen, Phytophthora agathidicida.",
@@ -57,44 +57,44 @@ Writing.create!([
 
 Writing.create!([
   {
-    title: "Creative Mushroom",
+    title: "Creative Mushroom.",
     publishing_date: DateTime.new(2020,5,25),
     publisher: "Aesthetica",
-    article: "Do you know Alice and the wonderland? Alice sits on a riverbank on a warm summer day, drowsily reading over her sister’s shoulder, when she catches sight of a White Rabbit in a waistcoat running by her. The White Rabbit pulls out a pocket watch, exclaims that he is late, and pops down a rabbit hole.", 
+    article: "Do you know Alice and the wonderland? Alice sits on a riverbank on a warm summer day, drowsily reading over her sister’s shoulder, when she catches sight of a White Rabbit in a waistcoat running by her. The White Rabbit pulls out a pocket watch, exclaims that he is late, and pops down a rabbit hole.",
     user_id: oscar.id
   },
   {
     title: "Mono Pole",
-    publishing_date: DateTime.parse("25-03-2020"),
+    publishing_date: DateTime.parse("25-03-2020."),
     publisher: "Arts Space",
     article: "The Wood That Fights Fire... As gold-crazed settlers flocked to the Bay Area in the 19th century, they needed lumber to build their homes and mines. And what better way to get a lot of wood at once than toppling an enormous redwood? Little did they know the wood had a greater legacy in store. ",
     user_id: oscar.id
   }])
 Writing.create!([
   {
-    title: "Portraits in Isolation",
+    title: "Portraits in Isolation.",
     publishing_date: DateTime.new(2020,3,14),
     publisher: "New York Times",
     article: "She finds a bottle marked “DRINK ME” and downs the contents. She shrinks down to the right size to enter the door but cannot enter since she has left the key on the tabletop above her head. Alice discovers a cake marked “EAT ME” which causes her to grow to an inordinately large height. ",
     user_id: oscar.id
   },
   {
-    title: "Review of Gaiety is the Most Outstanding Feature of the Soviet Union, London",
+    title: "Review of Gaiety is the Most Outstanding Feature of the Soviet Union.",
     publishing_date: DateTime.parse("13-03-2020"),
     publisher: "Mono.Kultur",
     article: "A broad anthology of Russia’s contemporary cultural offerings. Lightness, whatever the title may suggest, is an element scarcely present within Saatchi’s latest exhibition until, that is, you reach the gallery’s top floor where spotlights bounce off slick oil paintings which hang proudly, just waiting to be appreciated.",
     user_id: oscar.id
-  }]) 
+  }])
 
 Writing.create!(
-    title: "Sotheby’s Just Lost Its Lawsuit Against Greece Over an 8th-Century Horse Statue",
+    title: "Sotheby’s Just Lost Its Lawsuit Against Greece Over an 8th-Century Horse Statue.",
     publishing_date: DateTime.parse("25-02-2020"),
     publisher: "Arts and Culture",
     article: "The decision may have lasting implications for the trade. A lawyer for Greece says the ruling bodes well for the antiquities market. The ministry of culture in Greece has won a court ruling over Sotheby’s that may leave lasting effects on the antiquities market.",
     user_id: oscar.id
   )
 
-puts "======Writings for First User created"
+puts "======Writings created"
 
 # # ========== #
 # # SHOW SEEDS #
@@ -109,20 +109,20 @@ show_one = Show.new(
     title: "Alec Soth - I Know How Furiously Your Heart is Beating",
     logline: "After abandoning portraiture for an entire year, Alec Soth returns to the genre with a new photobook, emphasizing the importance of collaboration while photographing his subjects...",
     statement: "After abandoning portraiture for an entire year, Alec Soth returns to the genre with a new photobook, emphasizing the importance of collaboration while photographing his subjects.
-The very first image in Alec Soth’s new book, I Know How Furiously Your Heart Is Beating, reminds me of a time when I was five years old, and I convinced my best friend to let her parakeet out of its cage. In Soth’s photograph titled “Cammy’s View. Salt Lake City.” a cockatiel is perched at a closed window. Its head tilts back to look at the camera. Although the animal isn’t in a cage, it is in a corner and the trees that are visible through the window panes are too far away to be in focus. This scene makes me think of my childhood friend and her bird, because that bird was also drawn towards windows. It didn’t seem to know the difference between glass and air. I can remember watching the little animal as it searched for a way out, immediately knowing that I had made a mistake. When we finally managed to catch the parakeet, its entire body was like a pulsing heart. At that age, I was still negotiating the difference between kindness and cruelty, but with the frightened animal in my fist, I felt that the freedom I negotiated for it was no favor. I knew that, rather than concern for the animal, it had been my own curiosity that prompted all this excitement.",
+    The very first image in Alec Soth’s new book, I Know How Furiously Your Heart Is Beating, reminds me of a time when I was five years old, and I convinced my best friend to let her parakeet out of its cage. In Soth’s photograph titled “Cammy’s View. Salt Lake City.” a cockatiel is perched at a closed window. Its head tilts back to look at the camera. Although the animal isn’t in a cage, it is in a corner and the trees that are visible through the window panes are too far away to be in focus. This scene makes me think of my childhood friend and her bird, because that bird was also drawn towards windows. It didn’t seem to know the difference between glass and air. I can remember watching the little animal as it searched for a way out, immediately knowing that I had made a mistake. When we finally managed to catch the parakeet, its entire body was like a pulsing heart. At that age, I was still negotiating the difference between kindness and cruelty, but with the frightened animal in my fist, I felt that the freedom I negotiated for it was no favor. I knew that, rather than concern for the animal, it had been my own curiosity that prompted all this excitement.",
     user_id: oscar.id
 )
 show_one.photo.attach(io: show_one_img, filename: '963c7429-9d8d-4d4a-b8e9-f5f6f5fcfa61.jpg', content_type: 'image/jpg')
 show_one.save!
 puts "Alec Soth Show created"
 
-# Show 2 https://79hbm1979mg58bnh1fp50y1bry-wpengine.netdna-ssl.com/wp-content/uploads/2017/05/Ravens2.jpg
+# Show 2
 show_two_img = URI.open("https://news.artnet.com/app/news-upload/2017/06/2004-138-Gedser_A4_440x300mm_LAC-697x1024.jpg")
 show_two = Show.new(
     title: "Wolfgang Tilmans - Retrospective",
     logline: "This year's big summer exhibition is devoted to the artist Wolfgang Tillmans. It is the first comprehensive engagement with the medium of photography at the Fondation Beyeler...",
     statement: "This year's big summer exhibition is devoted to the artist Wolfgang Tillmans. It is the first comprehensive engagement with the medium of photography at the Fondation Beyeler, which some time ago added a wonderful group of works by Tillmans to its collection. Around 200 photographic works dating from 1989 to 2017 will be on show from May 28 to October 1, together with a new audiovisual installation.
-Tillmans first made a name for himself in the early 1990s through photographs that have attained iconic status for their evocation of the mood of an entire generation, with its carefree urge for freedom and its desire to seize life’s moments. Soon, however, he widened his focus, experimenting with the means of photography to develop a new visual language. He created his images with and without a camera and also using a photocopier. In addition to traditional genres such as portrait, still life and landscape, the exhibition presents abstract works that play with the limits of the visible. It will show how Tillman’s work is concerned with the creation of images rather than with photography in the conventional sense. The exhibition is being designed in close cooperation with the artist.",
+    Tillmans first made a name for himself in the early 1990s through photographs that have attained iconic status for their evocation of the mood of an entire generation, with its carefree urge for freedom and its desire to seize life’s moments. Soon, however, he widened his focus, experimenting with the means of photography to develop a new visual language. He created his images with and without a camera and also using a photocopier. In addition to traditional genres such as portrait, still life and landscape, the exhibition presents abstract works that play with the limits of the visible. It will show how Tillman’s work is concerned with the creation of images rather than with photography in the conventional sense. The exhibition is being designed in close cooperation with the artist.",
     user_id: oscar.id
 )
 show_two.photo.attach(io: show_two_img, filename: '2004-138-Gedser_A4_440x300mm_LAC-697x1024.jpg', content_type: 'image/jpg')
@@ -135,8 +135,8 @@ show_three = Show.new(
     title: "Igor Moritz : Untitled Self",
     logline: "Igor Moritz was born in Poland in 1996. At a young age, he and his family were forced to relocate to London, but when he was old enough, he returned to his home, Lubin, to pursue his studies in fine arts. Moritz’s artistic energy flows out him so intensely; constantly creating with an almost Egon Schieleian-like passion",
     statement: "Igor Moritz was born in Poland in 1996. At a young age, he and his family were forced to relocate to London, but when he was old enough, he returned to his home, Lubin, to pursue his studies in fine arts. Moritz’s artistic energy flows out him so intensely; constantly creating with an almost Egon Schieleian-like passion, Moritz’s muse is the world around him.
-Those in his most intimate circles are the ones he portrays, giving the viewer a view into Moritz’s world. His paintings and drawing flirt with mimesis while breaking all rules of perspective, proportion and realism. He morphs and composes the perspective, space and figures in a way, in order to create visual tension.
-Color is something that is always at the forefront of his works, as Moritz sees color to be a way to tap into the viewer’s visual palette. The effect are artworks that are palpable, emotional, and visceral.",
+    Those in his most intimate circles are the ones he portrays, giving the viewer a view into Moritz’s world. His paintings and drawing flirt with mimesis while breaking all rules of perspective, proportion and realism. He morphs and composes the perspective, space and figures in a way, in order to create visual tension.
+    Color is something that is always at the forefront of his works, as Moritz sees color to be a way to tap into the viewer’s visual palette. The effect are artworks that are palpable, emotional, and visceral.",
     user_id: oscar.id
 )
 show_three.photo.attach(io: show_three_img, filename: 'large.jpg', content_type: 'image/jpg')
@@ -156,14 +156,14 @@ show_four.save!
 puts "Maria Secio Show created"
 
 # Show 5
-show_five_img = URI.open("https://www.swr.de/swr2/kunst-und-ausstellung/1579886786342,edward-hopper-fondation-beyeler-110~_v-16x9@2dXL_-77ed5d09bafd4e3cf6a5a0264e5e16ea35f14925.jpg")
+show_five_img = URI.open("https://i1.wp.com/thewashingtonlobbyist.com/wp-content/uploads/2019/08/The-Jefferson-Hotel-richmond-edward-hopper-vmfa-october-2019.jpg")
 show_five = Show.new(
-    title: "Hopper",
+    title: "The Ultimate Hopper",
     logline: "With watercolors and oil paintings dating from the 1910s to the 1960s, the exhibition will provide an extensive and exciting overview of the multifaceted nature of Edward Hopper’s oeuvre.",
     statement: "",
     user_id: oscar.id
 )
-show_five.photo.attach(io: show_five_img, filename: '1579886786342,edward-hopper-fondation-beyeler-110~_v-16x9@2dXL_-77ed5d09bafd4e3cf6a5a0264e5e16ea35f14925.jpg', content_type: 'image/jpg')
+show_five.photo.attach(io: show_five_img, filename: 'The-Jefferson-Hotel-richmond-edward-hopper-vmfa-october-2019.jpg', content_type: 'image/jpg')
 show_five.save!
 puts "Hopper Show created"
 
@@ -179,15 +179,15 @@ show_six.save!
 puts "Allistair Walter Show created"
 
 # Show 7
-show_seven_img = URI.open("https://www.stereosis.com/wp-content/uploads/2017/04/Z8-Dareos_Khalili_05.jpg")
+show_seven_img = URI.open("https://www.thebroad.org/sites/default/files/art/neshat_rapture_women_show_hands_0.jpg")
 show_seven = Show.new(
-    title: "Home",
+    title: "Shirin Neshat - Retrospective",
     statement: "Curated by Jacob Aue Sobol, Home contains the work of 10 of the best contemporary Greek Photographers",
     user_id: mike.id
 )
-show_seven.photo.attach(io: show_seven_img, filename: 'Z8-Dareos_Khalili_05.jpg', content_type: 'image/jpg')
+show_seven.photo.attach(io: show_seven_img, filename: 'neshat_rapture_women_show_hands_0.jpg', content_type: 'image/jpg')
 show_seven.save!
-puts "Home Show created"
+puts "Shirin Neshat Show created"
 
 # Show 9
 show_nine_img = URI.open("https://66.media.tumblr.com/aef231256a10a700488efd7a3a3467ea/tumblr_ozeo7yIB4i1ugxfjno1_1280.jpg")
@@ -198,10 +198,10 @@ show_nine = Show.new(
 )
 show_nine.photo.attach(io: show_nine_img, filename: '698px-Ernst_Ludwig_Kirchner_-_KG_Br%C3%BCcke_%28Ausstellungsplakat_der_Galerie_Arnold_in_Dresden%29.jpeg', content_type: 'image/jpg')
 show_nine.save!
-puts "Die Brücke Show created"
+puts "Natasha Mabille Show created"
 
-puts "======Shows old created"
-# Show 10 
+
+# Show 10
 show_ten_img = URI.open("https://d2jv9003bew7ag.cloudfront.net/uploads/Elmgreen-and-Dragset-Broken-Square-2018-detail.jpg")
 show_ten = Show.new(
     title: "Dragset and Elmgreen",
@@ -210,16 +210,18 @@ show_ten = Show.new(
 )
 show_ten.photo.attach(io: show_ten_img, filename: 'Elmgreen-and-Dragset-Broken-Square-2018-detail.jpg', content_type: 'image/jpg')
 show_ten.save!
+puts "Dragset and Elmgreen Show created"
 
 # Show 11
 show_eleven_img = URI.open("https://d2jv9003bew7ag.cloudfront.net/uploads/Jan-Fabre-Thinking-Model-I-2012-image-via-museumtoscale.com_.jpg")
 show_eleven = Show.new(
-    title: "Dragset and Elmgreen",
+    title: "Jan Fabre",
     statement: "",
     user_id: mike.id
 )
 show_eleven.photo.attach(io: show_eleven_img, filename: 'Jan-Fabre-Thinking-Model-I-2012-image-via-museumtoscale.com_.jpg', content_type: 'image/jpg')
 show_eleven.save!
+puts "Jan Fabre Show created"
 
 # Show 8
 show_eight_img = URI.open("https://www.adam-themagazine.com/wp-content/uploads/2019/03/basquiat3.jpg")
@@ -241,8 +243,9 @@ show_twelve = Show.new(
 )
 show_twelve.photo.attach(io: show_twelve_img, filename: 'images/I/71m+hpscF9L.jpg', content_type: 'image/jpg')
 show_twelve.save!
+puts "Francesca Woodman Show created"
 
-# Show 13 https://www.alexcoghe.com/wp-content/uploads/2014/12/big.jpg
+# Show 13
 show_thirteen_img = URI.open("https://www.alexcoghe.com/wp-content/uploads/2014/12/big.jpg")
 show_thirteen = Show.new(
     title: "Jacob Aue Sobol - I, Tokyo.",
@@ -251,9 +254,9 @@ show_thirteen = Show.new(
 )
 show_thirteen.photo.attach(io: show_thirteen_img, filename: 'wp-content/uploads/2014/12/big.jpg', content_type: 'image/jpg')
 show_thirteen.save!
-puts "----shows new 1 created"
+puts "Jacob Aue Sobol Show created"
 
-# Show 14 https://aestheticamagazine.com/wp-content/uploads/2020/05/E7095534-A7B8-4BA4-AD66-D94094D91F95.jpeg
+# Show 14
 show_fourteen_img = URI.open("https://aestheticamagazine.com/wp-content/uploads/2020/05/E7095534-A7B8-4BA4-AD66-D94094D91F95.jpeg")
 show_fourteen = Show.new(
     title: "Body as Performance",
@@ -262,20 +265,20 @@ show_fourteen = Show.new(
 )
 show_fourteen.photo.attach(io: show_fourteen_img, filename: '2020/05/E7095534-A7B8-4BA4-AD66-D94094D91F95.jpeg', content_type: 'image/jpg')
 show_fourteen.save!
+puts "Dragset and Elmgreen Show created"
 
-puts "----shows new 1 created"
-
-# Show 15 https://graphics8.nytimes.com/images/2011/03/10/t-magazine/10mm-heyman/10mm-heyman-custom7.jpg
+# Show 15
 show_fifteen_img = URI.open("https://graphics8.nytimes.com/images/2011/03/10/t-magazine/10mm-heyman/10mm-heyman-custom7.jpg")
 show_fifteen = Show.new(
-    title: "Mark Morrisroe",
+    title: "The Unseen Mark Morrisroe",
     statement: "",
     user_id: mike.id
 )
 show_fifteen.photo.attach(io: show_fifteen_img, filename: '10mm-heyman/10mm-heyman-custom7.jpg', content_type: 'image/jpg')
 show_fifteen.save!
+puts "Mark Morrisroe Show created"
 
-# Shows 16 
+# Shows 16
 show_sixteen_img = URI.open("https://dazedimg-dazedgroup.netdna-ssl.com/786/azure/dazed-prod/1220/7/1227454.jpg")
 show_sixteen = Show.new(
     title: "Peter Hujar - Candy Darling's Legacy",
@@ -284,8 +287,9 @@ show_sixteen = Show.new(
 )
 show_sixteen.photo.attach(io: show_sixteen_img, filename: '10mm-heyman/10mm-heyman-custom7.jpg', content_type: 'image/jpg')
 show_sixteen.save!
+puts "Peter Hujar Show created"
 
-#Shows 17 
+#Shows 17
 show_seventeen_img = URI.open("https://2yt5hf5ru3lc0191q3nb5yfv-wpengine.netdna-ssl.com/wp-content/uploads/She-Lise-Sarfati-004.jpg")
 show_seventeen = Show.new(
     title: "Lise Sarfati",
@@ -294,8 +298,9 @@ show_seventeen = Show.new(
 )
 show_seventeen.photo.attach(io: show_seventeen_img, filename: 'wp-content/uploads/She-Lise-Sarfati-004.jpg', content_type: 'image/jpg')
 show_seventeen.save!
+puts "Lise Sarfati Show created"
 
-#Shows 18 
+#Shows 18
 show_eighteen_img = URI.open("https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fwww.all-about-photo.com%2Fimages%2Fphotographer%2FH%2FPHOT-pieter-hugo-2.jpg")
 show_eighteen = Show.new(
     title: "Pieter Hugo - scepticism",
@@ -304,8 +309,9 @@ show_eighteen = Show.new(
 )
 show_eighteen.photo.attach(io: show_eighteen_img, filename: 'photographer%2FH%2FPHOT-pieter-hugo-2.jpg', content_type: 'image/jpg')
 show_eighteen.save!
+puts "Pieter Hugo Show created"
 
-#Shows 19 
+#Shows 19
 show_nineteen_img = URI.open("https://79hbm1979mg58bnh1fp50y1bry-wpengine.netdna-ssl.com/wp-content/uploads/2017/05/Ravens2.jpg")
 show_nineteen = Show.new(
     title: "Eiki Mori - Tokyo Boy Alone",
@@ -314,8 +320,9 @@ show_nineteen = Show.new(
 )
 show_nineteen.photo.attach(io: show_nineteen_img, filename: 'wp-content/uploads/2017/05/Ravens2.jpg', content_type: 'image/jpg')
 show_nineteen.save!
+puts "Eiki Mori Show created"
 
-#Shows 19 https://66.media.tumblr.com/aef231256a10a700488efd7a3a3467ea/tumblr_ozeo7yIB4i1ugxfjno1_1280.jpg
+#Shows 20
 show_twenty_img = URI.open("https://www.positive-magazine.com/edge/wp-content/uploads/2009/10/eikimori5-550x433.jpg")
 show_twenty = Show.new(
     title: "Masahisa Fukase - Ravens",
@@ -324,18 +331,17 @@ show_twenty = Show.new(
 )
 show_twenty.photo.attach(io: show_twenty_img, filename: 'uploads/2009/10/eikimori5-550x433.jpg', content_type: 'image/jpg')
 show_twenty.save!
-puts "----shows new 2 created"
+puts "Masahisa Fukase Show created"
 
-## panel image link
-wall_panel_img = URI.open("https://res.cloudinary.com/do3fkzte4/image/upload/v1591694256/wall_1_xvvizq.jpg")
-##
+puts "======Shows Created"
+
 
 # # ============= #
 # # ARTWORK SEEDS #
 # # ============= #
 
 # Artworks Show 1
-
+wall_panel_img = URI.open("https://res.cloudinary.com/do3fkzte4/image/upload/v1591694256/wall_1_xvvizq.jpg")
    Panel.create!([
    show_id: Show.first.id
  ])
@@ -455,6 +461,162 @@ show_one_artwork_eight = Artwork.new(
 )
 show_one_artwork_eight.photo.attach(io: show_one_artwork_eight_img, filename: 'fedce6c0-6de8-4c76-a879-2a7217db5c03.jpg', content_type: 'image/jpg')
 show_one_artwork_eight.save!
+
+show_one_artwork_nine_img = URI.open("https://www.alecsoth.com/photography/media/pages/projects/i-know-how-furiously-your-heart-is-beating/3574326809-1551369195/2018_06zl0001.jpg")
+artwork_nine = Artwork.new(
+    artist: "Alec Soth",
+    show_id: Show.first.id,
+    panel_id: Panel.first.id,
+    user_id: User.first.id,
+    width: 200,
+    x: 300,
+    y: 300,
+)
+artwork_nine.photo.attach(io: show_one_artwork_nine_img, filename: '2018_06zl0001.jpg', content_type: 'image/jpg')
+artwork_nine.save!
+
+show_one_artwork_ten_img = URI.open("https://www.alecsoth.com/photography/media/pages/projects/i-know-how-furiously-your-heart-is-beating/2613431417-1551369195/2018_07zl0007.jpg")
+artwork_ten = Artwork.new(
+    artist: "Alec Soth",
+    show_id: Show.first.id,
+    panel_id: Panel.first.id,
+    user_id: User.first.id,
+    width: 200,
+    x: 300,
+    y: 300,
+)
+artwork_ten.photo.attach(io: show_one_artwork_ten_img, filename: '2018_07zl0007.jpgs', content_type: 'image/jpg')
+artwork_ten.save!
+
+show_one_artwork_eleven_img = URI.open("https://www.alecsoth.com/photography/media/pages/projects/i-know-how-furiously-your-heart-is-beating/599627657-1551369195/2018_01zl0057.jpg")
+artwork_eleven = Artwork.new(
+    artist: "Alec Soth",
+    show_id: Show.first.id,
+    panel_id: Panel.first.id,
+    user_id: User.first.id,
+    width: 200,
+    x: 300,
+    y: 300,
+)
+artwork_eleven.photo.attach(io: show_one_artwork_eleven_img, filename: '2018_01zl0057.jpg', content_type: 'image/jpg')
+artwork_eleven.save!
+
+show_one_artwork_twelve_img = URI.open("https://www.alecsoth.com/photography/media/pages/projects/i-know-how-furiously-your-heart-is-beating/240436317-1551369196/2018_10zl0097.jpg")
+artwork_twelve = Artwork.new(
+    artist: "Alec Soth",
+    show_id: Show.first.id,
+    panel_id: Panel.first.id,
+    user_id: User.first.id,
+    width: 200,
+    x: 300,
+    y: 300,
+)
+artwork_twelve.photo.attach(io: show_one_artwork_twelve_img, filename: '2018_10zl0097.jpg', content_type: 'image/jpg')
+artwork_twelve.save!
+
+show_one_artwork_thirteen_img = URI.open("https://www.alecsoth.com/photography/media/pages/projects/i-know-how-furiously-your-heart-is-beating/727850352-1551369196/2018_08zl0122.jpg")
+artwork_thirteen = Artwork.new(
+    artist: "Alec Soth",
+    show_id: Show.first.id,
+    panel_id: Panel.first.id,
+    user_id: User.first.id,
+    width: 200,
+    x: 300,
+    y: 300,
+)
+artwork_thirteen.photo.attach(io: show_one_artwork_thirteen_img, filename: '2018_08zl0122.jpg', content_type: 'image/jpg')
+artwork_thirteen.save!
+
+show_one_artwork_fourteen_img = URI.open("https://www.alecsoth.com/photography/media/pages/projects/i-know-how-furiously-your-heart-is-beating/3705626903-1551369196/2018_06zl0037.jpg")
+artwork_fourteen = Artwork.new(
+    artist: "Alec Soth",
+    show_id: Show.first.id,
+    panel_id: Panel.first.id,
+    user_id: User.first.id,
+    width: 200,
+    x: 300,
+    y: 300,
+)
+artwork_fourteen.photo.attach(io: show_one_artwork_fourteen_img, filename: '2018_06zl0037.jpg', content_type: 'image/jpg')
+artwork_fourteen.save!
+
+show_one_artwork_fifteen_img = URI.open("https://www.alecsoth.com/photography/media/pages/projects/i-know-how-furiously-your-heart-is-beating/3003251971-1551369195/2018_05zl0026.jpg")
+artwork_fifteen = Artwork.new(
+    artist: "Alec Soth",
+    show_id: Show.first.id,
+    panel_id: Panel.first.id,
+    user_id: User.first.id,
+    width: 200,
+    x: 300,
+    y: 300,
+)
+artwork_fifteen.photo.attach(io: show_one_artwork_fifteen_img, filename: '2018_05zl0026.jpg', content_type: 'image/jpg')
+artwork_fifteen.save!
+
+show_one_artwork_sixteen_img = URI.open("https://www.alecsoth.com/photography/media/pages/projects/i-know-how-furiously-your-heart-is-beating/2200033043-1551369195/2017_11zl0006.jpg")
+artwork_sixteen = Artwork.new(
+    artist: "Alec Soth",
+    show_id: Show.first.id,
+    panel_id: Panel.first.id,
+    user_id: User.first.id,
+    width: 200,
+    x: 300,
+    y: 300,
+)
+artwork_sixteen.photo.attach(io: show_one_artwork_sixteen_img, filename: '2017_11zl0006.jpg', content_type: 'image/jpg')
+artwork_sixteen.save!
+
+show_one_artwork_seventeen_img = URI.open("https://www.alecsoth.com/photography/media/pages/projects/i-know-how-furiously-your-heart-is-beating/3281594755-1551369195/2018_03zl0073.jpg")
+artwork_seventeen = Artwork.new(
+    artist: "Alec Soth",
+    show_id: Show.first.id,
+    panel_id: Panel.first.id,
+    user_id: User.first.id,
+    width: 200,
+    x: 300,
+    y: 300,
+)
+artwork_seventeen.photo.attach(io: show_one_artwork_seventeen_img, filename: '2018_03zl0073.jpg', content_type: 'image/jpg')
+artwork_seventeen.save!
+
+show_one_artwork_eighteen_img = URI.open("https://www.alecsoth.com/photography/media/pages/projects/i-know-how-furiously-your-heart-is-beating/3708819925-1551369195/2018_05zl0062.jpg")
+artwork_eighteen = Artwork.new(
+    artist: "Alec Soth",
+    show_id: Show.first.id,
+    panel_id: Panel.first.id,
+    user_id: User.first.id,
+    width: 200,
+    x: 300,
+    y: 300,
+)
+artwork_eighteen.photo.attach(io: show_one_artwork_eighteen_img, filename: '2018_05zl0062.jpg', content_type: 'image/jpg')
+artwork_eighteen.save!
+
+show_one_artwork_nineteen_img = URI.open("https://www.alecsoth.com/photography/media/pages/projects/i-know-how-furiously-your-heart-is-beating/2861487732-1551369196/2018_08zl0138.jpg")
+artwork_nineteen = Artwork.new(
+    artist: "Alec Soth",
+    show_id: Show.first.id,
+    panel_id: Panel.first.id,
+    user_id: User.first.id,
+    width: 200,
+    x: 300,
+    y: 300,
+)
+artwork_nineteen.photo.attach(io: show_one_artwork_nineteen_img, filename: '2018_08zl0138.jpg', content_type: 'image/jpg')
+artwork_nineteen.save!
+
+show_one_artwork_twenty_img = URI.open("https://www.alecsoth.com/photography/media/pages/projects/i-know-how-furiously-your-heart-is-beating/2590344561-1554821624/201806zl0066.jpg")
+artwork_twenty = Artwork.new(
+    artist: "Alec Soth",
+    show_id: Show.first.id,
+    panel_id: Panel.first.id,
+    user_id: User.first.id,
+    width: 200,
+    x: 300,
+    y: 300,
+)
+artwork_twenty.photo.attach(io: show_one_artwork_twenty_img, filename: '201806zl0066.jpg', content_type: 'image/jpg')
+artwork_twenty.save!
 
 #### PLACEHOLDER FOR SHOW_ONE ARTWORK INSTANCE ####
 

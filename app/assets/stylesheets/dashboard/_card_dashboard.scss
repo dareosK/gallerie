@@ -6,12 +6,12 @@
 }
 
 .profile {
-  margin-top: 18px; 
+  margin-top: 18px;
   margin-right: 20px;
-  background-color: white; 
-  text-align: center; 
+  background-color: white;
+  text-align: center;
   width: 300px;
-  padding: 10px; 
+  padding: 10px;
   position: -webkit-sticky;
   position: fixed;
   top: 3rem;
@@ -23,15 +23,16 @@ h5, p {
   font-family: $body-font;
 }
 .btn_add_show {
-  background-color: black; 
   border: none;
+  font-family: $body-font;
   &:hover {
-    background-color: $brand-color;
+    background-color: lightgrey;
+    font-family: $body-font;
   }
 }
 .fab:hover {
     color: $brand-color;
-}  
+}
 
 .card-product {
   overflow: hidden;
@@ -54,11 +55,11 @@ h5, p {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
-  color: black; 
+  color: black;
   text-decoration: none;
   &:hover {
-    text-decoration: none; 
-    color: grey; 
+    text-decoration: none;
+    color: grey;
   }
 }
 
@@ -68,7 +69,7 @@ h5, p {
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
-    color: black; 
+    color: black;
   text-decoration: none;
 }
 
@@ -89,7 +90,7 @@ h5, p {
   padding-bottom: 10px;
   border-bottom: 1px solid lightgrey;
   & h1 {
-    text-align: center; 
+    text-align: center;
   }
   & p {
     font-weight: 100;
@@ -115,8 +116,8 @@ h5, p {
 .biography {
   font-family: $body-font;
   width: 200px;
-  text-align: left; 
-  text-align: justify; 
-  color: grey; font-size:14px; 
+  text-align: left;
+  text-align: justify;
+  color: grey; font-size:14px;
   margin: 8px auto;
 }
