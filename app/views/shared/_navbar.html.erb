@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= "navbar-lewagon-homepage" if controller_name == "shows" && action_name == "index" || "show"%>">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= "navbar-lewagon-homepage" if controller_name == "shows" && action_name == "index" || controller_name == "shows"  && action_name == "show"%>">
   <%= link_to "VUE", root_path, class: "navbar-brand" %>
 
 

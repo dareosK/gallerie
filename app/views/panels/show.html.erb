@@ -1,19 +1,18 @@
 <div class="container-fluid mt-5" style="padding: 0 !important; margin: 0 !important;">
-	<div class="col-12">
-	<i class="fas fa-angle-double-left"><% link_to edit_show_path(@show) %></i>
-	
-	  <%= link_to "view show", show_path(@show) %>
-	</div>
+	<div class="ml-4 mt-3"><%= link_to "back", edit_show_path(@show), class: 'linking-it' %> | <%= link_to "view show", show_path(@show), class: 'linking-it' %></div>
 		<div class="col-12 p-3" style="position:relative; width: 100%; overflow: scroll;">
 			<div class="d-flex justify-content-start">
 				<% @artworks.each do |artwork| %>
-				<div class="index-artworks">
+				<div class="index-artworks artwork-image">
 				<%= cl_image_tag(artwork.photo.key, class: "m-3", transformation: { height: 200, crop: 'fit'})%>
 				<%= form_with(model: [@panel, artwork]) do |f| %>
 				<%= f.number_field :panel_id, value: @panel.id, style: 'display: none;' %>
-				<%= f.submit as: :button, class: 'btn btn-primary' %>
+				<%= f.submit "+" ,as: :button, class: 'btn btn-primary btn_add_show ml-3 button-artwork' %>
 				<% end %>
 			</div>
+			<!--
+			<div class="d-flex justify-content-end m-3"><p><%#= link_to "Show", show_path(@show), class: "btn btn-light btn-lg btn_add_show" %></p></div>
+	        <div class="d-flex justify-content-end m-3"><button type="button" class="btn btn-primary btn-lg btn_add_show">+</button></div>-->
           
       <% end %>
     </div>

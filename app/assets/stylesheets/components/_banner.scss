@@ -24,9 +24,13 @@
   position: relative;
   z-index: 2;
   margin: 119px 0px;
+
   .details h1, .details p {
     color: white;
-    padding-right: 8px;
+    padding-right: 14px;
+  }
+  .details {
+    margin-top: 60px;
   }
   .details p {
     text-align: left;
@@ -37,19 +41,20 @@
     border-bottom: solid 4px white;    
   }
   
-  .live h2 {
+  .live h4 {
     background: #B80000;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    text-align: center;
+    color: white !important;
     width: 200px;
     height: 200px;
     border-radius: 50%;
     font-size: 32px;
     font-weight: 900;
     margin-left: 65px;
-    margin-top: 60px;
+    margin-top: 66px;
   }
 }
 
