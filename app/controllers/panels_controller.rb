@@ -8,6 +8,7 @@ class PanelsController < ApplicationController
 
   def show
     @panel = Panel.find(params[:id])
+    @show = @panel.show
     authorize @panel
     @artworks = @panel.show.artworks
     @panel_artworks = @panel.artworks
