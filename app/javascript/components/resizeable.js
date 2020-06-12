@@ -36,10 +36,12 @@ const saveWidth = () => {
 }
 
 const initResizeable = () => {
-  resizeIcons.forEach((icon) => {
-    icon.addEventListener("mousedown", startResize)
-    icon.addEventListener("mouseup", stopResize)
-   })
+  if (resizeIcons) {
+    resizeIcons.forEach((icon) => {
+      icon.addEventListener("mousedown", startResize)
+      icon.addEventListener("mouseup", stopResize)
+     })
+  }
 }
 
 
