@@ -34,18 +34,19 @@ const savePosition = ( x, y, draggableArtwork) => {
   coordinateForm.querySelector(".coordinate-form-x").value = draggableArtwork.style.left.replace("px", "");
   console.log(coordinateForm.querySelector(".coordinate-form-x"));
   coordinateForm.querySelector(".coordinate-form-y").value = draggableArtwork.style.top.replace("px", "");
-  
+
   // coordinateForm.submit();
   coordinateForm.querySelector(".coordinate-form-submit").click();
 }
 
 const initDraggable = () => {
+  if (allArtworks && indexArtworks) {
    allArtworks.forEach((artwork) => {
     artwork.addEventListener("mousedown", startDrag)
     // if (draggableArtwork) {
-      artwork.addEventListener("click", stopDrag) 
+      artwork.addEventListener("click", stopDrag)
     // };
-    
+
   })
   indexArtworks.forEach((artwork) => {
     artwork.addEventListener("mousedown", startDrag)
@@ -54,6 +55,7 @@ const initDraggable = () => {
     // };
 
   })
+  }
 }
 
 export { initDraggable }
