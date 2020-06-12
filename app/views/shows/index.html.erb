@@ -17,9 +17,9 @@
 
 <div class="flick-carousel data-flickity">
     <% @shows.each do |s| %>
-      <div class="carousel-cell mr-1">
+      <div class="carousel-cell mr-1 flickity-slider">
         <%= link_to show_path(s.id) do %>
-        <div id="poster">
+        <div id="poster" style="height: 450px;">
           <%= cl_image_tag(s.photo.key, width: 300) %>
         </div>
         <% end %>
@@ -27,7 +27,7 @@
     <% end %>
 </div>
 
-<div style="text-align: center; width: 100%; margin-bottom: 3.5rem; margin-top: 7rem; height: 450px;">
+<div style="text-align: center; width: 100%; margin-bottom: 3.5rem; margin-top: 7rem;">
 <h1>Recent Artshows</h1>
 </div>
 
