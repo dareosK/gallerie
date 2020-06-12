@@ -9,7 +9,8 @@
 	        <%#= @show.logline %>
 	        <div class="overflow-auto mr-3" style="max-height: 140px; text-align: justify"><%= @show.statement %></div>
 	        <!--  style="max-height: 140px; max-width: 600px; display: block; overflow: hidden; white-space: normal; text-overflow: ellipsis;" -->
-	        <div class="d-flex justify-content-end m-3"><%= link_to "Show", show_path(@show), class: "btn btn-light btn-lg btn_add_show" %></div>
+	        <div class="d-flex justify-content-end m-3"><p><%= link_to "Show", show_path(@show), class: "btn btn-light btn-lg btn_add_show" %></p></div>
+	       
 	    </div>
 	  </div>
 	</div>
@@ -54,7 +55,7 @@
 
 							<%= link_to panel_path(p)  do %>
                 <div class="box-spacing ml-4">
-								  <%= cl_image_tag(p.wall.key, transformation: { width: 200, height: 200, crop: 'fill'}) %>
+								  <%= cl_image_tag(p.wall.key, transformation: {height: 200, crop: 'fill'}) %>
                 </div>
 							<% end %>
 					<% end %>

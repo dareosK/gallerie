@@ -25,6 +25,8 @@ h5, p {
 .btn_add_show {
   border: none;
   font-family: $body-font;
+  background-color: black; 
+  color: white;
   &:hover {
     background-color: lightgrey;
     font-family: $body-font;
@@ -32,6 +34,24 @@ h5, p {
 }
 .fab:hover {
     color: $brand-color;
+}
+
+.artwork-image {
+  position: relative;
+}
+
+.button-artwork {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  border-radius: 0 !important;
+}
+
+.linking-it {
+  color: black ; 
+  &:hover {
+    color: grey;
+  }
 }
 
 .card-product {
