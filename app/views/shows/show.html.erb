@@ -5,27 +5,14 @@
         <div class="d-block w-100" >
           <div>
             <%= cl_image_tag(@show.panels.first.wall.key, width: "100%", height: "100vh", class: "wall-img") %>
-            <% panel.artworks.each do |artwork| %>
-            <div style='position: absolute; left: <%= artwork.x %>px; top: <%= artwork.y %>px; box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.2)'>
-              <%= cl_image_tag(artwork.photo.key) %>
-            </div>
-            <% end %>
           </div>
         </div>
     </div>
     <div class="carousel-item image-show">
         <div class="d-block w-100" >
-        <% @show.panels[1..-1].each_with_index do |panel| %>
-          <div>
-            <%= cl_image_tag(panel.wall.key, width: "100%", height: "100vh", class: "wall-img") %>
-            <% panel.artworks.each do |artwork| %>
-            <div style='position: absolute; left: <%= artwork.x %>px; top: <%= artwork.y %>px; box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.2)'>
-              <%= cl_image_tag(artwork.photo.key) %>
-            </div>
-            <% end %>
+        <div>
+            <%= cl_image_tag(@show.panels.first.wall.key, width: "100%", height: "100vh", class: "wall-img") %>
           </div>
-        </div>
-      <% end %>
     </div>
   </div>
   <a class="carousel-control-prev" href="#showCarousel" role="button" data-slide="prev">
