@@ -1,3 +1,4 @@
+@import "flickity/dist/flickity.min.css";
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
@@ -13,7 +14,6 @@
 @import "pages/index";
 @import "dashboard/index";
 @import "pages/edit";
-@import "flickity/dist/flickity.min.css";
 
 body {
   background-color: white;
