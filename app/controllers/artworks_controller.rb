@@ -1,5 +1,5 @@
 class ArtworksController < ApplicationController
-  def new    
+  def new
   end
 
   def update
@@ -10,16 +10,14 @@ class ArtworksController < ApplicationController
         @panel = @artwork.panel
         @panel_id = @artwork.panel_id
         if @panel_id.to_s == params[:artwork][:panel_id]
-
         redirect_to panel_path(@panel)
       else
-
         render panel_path(@panel)
       end
     end
-
       #   @panel = @artwork.panel
-      #   ## instead of this horrible if statement find out how to check if params coming from form include panel_id
+      #   ## instead of this horrible if statement find out how to check if params
+      #   coming from form include panel_id
       #   ## if artwork.panel.value changes then redirect_to else render
       #   redirect_to panel_path(@panel)
       # else
@@ -27,8 +25,8 @@ class ArtworksController < ApplicationController
       # end
     authorize @artwork
   end
-  
-  def create 
+
+  def create
     @panel = Panel.find(params[:panel_id])
     @show = @panel.show
     @artwork = Artwork.new(artworks_params)
