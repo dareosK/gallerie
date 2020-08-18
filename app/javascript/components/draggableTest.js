@@ -1,6 +1,6 @@
 // // THIS IS JUST TEST CODE, PLEASE DO NOT REMOVE //
 
-// /*Make resizable div by Hung Nguyen*/
+// /* Make resizable div */
 // function makeResizableDiv(div) {
 //   const element = document.querySelector(div);  // selects div
 //   const resizers = document.querySelectorAll(div + ' .resizer') // (select the gray icon instead)
