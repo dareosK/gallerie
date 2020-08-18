@@ -11,4 +11,22 @@
 # Browse through user-generated artshows
 [![Screenshot-2020-08-18-at-16-02-56.png](https://i.postimg.cc/kGGhpWVc/Screenshot-2020-08-18-at-16-02-56.png)](https://postimg.cc/gL9DwXHX)
 
+## VUE Gallerie:
+
+#### BUILT WITH:
+Ruby on Rails,
+VanillaJS,
+HTML/SCSS,
+PostgreSQL,
+deployed through HEROKU.
+
+#### DEVS:
+Dareos Khalili - Lead Dev,
+Kat McGlone,
+Fritz Bunse,
+Ella Luna von Müller.
+
+#### ACKNOWLEDGEMENTS
+All pictures for the seeds taken from the master portraitist Alec Soth and other artists that Dareos loves profoundly and hopes won't sue us <3 
+
 ## FOLLOW [THIS LINK](https://www.youtube.com/watch?v=U88N9JBsCQA/ "This link title") TO THE 2 MIN SITE TOUR !
