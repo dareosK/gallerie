@@ -1,32 +1,34 @@
+<!-- show.artworks index on the top of the page -->
 <div class="container-fluid mt-5" style="padding: 0 !important; margin: 0 !important;">
 	<div class="ml-4 mt-3"><%= link_to "back", edit_show_path(@show), class: 'linking-it' %> | <%= link_to "view show", show_path(@show), class: 'linking-it' %></div>
 		<div class="col-12 p-3" style="position:relative; width: 100%; overflow: scroll;">
 			<div class="d-flex justify-content-start">
 				<% @artworks.each do |artwork| %>
-				<div class="index-artworks artwork-image">
-				<%= cl_image_tag(artwork.photo.key, class: "m-3", transformation: { height: 200, crop: 'fit'})%>
-				<%= form_with(model: [@panel, artwork]) do |f| %>
-				<%= f.number_field :panel_id, value: @panel.id, style: 'display: none;' %>
-				<%= f.submit "+" ,as: :button, class: 'btn btn-primary btn_add_show ml-3 button-artwork' %>
-				<% end %>
-			</div>
-			<!--
-			<div class="d-flex justify-content-end m-3"><p><%#= link_to "Show", show_path(@show), class: "btn btn-light btn-lg btn_add_show" %></p></div>
-	        <div class="d-flex justify-content-end m-3"><button type="button" class="btn btn-primary btn-lg btn_add_show">+</button></div>-->
-          
+  				<div class="index-artworks artwork-image">
+  				<%= cl_image_tag(artwork.photo.key, class: "m-3", transformation: { height: 200, crop: 'fit'})%>
+  				<%= form_with(model: [@panel, artwork]) do |f| %>
+  				<%= f.number_field :panel_id, value: @panel.id, style: 'display: none;' %>
+  				<%= f.submit "+" ,as: :button, class: 'btn btn-primary btn_add_show ml-3 button-artwork' %>
+  				<% end %>
+  			</div>
       <% end %>
     </div>
   </div>
+
+  <!-- Panel -->
 	<div class="col-12" style="padding: 0 !important; margin: 0 !important;">
 		<div class="" style="width: 100%; height: 100vh; background-image: url(<%= cl_image_path(@panel.wall.key)%>)">
 		<div class="col-8 d-flex">
-        <% @panel_artworks.each do |panel_artwork| %>
+
+        <!-- display all panel.artworks on the panel -->
+        <% @panel_artworks.each do |panel_artwork| %> <!-- This iteration needs to include the two Hidden Forms in it, so they are created for each artwork separately -->
           <div class="p-3 artwork" style="width: fit-content; position: absolute; top: <%= panel_artwork.y %>px; left: <%= panel_artwork.x %>px; ">
             <%= cl_image_tag(panel_artwork.photo.key, width: "#{panel_artwork.width}px") %>
             <div style="height: 100%; width: 100%; position: relative;" id="resize-icon">
               <div class="resize-icon" style=" width:20px; height:20px; background-color: gray; position: absolute; bottom: 0; right: 0;"></div>
             </div>
-					  <div style="display: none">
+            <!-- Hidden Form for artworks X and Y manipulation -->
+					  <div style="display: none"> <!-- Hides the form 😏 -->
 						<%= form_with(model: [ @panel, panel_artwork], class: 'coordinate-form') do |f| %>
 						<%= f.number_field :x, as: :hidden, class: "coordinate-form-x" %>
 						<%= f.number_field :y, as: :hidden, class: "coordinate-form-y" %>
@@ -38,6 +40,7 @@
 								<%= f.submit as: :hidden, class: 'coordinate-form-submit' %>
 						  <% end %>
 						</div>
+            <!-- Hidden Form for artwork width manipulation (see resizeable.js) -->
 						<div style="display: none">
 						  <%= simple_form_for [@panel, panel_artwork], remote: true, html: { class: 'resizable-form'} do |f| %>
 							<%= f.input :width, as: :hidden, input_html: { class: 'resizable-form-width'} %>
@@ -46,6 +49,7 @@
 						</div>
           </div>
         <% end %>
+
       </div>
 		</div>
   </div>
