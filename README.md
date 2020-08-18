@@ -27,6 +27,6 @@ Fritz Bunse,
 Ella Luna von Müller.
 
 #### ACKNOWLEDGEMENTS
-All pictures for the seeds taken from the master portraitist Alec Soth and other artists that Dareos loves profoundly and hopes won't sue us <3 
+All pictures for the seeds taken from the master portraitist Alec Soth and other artists that Dareos loves profoundly and hopes won't sue us <3 VUE is a work in progress MVP.
 
 ## FOLLOW [THIS LINK](https://www.youtube.com/watch?v=U88N9JBsCQA/ "This link title") TO THE 2 MIN SITE TOUR !
