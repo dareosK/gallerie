@@ -1,27 +1,29 @@
 // =====resizeable.js===== //
-// import { savePosition } from "../draggable";
+
 const resizeIcons = document.querySelectorAll(".resize-icon");
 // selects all grey resize icons on the images (-> turn into vector later)
 
-let initWidth; // so you can manipulate the final width of the artwork (see below)
-let initX; // same for the final X position on the panel
+let initWidth; // so you can manipulate the final width of the Artwork (see below)
+let initX; // same for the final X position on the Panel
 let resizableArtwork;
 
 // 2.
 const startResize = (event) => {
-  event.preventDefault(); // prevents default JS behaviours, so that we can create ours.
+  event.preventDefault(); // prevents default behaviours
   resizableArtwork = event.currentTarget.parentElement.parentElement.querySelector("img");
-  // the artwork is wrapped in many divs, that's why all the .parentElement s
-  initWidth = resizableArtwork.width; // assign the width
-  initX = event.clientX; // assign the initial X position on the panel
+  // The artwork is wrapped in many divs, that's why all the parentElements.
+  // Assign the width to the width of the artwork.
+  initWidth = resizableArtwork.width;
+  // Assign the initial X position of the Artwork on the Panel.
+  initX = event.clientX;
   window.addEventListener("mousemove", resize); // once you move the mouse, call resize (.3)
 }
 
 // 3.
 const resize = (event) => {
-  event.preventDefault(); // prevents default JS behaviours.
+  event.preventDefault();
+  // change the final width of the Artwork.
   resizableArtwork.style.width = `${initWidth + event.clientX - initX}px`;
-  // changes the final width of the Artwork.
 }
 
 // 4.
@@ -31,21 +33,19 @@ const stopResize = (event) => {
   saveWidth();
 }
 
-// 5. uses a hidden form to save the final width to the DB
+// 5. uses a Hidden Form (check show.html.erb) to save the final width to the DB
 const saveWidth = () => {
   const resizableForm = resizableArtwork.parentElement.querySelector(".resizable-form");
-  console.log(resizableForm);
   resizableForm.querySelector(".resizable-form-width").value = resizableArtwork.width;
   resizableForm.querySelector(".resizable-form-submit").click();
-  // savePosition();
 }
 
 // 1.
 const initResizeable = () => {
   if (resizeIcons) { // we only want this to fire if there are any resizeIcons. Otherwise, we will get console errors.
     resizeIcons.forEach((icon) => {
-      icon.addEventListener("mousedown", startResize) // call startResize() when mousedown (2.)
-      icon.addEventListener("mouseup", stopResize) // call stopResize() when mouseup (.4)
+      icon.addEventListener("mousedown", startResize) // start resizing when mousedown (2.)
+      icon.addEventListener("mouseup", stopResize) // stop resizing when mouseup (.4)
      })
   }
 }

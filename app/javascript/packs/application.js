@@ -23,20 +23,16 @@ require("channels")
 // External imports
 import "bootstrap";
 
-// Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
+// Internal imports
 import { initMasonry } from '../components/masonry';
-
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { clickable } from '../components/clickable';
-// Sandbox
 import { initDraggable } from '../components/draggable';
 import { initResizeable } from '../components/resizeable';
 import { initFlickity } from '../components/flickity';
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
+  // Call your functions here so they work with AJAX
   initUpdateNavbarOnScroll();
   initMasonry();
   initDraggable();

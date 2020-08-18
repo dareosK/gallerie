@@ -1,4 +1,4 @@
-.container{
+.container {
   height: 100%;
   display: flex;
   align-items: flex-start;
@@ -25,7 +25,7 @@ h5, p {
 .btn_add_show {
   border: none;
   font-family: $body-font;
-  background-color: black; 
+  background-color: black;
   color: white;
   &:hover {
     background-color: lightgrey;
@@ -48,7 +48,7 @@ h5, p {
 }
 
 .linking-it {
-  color: black ; 
+  color: black ;
   &:hover {
     color: grey;
   }
