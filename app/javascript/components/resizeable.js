@@ -1,33 +1,38 @@
 // =====resizeable.js===== //
 // import { savePosition } from "../draggable";
-const resizeIcons = document.querySelectorAll(".resize-icon"); // selects the right element(make ->elementss)
+const resizeIcons = document.querySelectorAll(".resize-icon");
+// selects all grey resize icons on the images (-> turn into vector later)
 
-let initWidth;
-let initX;
+let initWidth; // so you can manipulate the final width of the artwork (see below)
+let initX; // same for the final X position on the panel
 let resizableArtwork;
 
+// 2.
 const startResize = (event) => {
-  event.preventDefault();
-  console.log(event.currentTarget);
+  event.preventDefault(); // prevents default JS behaviours, so that we can create ours.
   resizableArtwork = event.currentTarget.parentElement.parentElement.querySelector("img");
-  initWidth = resizableArtwork.width;
-  initX = event.clientX;
-  window.addEventListener("mousemove", resize);
+  // the artwork is wrapped in many divs, that's why all the .parentElement s
+  initWidth = resizableArtwork.width; // assign the width
+  initX = event.clientX; // assign the initial X position on the panel
+  window.addEventListener("mousemove", resize); // once you move the mouse, call resize (.3)
 }
 
+// 3.
 const resize = (event) => {
-  event.preventDefault();
+  event.preventDefault(); // prevents default JS behaviours.
   resizableArtwork.style.width = `${initWidth + event.clientX - initX}px`;
+  // changes the final width of the Artwork.
 }
 
+// 4.
 const stopResize = (event) => {
   event.preventDefault();
   window.removeEventListener("mousemove", resize);
   saveWidth();
 }
 
+// 5. uses a hidden form to save the final width to the DB
 const saveWidth = () => {
-  console.log(resizableArtwork);
   const resizableForm = resizableArtwork.parentElement.querySelector(".resizable-form");
   console.log(resizableForm);
   resizableForm.querySelector(".resizable-form-width").value = resizableArtwork.width;
@@ -35,56 +40,15 @@ const saveWidth = () => {
   // savePosition();
 }
 
+// 1.
 const initResizeable = () => {
-  if (resizeIcons) {
+  if (resizeIcons) { // we only want this to fire if there are any resizeIcons. Otherwise, we will get console errors.
     resizeIcons.forEach((icon) => {
-      icon.addEventListener("mousedown", startResize)
-      icon.addEventListener("mouseup", stopResize)
+      icon.addEventListener("mousedown", startResize) // call startResize() when mousedown (2.)
+      icon.addEventListener("mouseup", stopResize) // call stopResize() when mouseup (.4)
      })
   }
 }
 
 
 export { initResizeable }
-
-// ========================================================================= //
-
-// const resizeIcon = document.querySelector(".resize-icon"); // selects the right element(make ->elementss)
-
-// let initWidth;
-// let initX;
-// let resizeableArtwork; // assigned an Artwork
-
-// const start = (event) => {
-//   // event.preventDefault;
-//   resizeableArtwork = event.currentTarget.parentElement.parentElement.querySelector("img");
-//   initWidth = resizeableArtwork.width// event.clientX - resizeable.offsetLeft;
-//   initX = event.clientX;
-//   console.log(initWidth);
-//   resizeIcon.addEventListener("mousemove" , resize);
-// }
-
-// const resize =(event) => {
-//   // instead of drag
-//   resizeableArtwork.style.width = `${initWidth + event.clientX - initX}px`; // replace 100
-// }
-
-// // const drag = (event) => {
-// // // console.log(draggableArtwork);
-// // draggableArtwork.style.top = `${event.clientY - initY}px`; // change the top CSS attribute of the draggable = [assign it to (where the mouse clicked) - the]
-// // draggableArtwork.style.left = `${event.clientX - initX}px`;
-// // }
-
-// const stop = (event) => {
-//   resizeableArtwork.removeEventListener("mousemove", resize);
-//   // savePosition(event.clientX, event.clientY, draggableArtwork) // add function
-// }
-
-// const initResizeable = () => {
-//   resizeIcon.addEventListener("mousedown", start)
-//  // if the click is the gray box -> stop eventListener / resize image
-// }
-
-
-// export { initResizeable }
-
