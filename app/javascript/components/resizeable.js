@@ -34,7 +34,6 @@ const stopResize = (event) => {
 // 5. uses a Hidden Form (check show.html.erb) to save the final width to the DB
 const saveWidth = () => {
   const resizableForm = resizableArtwork.parentElement.querySelector(".resizable-form");
-  console.log(resizableForm);
   resizableForm.querySelector(".resizable-form-width").value = resizableArtwork.width;
   resizableForm.querySelector(".resizable-form-submit").click();
 }
@@ -43,8 +42,8 @@ const saveWidth = () => {
 const initResizeable = () => {
   if (resizeIcons) { // we only want this to fire if there are any resizeIcons. Otherwise, we will get console errors.
     resizeIcons.forEach((icon) => {
-      icon.addEventListener("mousedown", startResize) // call startResize() when mousedown (2.)
-      icon.addEventListener("mouseup", stopResize) // call stopResize() when mouseup (.4)
+      icon.addEventListener("mousedown", startResize) // start resizing when mousedown (2.)
+      icon.addEventListener("mouseup", stopResize) // stop resizing when mouseup (.4)
      })
   }
 }
