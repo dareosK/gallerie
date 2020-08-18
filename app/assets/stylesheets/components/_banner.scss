@@ -23,7 +23,7 @@
   justify-content: space-between;
   position: relative;
   z-index: 2;
-  margin: 119px 0px;
+  margin-top: 200px;
 
   .details h1, .details p {
     color: white;
@@ -38,9 +38,9 @@
 
   .details .underline {
     width: 100%;
-    border-bottom: solid 4px white;    
+    border-bottom: solid 4px white;
   }
-  
+
   .live h4 {
     background: #B80000;
     display: flex;
