@@ -1,5 +1,6 @@
 class ShowsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :show, :index ]
+  skip_before_action :authenticate_user!, only: [:show, :index]
+
   def index
     @shows = policy_scope(Show).order(created_at: :desc)
   end
