@@ -1,27 +1,29 @@
 // =====resizeable.js===== //
-// import { savePosition } from "../draggable";
+
 const resizeIcons = document.querySelectorAll(".resize-icon");
 // selects all grey resize icons on the images (-> turn into vector later)
 
-let initWidth; // so you can manipulate the final width of the artwork (see below)
+let initWidth; // so you can manipulate the final width of the Artwork (see below)
 let initX; // same for the final X position on the Panel
 let resizableArtwork;
 
 // 2.
 const startResize = (event) => {
-  event.preventDefault(); // prevents default JS behaviours, so that we can create ours.
+  event.preventDefault(); // prevents default behaviours
   resizableArtwork = event.currentTarget.parentElement.parentElement.querySelector("img");
-  // the artwork is wrapped in many divs, that's why all the parentElements.
-  initWidth = resizableArtwork.width; // assign the width.
-  initX = event.clientX; // assign the initial X position on the Panel.
+  // The artwork is wrapped in many divs, that's why all the parentElements.
+  // Assign the width to the width of the artwork.
+  initWidth = resizableArtwork.width;
+  // Assign the initial X position of the Artwork on the Panel.
+  initX = event.clientX;
   window.addEventListener("mousemove", resize); // once you move the mouse, call resize (.3)
 }
 
 // 3.
 const resize = (event) => {
-  event.preventDefault(); // prevents default JS behaviours.
+  event.preventDefault();
+  // change the final width of the Artwork.
   resizableArtwork.style.width = `${initWidth + event.clientX - initX}px`;
-  // changes the final width of the Artwork.
 }
 
 // 4.

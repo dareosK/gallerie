@@ -1,4 +1,4 @@
-// =====draggable.js===== //
+// =====draggable.js ===== //
 const allArtworks = document.querySelectorAll(".artwork img");
 const indexArtworks = document.querySelectorAll(".index-artworks img");
 
@@ -8,20 +8,22 @@ let draggableArtwork;
 
 // 2.
 const startDrag = (event) => {
-  draggableArtwork = event.currentTarget.parentElement; // pick which of the allArtworks you want to drag
+  // pick which of the allArtworks you want to drag
+  draggableArtwork = event.currentTarget.parentElement;
+  // set their initial X and Y attributes
   initX = event.clientX - draggableArtwork.offsetLeft;
-  initY = event.clientY - draggableArtwork.offsetTop; // set their initial X and Y attributes
+  initY = event.clientY - draggableArtwork.offsetTop;
   window.addEventListener("mousemove" , drag); // when the mousemoves call drag (3.)
 }
 
 // 3.
 const drag = (event) => {
+  // The position of the artworks on the panel are defined
+  // with an inline css style on the div that contains them. Change the inline css style
+  // to change the position!
   event.preventDefault(); // tested this and makes the drag function smoother. Not sure what default behaviour it stopped though.
   draggableArtwork.style.top = `${event.clientY - initY}px`;
   draggableArtwork.style.left = `${event.clientX - initX}px`;
-  // the position of the artworks on the panel are defined
-  // with an inline css style on the div that contains them. Change the inline css style
-  // to change the position!
 };
 
 // 4.
@@ -30,15 +32,18 @@ const stopDrag = (event) => {
   // also makes the functionality smoother. Also not sure why.
   window.removeEventListener("mousemove", drag);
   savePosition(event.clientX, event.clientY, draggableArtwork);
-  // once the dragging is done, call savePosition() in order to save
+  // Once the dragging is done, call savePosition() in order to save
   // the position inside the DB.
 };
 
 // 5.
 const savePosition = ( x, y, draggableArtwork) => {
+  // select the Hidden Form (find it in the show.html.erb) through which it reassigns values in the DB.
   const coordinateForm = draggableArtwork.querySelector(".coordinate-form");
+  // change the X and Y
   coordinateForm.querySelector(".coordinate-form-x").value = draggableArtwork.style.left.replace("px", "");
   coordinateForm.querySelector(".coordinate-form-y").value = draggableArtwork.style.top.replace("px", "");
+  // then click submit, and change the values in the DB.
   coordinateForm.querySelector(".coordinate-form-submit").click();
 };
 
