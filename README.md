@@ -1,5 +1,5 @@
 # VUE Gallerie: A Virtual Gallery and Social Media for Curators (wip)
-### FOLLOW [THIS LINK](https://www.youtube.com/watch?v=U88N9JBsCQA/ "This link title") TO THE 2 MIN SITE TOUR !
+### Check out the [Site Tour](https://www.youtube.com/watch?v=U88N9JBsCQA/ "Site tour title") !
 [![hero banner of the website](https://i.postimg.cc/bvYfpDW7/Screenshot-2020-08-18-at-15-57-55.png)](https://postimg.cc/mPn5SDbj)
 
 # Collect your *curatorial portfolio* on your personal page
@@ -29,4 +29,4 @@ Ella Luna von Müller.
 #### ACKNOWLEDGEMENTS
 All pictures for the seeds taken from the master portraitist Alec Soth and other artists that Dareos loves profoundly and hopes won't sue us <3 VUE is a work in progress MVP.
 
-## FOLLOW [THIS LINK](https://www.youtube.com/watch?v=U88N9JBsCQA/ "This link title") TO THE 2 MIN SITE TOUR !
+## Check out the [Site Tour](https://www.youtube.com/watch?v=U88N9JBsCQA/ "Site tour title") !
