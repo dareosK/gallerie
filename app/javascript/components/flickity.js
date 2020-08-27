@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import Flickity from 'flickity';
+require('flickity-imagesloaded');
 
 const initFlickity = () => {
   var elem = document.querySelector('.flick-carousel');
@@ -11,6 +12,7 @@ const initFlickity = () => {
       freeScroll: true,
       autoPlay: true,
       draggable: true,
+      imagesLoaded: true
     });
   }
 }
