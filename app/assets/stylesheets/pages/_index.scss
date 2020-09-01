@@ -63,11 +63,6 @@
   .featured-artshows-text {
     display: none;
   }
-
-  .details { 
-    display: none;
-  }
-
   .live {
     display: none;
   }
@@ -77,5 +72,11 @@
   text-align: center; 
   width: 100%; 
   margin-bottom: 2rem; 
+  margin-top: 2rem;
+}
+
+.featured-artshows-text {
+  text-align: center; 
+  width: 100%; 
   margin-top: 2rem;
 }
