@@ -10,6 +10,13 @@
   }
 }
 
+@media (max-width: 600px) {
+  .masonry-grid-item {
+  width: 50%;
+  margin-bottom: 5px;
+} 
+}
+
 .card-masonry {
   padding: 10px;
 }

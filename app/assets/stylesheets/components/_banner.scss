@@ -58,3 +58,13 @@
   }
 }
 
+@media(max-width: 600px) {
+  .home-banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 50%;
+    width: 100vw;
+    margin: 0;
+  }
+}
