@@ -58,3 +58,32 @@
 //   margin: 50px 0px 0px 50px;
 //   z-index: 1000;
 // }
+
+@media (max-width: 500px) {
+  .featured-artshows-text {
+    display: none;
+  }
+  .live {
+    display: none;
+  }
+  .recent-artshows-text {
+    margin: 0px;
+    
+    h1 {
+    font-size: 25px;
+  }
+  } 
+}
+
+.recent-artshows-text {
+  text-align: center; 
+  width: 100%; 
+  margin-bottom: 2rem; 
+  margin-top: 2rem;
+}
+
+.featured-artshows-text {
+  text-align: center; 
+  width: 100%; 
+  margin-top: 2rem;
+}
